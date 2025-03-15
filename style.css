@@ -11,7 +11,7 @@ h1 {
     color: var(--accent-rgb);
     font-size: 4.5rem;
     font-weight: 900;
-    letter-spacing: -0.06em;
+    letter-spacing: -0.04em;
     line-height: 0.9em;
     margin-bottom: 0.25em;
 }
