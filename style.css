@@ -10,7 +10,7 @@
 }
 
 h1 {
-    color: rgb(var(--accent-rgb));
+    color: var(--accent-rgb);
     font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: -0.06em;
