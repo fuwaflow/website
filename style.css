@@ -1,9 +1,12 @@
-body {
-  font-family: "Inter", sans-serif;
-}
+
 
 :root {
   --accent-rgb: rgb(114, 135, 253);
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
 }
 
 h1 {
