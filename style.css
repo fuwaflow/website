@@ -1,3 +1,17 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+:root {
+  --accent-rgb: rgb(114, 135, 253);
+}
+
+h1 {
+    color: rgb(var(--accent-rgb));
+    fill: rgb(var(--accent-rgb));
+    font-size: 5.125rem;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 0.9em;
+    margin-bottom: 0.25em;
+}
