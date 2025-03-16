@@ -35,7 +35,7 @@ h1 {
 /* Headerbar */
 .headerbar {
   display: flex;
-  background: rgba(239, 241, 245, 0.8); 
+  background: transparent !important; 
   justify-content: center; /* Center the view switcher horizontally */
   align-items: center; /* Align items vertically in the center */
   height: 47px; /* Set the headerbar height to 47px */
@@ -49,7 +49,6 @@ h1 {
 .view-switcher {
   display: flex; /* Horizontally align the list items */
   justify-content: center; /* Center the items */
-  gap: 0px; /* Space between items */
   padding: 0; /* Remove padding */
 }
 
@@ -58,6 +57,7 @@ h1 {
   list-style: none; /* Remove bullet points */
   margin: 0;
   padding: 0;
+  gap: 4px;
 }
 
 .view-switcher li {
@@ -65,22 +65,31 @@ h1 {
 }
 
 .view-switcher a {
-  color: rgb(var(--ctp-latte-text-rgb));
+  color: rgb(var(--ctp-latte-text-rgb)); /* Text color */
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 32px; /* Increased horizontal padding for wider boxes */
+  width: 118px; /* Static width for the navigation items */
+  height: 32px;
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center text and icon within the fixed width */
+  gap: 4px; /* Space between the icon and text */
   border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Add smooth color transition */
 }
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgb(var(--ctp-latte-overlay1-rgb)); /* Latte hover/focus */
-  padding: 8px 32px; /* Ensure the padding is the same on hover/focus */
+  background-color: rgba(124,127,147,0.3); /* Latte hover/focus */
   border-radius: 6px;
 }
 
 .view-switcher .current {
   background-color: rgb(201, 207, 219, 0.5);
-  padding: 8px 32px; /* Ensure the padding is the same for the current item */
   border-radius: 6px;
+}
+
+/* Icon styling to match text color */
+.nav-icon {
+  fill: red !important;
 }
