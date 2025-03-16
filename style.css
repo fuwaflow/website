@@ -1,17 +1,108 @@
+/* Root Variables */
 :root {
-  --accent-rgb: rgb(114, 135, 253);
+  --accent-color: rgb(114, 135, 253);
+  --background-light: white;
+  --background-dark: #121212;
+  --text-light: black;
+  --text-dark: white;
+  --nav-background-light: rgba(255, 255, 255, 0.7);
+  --nav-background-dark: rgba(30, 30, 30, 0.8);
+  
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-}
-@supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  font-feature-settings: 'liga' 1, 'calt' 1; /* Chrome fix */
 }
 
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: var(--background-dark);
+    --text-light: var(--text-dark);
+    --nav-background-light: var(--nav-background-dark);
+  }
+}
+
+/* Global Styles */
+body {
+  background: var(--background-light);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  background: var(--nav-background-light);
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background var(--global-transition-time), color var(--global-transition-time);
+}
+
+nav a:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Headings */
 h1 {
-    color: var(--accent-rgb);
-    font-size: 4.5rem;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 0.9em;
-    margin-bottom: 0.25em;
+  color: var(--accent-color);
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Content */
+.content {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Blockquote */
+blockquote {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+  border-left: 4px solid var(--accent-color);
+  font-style: italic;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/* Dark Mode Blockquote */
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
