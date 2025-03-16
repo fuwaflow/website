@@ -35,7 +35,7 @@ h1 {
 /* Headerbar */
 .headerbar {
   display: flex;
-  background: transparent !important; 
+  background: rgba(239, 241, 245, 0.8); 
   justify-content: center; /* Center the view switcher horizontally */
   align-items: center; /* Align items vertically in the center */
   height: 47px; /* Set the headerbar height to 47px */
@@ -43,6 +43,7 @@ h1 {
   width: 100%; /* Ensure the header bar spans the full width */
   position: fixed;
   backdrop-filter: blur(8px);
+  z-index: 9999; /* Ensure it appears above other content */
 }
 
 /* View Switcher */
@@ -89,7 +90,3 @@ h1 {
   border-radius: 6px;
 }
 
-/* Icon styling to match text color */
-.nav-icon {
-  fill: red !important;
-}
