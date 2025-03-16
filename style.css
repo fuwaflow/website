@@ -29,7 +29,7 @@
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgba(var(--ctp-latte-overlay1-rgb)), 1);
+  background-color: rgba(var(--ctp-latte-overlay1-rgb), 1); /* Latte hover/focus */
   padding: 8px 32px; /* Ensure the padding is the same on hover/focus */
   border-radius: 6px;
 }
@@ -46,13 +46,12 @@
   justify-content: center; /* Center the view switcher horizontally */
   align-items: center; /* Align items vertically in the center */
   height: 47px; /* Set the headerbar height to 47px */
-  background-color: rgb(--ctp-latte-mantle-rgb);
   padding: 0; /* Remove padding around the header */
   width: 100%; /* Ensure the header bar spans the full width */
 }
 
 body {
-  background: rgb(var(--ctp-latte-base-rgb));
+  background: rgb(var(--ctp-latte-base-rgb)); /* Default to latte theme */
 }
 
 h1 {
@@ -72,5 +71,30 @@ h1 {
 @supports (font-variation-settings: normal) {
   :root {
     font-family: InterVariable, sans-serif;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  /* View Switcher */
+  .view-switcher a {
+    color: rgb(var(--ctp-frappe-text-rgb)); /* Frappe text color */
+  }
+
+  .view-switcher a:hover,
+  .view-switcher a:focus {
+    background-color: rgba(var(--ctp-frappe-overlay1-rgb), 1); /* Frappe hover/focus */
+  }
+
+  .view-switcher .current {
+    background-color: rgb(var(--ctp-frappe-crust-rgb)); /* Frappe current item */
+  }
+
+  body {
+    background: rgb(var(--ctp-frappe-base-rgb)); /* Frappe background */
+  }
+
+  h1 {
+    color: var(--ctp-frappe-lavender); /* Frappe lavender color */
   }
 }
