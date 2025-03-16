@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinuxJava7</title>
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="LinuxJava7 - Personal Website" />
-    <meta property="og:description" content="Welcome to LinuxJava7's personal website." />
-    <meta property="og:url" content="https://linuxjava7.dev/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="LinuxJava7 - Personal Website" />
-    <meta name="twitter:description" content="Welcome to LinuxJava7's personal website." />
-
-    <!-- Link to Stylesheet -->
+    
+    <!-- Metadata -->
+    <meta name="description" content="Welcome to LinuxJava7's personal website.">
+    <meta property="og:title" content="LinuxJava7 - Personal Website">
+    <meta property="og:description" content="Welcome to LinuxJava7's personal website.">
+    <meta property="og:url" content="https://linuxjava7.dev/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
-
 <body>
-
     <!-- Header -->
     <header class="headerbar">
-        <!-- Navigation (View Switcher) -->
-        <nav class="view-switcher">
+        <nav role="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="/" class="current" aria-current="page">
-                    <img src="data/icons/go-home-symbolic.svg" alt="Home icon" class="nav-icon"> Home
+                <li><a href="/" class="current">
+                    <img src="data/icons/go-home-symbolic.svg" alt="Home icon"> Home
                 </a></li>
                 <li><a href="/test1">Test 1</a></li>
                 <li><a href="/test2">Test 2</a></li>
@@ -40,19 +33,18 @@
     </header>
 
     <!-- Main Content -->
-    <main class="content">
+    <main>
         <h1>LinuxJava7</h1>
         <p><strong>Hey, I'm LinuxJava7.</strong> I'm currently studying A-Levels.</p>
 
         <section>
             <h2 id="work">What do I do?</h2>
-            <p>I do a lot of things, including:</p>
             <ul>
                 <li><strong>I'm a hobbyist UX and UI designer</strong></li>
                 <li><strong>Linux desktop user since 2021</strong></li>
                 <li><strong>FOSS (Free and Open Source Software) enthusiast</strong></li>
                 <li><strong>Aspiring full-stack developer</strong></li>
-                <li>I'm a big fan of <a href="https://www.gnome.org/" target="_blank" rel="noopener noreferrer">GNOME</a> and their work; check them out!</li>
+                <li>I'm a big fan of <a href="https://www.gnome.org/" target="_blank">GNOME</a> and their work; check them out!</li>
             </ul>
         </section>
 
@@ -66,15 +58,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>This website is licensed under the AGPL v3.</p>
+        <p>This website is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL v3</a>.</p>
         <ul class="social">
             <li class="github">
-                <a href="https://github.com/linuxjava7" title="GitHub">
-                    GitHub
-                </a>
+                <a href="https://github.com/linuxjava7" title="GitHub">GitHub</a>
             </li>
         </ul>
     </footer>
-
 </body>
 </html>
