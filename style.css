@@ -1,13 +1,70 @@
-/* Root Variables */
-:root {
-  --accent-color: rgb(114, 135, 253);
-  --background-light: white;
-  --background-dark: #121212;
-  --text-light: black;
-  --text-dark: white;
-  --nav-background-light: rgba(255, 255, 255, 0.7);
-  --nav-background-dark: rgba(30, 30, 30, 0.8);
-  
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+/* View Switcher */
+.view-switcher {
+  display: flex; /* Horizontally align the list items */
+  justify-content: center; /* Center the items */
+  gap: 0px; /* Space between items */
+  padding: 0; /* Remove padding */
+}
+
+.view-switcher ul {
+  display: flex; /* Ensure the <ul> is also displayed in a row */
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.view-switcher li {
+  display: inline-block;
+}
+
+.view-switcher a {
+  color: rgb(var(--ctp-latte-text-rgb));
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 32px; /* Increased horizontal padding for wider boxes */
+  border-radius: 6px;
+}
+
+.view-switcher a:hover,
+.view-switcher a:focus {
+  background-color: rgba(var(--ctp-latte-overlay1-rgb)), 1);
+  padding: 8px 32px; /* Ensure the padding is the same on hover/focus */
+  border-radius: 6px;
+}
+
+.view-switcher .current {
+  background-color: rgb(var(--ctp-latte-crust-rgb));
+  padding: 8px 32px; /* Ensure the padding is the same for the current item */
+  border-radius: 6px;
+}
+
+/* Headerbar */
+.headerbar {
+  display: flex;
+  justify-content: center; /* Center the view switcher horizontally */
+  align-items: center; /* Align items vertically in the center */
+  height: 47px; /* Set the headerbar height to 47px */
+  background-color: rgb(--ctp-latte-mantle-rgb);
+  padding: 0; /* Remove padding around the header */
+  width: 100%; /* Ensure the header bar spans the full width */
+}
+
+body {
+  background: rgb(var(--ctp-latte-base-rgb));
+}
+
+h1 {
+  color: var(--ctp-latte-lavender);
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9em;
+  margin: 0 0 0.25em;
+}
+
+:root { 
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* Chrome fix */
 }
@@ -15,94 +72,5 @@
 @supports (font-variation-settings: normal) {
   :root {
     font-family: InterVariable, sans-serif;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-light: var(--background-dark);
-    --text-light: var(--text-dark);
-    --nav-background-light: var(--nav-background-dark);
-  }
-}
-
-/* Global Styles */
-body {
-  background: var(--background-light);
-  color: var(--text-light);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Navigation */
-nav {
-  background: var(--nav-background-light);
-  padding: 12px 24px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 15px;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-light);
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: background var(--global-transition-time), color var(--global-transition-time);
-}
-
-nav a:hover {
-  background: var(--accent-color);
-  color: white;
-}
-
-/* Headings */
-h1 {
-  color: var(--accent-color);
-  font-size: 4rem;
-  font-weight: 900;
-  text-align: center;
-}
-
-/* Content */
-.content {
-  max-width: 800px;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Blockquote */
-blockquote {
-  background: rgba(0, 0, 0, 0.05);
-  padding: 15px 20px;
-  border-left: 4px solid var(--accent-color);
-  font-style: italic;
-  margin: 20px 0;
-  border-radius: 5px;
-}
-
-/* Dark Mode Blockquote */
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    background: rgba(255, 255, 255, 0.1);
   }
 }
