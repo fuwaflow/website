@@ -26,6 +26,10 @@ body {
 a {
 	color: var(--ctp-latte-blue);
 	font-variation-settings: "wght" 600;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-variation-settings: "wght" 600; /* needed for webkit */
 }
 
 .content {
@@ -137,14 +141,32 @@ body > footer {
 	gap: 32px;
 }
 
-.cards-grid-box {
+.tile {
 	margin: 1rem;
-	padding: 2rem;
-	border-radius: 0.5rem;
-	background-color: var(--ctp-latte-mantle);
-  border: 1px solid rgba(76, 79, 105, 0.1) !important;
+	padding: 54px;
+	border-radius: 24px;
+	background-color: var(--ctp-frappe-base);
+  color: var(--ctp-frappe-text);
 }
 
+.tile a {
+	color: var(--ctp-frappe-blue);
+	font-variation-settings: "wght" 600;
+}
+
+.tile {
+  & h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 3rem 0 1rem;
+  font-weight: bold;
+  font-weight: 800;
+  line-height: 1.25;
+}
 
 a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	margin: 0 0.1em 0 0.2em;
