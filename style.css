@@ -1,4 +1,49 @@
+/* Import the external Catppuccin palette */
 @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+/* Global Styles */
+:root { 
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* Chrome fix */
+  word-wrap: break-word; /* Break long words and force line wrapping */
+  overflow-wrap: break-word; /* Ensures long words break */
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+body {
+  background: rgb(var(--ctp-latte-base-rgb)); /* Default to latte theme */
+}
+
+h1 {
+  color: var(--ctp-latte-lavender);
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.9em;
+  margin: 0 0 0.25em;
+}
+
+.content {
+  padding-top: 50px;
+}
+
+/* Headerbar */
+.headerbar {
+  display: flex;
+  background: rgba(239, 241, 245, 0.8); 
+  justify-content: center; /* Center the view switcher horizontally */
+  align-items: center; /* Align items vertically in the center */
+  height: 47px; /* Set the headerbar height to 47px */
+  padding: 0; /* Remove padding around the header */
+  width: 100%; /* Ensure the header bar spans the full width */
+  position: fixed;
+  backdrop-filter: blur(8px);
+}
 
 /* View Switcher */
 .view-switcher {
@@ -29,72 +74,13 @@
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgba(var(--ctp-latte-overlay1-rgb), 1); /* Latte hover/focus */
+  background-color: rgb(var(--ctp-latte-overlay1-rgb)); /* Latte hover/focus */
   padding: 8px 32px; /* Ensure the padding is the same on hover/focus */
   border-radius: 6px;
 }
 
 .view-switcher .current {
-  background-color: rgb(var(--ctp-latte-crust-rgb));
+  background-color: rgb(201, 207, 219, 0.5);
   padding: 8px 32px; /* Ensure the padding is the same for the current item */
   border-radius: 6px;
-}
-
-/* Headerbar */
-.headerbar {
-  display: flex;
-  justify-content: center; /* Center the view switcher horizontally */
-  align-items: center; /* Align items vertically in the center */
-  height: 47px; /* Set the headerbar height to 47px */
-  padding: 0; /* Remove padding around the header */
-  width: 100%; /* Ensure the header bar spans the full width */
-}
-
-body {
-  background: rgb(var(--ctp-latte-base-rgb)); /* Default to latte theme */
-}
-
-h1 {
-  color: var(--ctp-latte-lavender);
-  font-size: 4.5rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.9em;
-  margin: 0 0 0.25em;
-}
-
-:root { 
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* Chrome fix */
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  /* View Switcher */
-  .view-switcher a {
-    color: rgb(var(--ctp-frappe-text-rgb)); /* Frappe text color */
-  }
-
-  .view-switcher a:hover,
-  .view-switcher a:focus {
-    background-color: rgba(var(--ctp-frappe-overlay1-rgb), 1); /* Frappe hover/focus */
-  }
-
-  .view-switcher .current {
-    background-color: rgb(var(--ctp-frappe-crust-rgb)); /* Frappe current item */
-  }
-
-  body {
-    background: rgb(var(--ctp-frappe-base-rgb)); /* Frappe background */
-  }
-
-  h1 {
-    color: var(--ctp-frappe-lavender); /* Frappe lavender color */
-  }
 }
