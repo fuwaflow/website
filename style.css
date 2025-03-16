@@ -125,9 +125,9 @@ body > footer {
 }
 
 .cards-grid {
-	display: grid;
-	grid-template-columns: calc(50% - 32px) auto;
-	gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
 }
 
 .cards-grid-box {
