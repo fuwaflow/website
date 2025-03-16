@@ -20,12 +20,13 @@ body {
   font-size: 1rem;
 }
 
-.content { 
-  margin-bottom: 1.5rem; 
-  margin-left: 1.5rem; 
-  margin-right: 1.5rem; 
-  margin-top: 0rem;
-  padding-top: 4.75rem;
+.content {
+  margin-bottom: 1em; 
+  margin-left: 1em; 
+  margin-right: 1em; 
+  margin-top: 1em; 
+  padding-bottom: 4em; 
+  padding-top: 2em;
 }
 
 h1 {
