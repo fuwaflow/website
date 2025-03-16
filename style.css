@@ -99,6 +99,5 @@ body > footer {
   flex-shrink: 0; 
   line-height: 4em; 
   padding: 1rem 1rem 0; 
-  text-align: center; 
-  width: 100%; 
+  text-align: center;  
 }
