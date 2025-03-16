@@ -101,9 +101,10 @@ body > footer {
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
-  line-height: 2em;
-  padding: 1rem;
+  line-height: 4em;
+  padding: 1rem 1rem 0;
   text-align: center;
+  margin-top: auto;
 }
 
 .social {
@@ -123,6 +124,16 @@ body > footer {
   text-decoration: none;
 }
 
-p, .social {
-  margin: 0.5em auto;
+.cards-grid {
+	display: grid;
+	grid-template-columns: calc(50% - 32px) auto;
+	gap: 32px;
+}
+
+.cards-grid-box {
+	margin: 1rem;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	background-color: var(--ctp-latte-mantle);
+  border: 1px solid rgba(76, 79, 105, 0.1) !important;
 }
