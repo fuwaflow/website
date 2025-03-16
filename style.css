@@ -21,12 +21,8 @@ body {
 }
 
 .content {
-  margin-bottom: 1em; 
-  margin-left: 1em; 
-  margin-right: 1em; 
-  margin-top: 1em; 
-  padding-bottom: 4em; 
-  padding-top: 2em;
+  margin: 1em; 
+  padding: 2em 0 4em; 
 }
 
 h1 {
@@ -47,7 +43,7 @@ h1 {
   padding: 0;
   width: 100%;
   position: sticky;
-  top: 0px;
+  top: 0;
   backdrop-filter: blur(12px);
   z-index: 9999;
 }
@@ -86,11 +82,23 @@ h1 {
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgba(124,127,147,0.3);
+  background-color: rgba(124, 127, 147, 0.3);
   border-radius: 0.375rem;
 }
 
 .view-switcher .current {
   background-color: rgb(201, 207, 219, 0.5);
   border-radius: 0.375rem;
+}
+
+body > footer { 
+  background-color: var(--ctp-frappe-base); 
+  color: var(--ctp-frappe-text); 
+  flex-basis: auto; 
+  flex-grow: 0; 
+  flex-shrink: 0; 
+  line-height: 4em; 
+  padding: 1rem 1rem 0; 
+  text-align: center; 
+  width: 100%; 
 }
