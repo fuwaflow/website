@@ -188,8 +188,13 @@ body > footer {
 /* Cards Grid */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  gap: 32px;
+  column-gap: 1rem; 
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem; 
+  margin-left: Opx;
+  margin-right: Opx; 
+  margin-top: 0.5rem; 
+  row-gap: 1rem;
 }
 
 /* Tiles */
