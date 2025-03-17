@@ -136,11 +136,11 @@ h1 {
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgba(124, 127, 147, 0.3);
+  background-color: rgba(0, 0, 0, 0.025);
 }
 
 .view-switcher .current {
-  background-color: rgba(204, 208, 218, 0.4);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Footer */
