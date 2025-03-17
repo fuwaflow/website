@@ -44,7 +44,7 @@
 /* Body */
 body {
   background: var(--ctp-base);
-  color: var (--ctp-text);
+  color: var(--ctp-text);
   margin: 0;
   font-size: 1rem;
   min-height: 100vh;
