@@ -26,6 +26,16 @@
     --ctp-antiblue: var(--ctp-latte-blue);
     --ctp-antilavender: var(--ctp-latte-lavender)
   }
+
+  .view-switcher a:hover,
+  .view-switcher a:focus {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+  
+  .view-switcher .current {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
 }
 
 /* Root Variables */
