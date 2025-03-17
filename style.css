@@ -20,6 +20,7 @@
     --ctp-base: var(--ctp-frappe-base);
     --ctp-blue: var(--ctp-frappe-blue);
     --ctp-lavender: var(--ctp-frappe-lavender);
+    --ctp-base-translucent: 48, 52, 70;
     --ctp-antitext: var(--ctp-latte-text);
     --ctp-antibase: var(--ctp-latte-base);
     --ctp-antiblue: var(--ctp-latte-blue);
