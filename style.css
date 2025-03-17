@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: var(--ctp-lavender);
-  font-size: 4.1rem;
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.25;
