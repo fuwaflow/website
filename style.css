@@ -13,31 +13,6 @@
   --ctp-antilavender: var(--ctp-frappe-lavender);
 }
 
-/* Dark Mode - Automatically Applied if User Prefers Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ctp-text: var(--ctp-frappe-text);
-    --ctp-base: var(--ctp-frappe-base);
-    --ctp-blue: var(--ctp-frappe-blue);
-    --ctp-lavender: var(--ctp-frappe-lavender);
-    --ctp-base-translucent: 48, 52, 70;
-    --ctp-antitext: var(--ctp-latte-text);
-    --ctp-antibase: var(--ctp-latte-base);
-    --ctp-antiblue: var(--ctp-latte-blue);
-    --ctp-antilavender: var(--ctp-latte-lavender)
-  }
-
-  .view-switcher a:hover,
-  .view-switcher a:focus {
-    background-color: rgba(255, 255, 255, 0.025);
-  }
-  
-  .view-switcher .current {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-
-}
-
 /* Root Variables */
 :root {
   font-family: Inter, sans-serif;
@@ -233,4 +208,30 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   mask-repeat: no-repeat;
   mask-size: contain;
   background-color: currentColor;
+}
+
+
+/* Dark Mode - Automatically Applied if User Prefers Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ctp-text: var(--ctp-frappe-text);
+    --ctp-base: var(--ctp-frappe-base);
+    --ctp-blue: var(--ctp-frappe-blue);
+    --ctp-lavender: var(--ctp-frappe-lavender);
+    --ctp-base-translucent: 48, 52, 70;
+    --ctp-antitext: var(--ctp-latte-text);
+    --ctp-antibase: var(--ctp-latte-base);
+    --ctp-antiblue: var(--ctp-latte-blue);
+    --ctp-antilavender: var(--ctp-latte-lavender)
+  }
+
+  .view-switcher a:hover,
+  .view-switcher a:focus {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+  
+  .view-switcher .current {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
 }
