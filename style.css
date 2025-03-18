@@ -28,6 +28,10 @@
   }
 }
 
+html {
+  font-size: 18px;
+}
+
 /* Body */
 body {
   background: var(--ctp-base);
@@ -37,6 +41,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 18px;
 }
 
 /* Links */
