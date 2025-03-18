@@ -185,16 +185,22 @@ body > footer {
   text-decoration: none;
 }
 
-/* Cards Grid */
+/* Tiles Grid */
 .cards-grid {
   display: grid;
   column-gap: 1rem; 
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 3rem; 
-  margin-left: Opx;
-  margin-right: Opx; 
+  margin-left: 0;
+  margin-right: 0; 
   margin-top: 0.5rem; 
   row-gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Tiles */
