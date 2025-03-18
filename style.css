@@ -55,7 +55,8 @@ a {
 
 /* Content */
 .content {
-  margin: 1em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   padding: 2em 0 4em;
   flex-grow: 1;
 }
