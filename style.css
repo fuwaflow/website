@@ -12,17 +12,12 @@
   --ctp-antilavender: var(--ctp-frappe-lavender);
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1;
-}
-
-/* Root Variables */
-:root {
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1;
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 18px;
 }
 
+/* Font Variation Settings */
 @supports (font-variation-settings: normal) {
   :root {
     font-family: InterVariable, sans-serif;
