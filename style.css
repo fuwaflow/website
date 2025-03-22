@@ -3,11 +3,11 @@
 /* Root Variables - Light Mode (Default) */
 :root {
   --ctp-text: var(--ctp-latte-text);
-  --ctp-base: var(--ctp-latte-base);
+  --ctp-base: var(--ctp-latte-base-rgb);
   --ctp-blue: var(--ctp-latte-blue);
   --ctp-lavender: var(--ctp-latte-lavender);
   --ctp-antitext: var(--ctp-frappe-text);
-  --ctp-antibase: var(--ctp-frappe-base);
+  --ctp-antibase: var(--ctp-frappe-base-rgb);
   --ctp-antiblue: var(--ctp-frappe-blue);
   --ctp-antilavender: var(--ctp-frappe-lavender);
   font-family: Inter, sans-serif;
@@ -31,7 +31,7 @@ html {
 
 /* Body */
 body {
-  background: var(--ctp-base);
+  background: rgb(var(--ctp-base));
   color: var(--ctp-text);
   margin: 0;
   font-size: 1rem;
@@ -136,7 +136,7 @@ h1 {
 
 /* Footer */
 body > footer {
-  background-color: var(--ctp-antibase);
+  background-color: rgb(var(--ctp-antibase));
   color: var(--ctp-antitext);
   line-height: 4em;
   padding: 1rem 1rem 0;
@@ -185,7 +185,7 @@ body > footer {
   margin: 1rem;
   padding: 54px;
   border-radius: 24px;
-  background-color: var(--ctp-antibase);
+  background-color: rgb(var(--ctp-antibase));
   color: var(--ctp-antitext);
 }
 
@@ -218,11 +218,11 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 @media (prefers-color-scheme: dark) {
   :root {
     --ctp-text: var(--ctp-frappe-text);
-    --ctp-base: var(--ctp-frappe-base);
+    --ctp-base: var(--ctp-frappe-base-rgb);
     --ctp-blue: var(--ctp-frappe-blue);
     --ctp-lavender: var(--ctp-frappe-lavender);
     --ctp-antitext: var(--ctp-latte-text);
-    --ctp-antibase: var(--ctp-latte-base);
+    --ctp-antibase: var(--ctp-latte-base-rgb);
     --ctp-antiblue: var(--ctp-latte-blue);
     --ctp-antilavender: var(--ctp-latte-lavender);
   }
