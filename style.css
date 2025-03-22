@@ -8,7 +8,7 @@
   --ctp-lavender: var(--ctp-latte-lavender);
   --ctp-antitext: var(--ctp-frappe-text);
   --ctp-antibase: var(--ctp-frappe-base-rgb);
-  --ctp-antiblue: var(--ctp-frappe-blue);
+  --ctp-antiblue: var(--ctp-frappe-blue-rgb);
   --ctp-antilavender: var(--ctp-frappe-lavender);
   
   /* Layout Variables */
@@ -229,7 +229,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile p {
-  opacity: 1;
+  opacity: 0.8;
   margin: 0;
   padding: 0;
   font-size: 0.95rem;
@@ -247,7 +247,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .tile a {
   justify-self: start;
   width: 100%;
-  color: var(--ctp-antiblue);
+  color: rgb(var(--ctp-antiblue));
 }
 
 .tile a:not(.btn) {
@@ -263,8 +263,9 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   max-width: 12rem;
   font-size: 80%;
   border-radius: var(--btnsqr);
-  background-color: var(--ctp-antiblue);
+  background-color: rgba(var(--ctp-antiblue)/ 50%);
   color: var(--ctp-antitext);
+  opacity: 1;
   font-weight: 600;
   font-variation-settings: "wght" 600;
   padding: 0.6rem 1.5rem;
@@ -275,7 +276,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   transition: box-shadow 200ms var(--slickease);
   margin: 0.3rem;
   border: none;
-  box-shadow: 0 0 0 0 var(--ctp-antiblue);
+  box-shadow: 0 0 0 0 rgba(var(--ctp-antiblue)/ 50%);
   min-width: 4rem;
   vertical-align: middle;
   text-align: center;
@@ -283,7 +284,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile .btn:hover {
-  box-shadow: 0 0 0 2px var(--ctp-antiblue);
+  box-shadow: 0 0 0 2px rgba(var(--ctp-antiblue)/ 50%);
   text-decoration: none;
 }
 
