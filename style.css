@@ -6,25 +6,27 @@
   --ctp-base: var(--ctp-latte-base);
   --ctp-blue: var(--ctp-latte-blue);
   --ctp-lavender: var(--ctp-latte-lavender);
-  --ctp-base-translucent: 239, 241, 245;
   --ctp-antitext: var(--ctp-frappe-text);
   --ctp-antibase: var(--ctp-frappe-base);
   --ctp-antiblue: var(--ctp-frappe-blue);
   --ctp-antilavender: var(--ctp-frappe-lavender);
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1;
 }
 
 /* Root Variables */
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @supports (font-variation-settings: normal) {
   :root {
     font-family: InterVariable, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1;
   }
 }
 
@@ -62,7 +64,6 @@ a {
 }
 
 /* Headings */
-
 h1, h2, h3, h4, h5, h6 {
   margin: 2rem 0 1rem;
   font-weight: 800;
@@ -88,7 +89,7 @@ h1 {
   position: sticky;
   top: 0;
   padding: 0;
-  background-color: rgba(var(--ctp-base-translucent), 0.8);
+  background-color: rgba(var(--ctp-base) / 75%);
   backdrop-filter: blur(12px);
   z-index: 9999;
 }
@@ -127,11 +128,11 @@ h1 {
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgba(0, 0, 0, 0.025);
+  background-color: rgb(0 0 0 / 2.5%);
 }
 
 .view-switcher .current {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 
 .view-switcher a svg {
@@ -210,12 +211,11 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: inline-block;
   width: 0.75em;
   height: 0.75em;
-  mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
+  mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3Ii[...]
   mask-repeat: no-repeat;
   mask-size: contain;
   background-color: currentColor;
 }
-
 
 /* Dark Mode - Automatically Applied if User Prefers Dark Mode */
 @media (prefers-color-scheme: dark) {
@@ -224,20 +224,18 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
     --ctp-base: var(--ctp-frappe-base);
     --ctp-blue: var(--ctp-frappe-blue);
     --ctp-lavender: var(--ctp-frappe-lavender);
-    --ctp-base-translucent: 48, 52, 70;
     --ctp-antitext: var(--ctp-latte-text);
     --ctp-antibase: var(--ctp-latte-base);
     --ctp-antiblue: var(--ctp-latte-blue);
-    --ctp-antilavender: var(--ctp-latte-lavender)
+    --ctp-antilavender: var(--ctp-latte-lavender);
   }
 
   .view-switcher a:hover,
   .view-switcher a:focus {
-    background-color: rgba(255, 255, 255, 0.025);
-  }
-  
-  .view-switcher .current {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgb(255 255 255 / 2.5%);
   }
 
+  .view-switcher .current {
+    background-color: rgb(255 255 255 / 5%);
+  }
 }
