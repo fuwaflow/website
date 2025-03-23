@@ -511,39 +511,3 @@ footer {
     font-size: 0.9rem;
   }
 }
-
-/* Print styles */
-@media print {
-  .headerbar,
-  .view-switcher,
-  .social,
-  footer {
-    display: none;
-  }
-  
-  body {
-    background: white;
-    color: black;
-  }
-  
-  a {
-    color: #0000EE;
-  }
-  
-  .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .tile {
-    break-inside: avoid;
-    border: 1px solid #ddd;
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  
-  .tile img {
-    max-height: 150px;
-  }
-}
