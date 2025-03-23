@@ -4,7 +4,7 @@
 :root {
   --ctp-text: var(--ctp-latte-text);
   --ctp-base: var(--ctp-latte-base-rgb);
-  --ctp-blue: var(--ctp-latte-blue);
+  --ctp-blue: var(--ctp-latte-blue-rgb);
   --ctp-lavender: var(--ctp-latte-lavender);
   --ctp-antitext: var(--ctp-frappe-text);
   --ctp-antibase: var(--ctp-frappe-base-rgb);
@@ -111,7 +111,7 @@ h2:first-child {
 
 /* Links */
 a {
-  color: var(--ctp-blue);
+  color: rgba(var(--ctp-blue));
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -386,11 +386,11 @@ footer {
   :root {
     --ctp-text: var(--ctp-frappe-text);
     --ctp-base: var(--ctp-frappe-base-rgb);
-    --ctp-blue: var(--ctp-frappe-blue);
+    --ctp-blue: var(--ctp-frappe-blue-rgb);
     --ctp-lavender: var(--ctp-frappe-lavender);
     --ctp-antitext: var(--ctp-latte-text);
     --ctp-antibase: var(--ctp-latte-base-rgb);
-    --ctp-antiblue: var(--ctp-latte-blue);
+    --ctp-antiblue: var(--ctp-latte-blue-rgb);
     --ctp-antilavender: var(--ctp-latte-lavender);
   }
 
