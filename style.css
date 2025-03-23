@@ -48,6 +48,8 @@
   box-sizing: border-box;
 }
 
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -92,6 +94,12 @@ h1 {
 h2:first-child { 
   margin: 1rem 0 1rem; 
 }
+
+h2 { font-size: 1.875em; }   /* 1.5em * 1.25 */
+h3 { font-size: 1.463em; }   /* 1.17em * 1.25 */
+h4 { font-size: 1.250em; }   /* 1em * 1.25 */
+h5 { font-size: 1.038em; }   /* 0.83em * 1.25 */
+h6 { font-size: 0.838em; }   /* 0.67em * 1.25 */
 
 .note {
   margin: 1.5rem 0;
@@ -212,7 +220,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile h4 {
-  font-size: 1.2rem;
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -222,7 +229,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile h3 {
-  font-size: 1.5rem;
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -232,7 +238,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile h4 svg {
-
   width: 16px;
   height: 16px;
   fill: currentColor;
