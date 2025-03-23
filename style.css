@@ -221,6 +221,16 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   gap: 0.5rem;
 }
 
+.tile h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .tile h4 svg {
 
   width: 16px;
