@@ -278,7 +278,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   max-width: 12rem;
   font-size: 80%;
   border-radius: var(--btnsqr);
-  background-color: rgba(var(--ctp-antiblue)/ 50%);
+  background-color: rgba(var(--ctp-antiblue)/ 40%);
   color: var(--ctp-antitext);
   opacity: 1;
   font-weight: 600;
@@ -291,7 +291,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   transition: box-shadow 200ms var(--slickease);
   margin: 0.3rem;
   border: none;
-  box-shadow: 0 0 0 0 rgba(var(--ctp-antiblue)/ 50%);
+  box-shadow: 0 0 0 0 rgba(var(--ctp-antiblue)/ 40%);
   min-width: 4rem;
   vertical-align: middle;
   text-align: center;
