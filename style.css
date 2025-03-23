@@ -19,7 +19,6 @@
   --defaultsize: 18px;
   --slickease: cubic-bezier(.17,.89,.32,1.28);
   --max-width: 1200px;
-  --container-padding: 1rem;
   
   /* Component Variables */
   --rounded-corner: 12px;
@@ -95,11 +94,9 @@ h2:first-child {
   margin: 1rem 0 1rem; 
 }
 
-h2 { font-size: 1.875em; }   /* 1.5em * 1.25 */
-h3 { font-size: 1.463em; }   /* 1.17em * 1.25 */
-h4 { font-size: 1.250em; }   /* 1em * 1.25 */
-h5 { font-size: 1.038em; }   /* 0.83em * 1.25 */
-h6 { font-size: 0.838em; }   /* 0.67em * 1.25 */
+h2 { font-size: 1.75em; }  
+h3 { font-size: 1.45em; } 
+h4 { font-size: 1.20em; }   
 
 .note {
   margin: 1.5rem 0;
@@ -148,7 +145,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 /* Layout */
 .container {
   margin: 2rem 0 0;
-  padding: 0 var(--container-padding);
   flex: 1;
   display: grid;
   gap: 0 var(--grid-gap);
@@ -201,14 +197,12 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile img {
-  height: 100%;
+  height: 270px;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom center;
   z-index: 0;
   overflow: hidden;
-  border-radius: 0;
   width: 100%;
-  min-width: 0;
 }
 
 .tile .description {
@@ -216,7 +210,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   flex-direction: column;
   gap: 0;
   min-width: 0;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .tile h4 {
@@ -235,12 +229,13 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  overflow-wrap: anywhere;
 }
 
-.tile h4 svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+.tile h3 img {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.375rem;
 }
 
 .tile p {
@@ -420,40 +415,12 @@ footer {
 }
 
 /* Responsive Design */
-@media only screen and (max-width: 1200px) {
-  :root {
-    --max-width: 100%;
-  }
-  
-  .container {
-    grid-template-columns: [full-start] minmax(0, 1fr) [main-start] repeat(4,minmax(1rem,calc(var(--pagewidth)/4))) [main-end] minmax(0, 1fr) [full-end];
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .container {
-    grid-template-columns: [full-start] minmax(0, 1fr) [main-start] repeat(3,minmax(1rem,calc(var(--pagewidth)/3))) [main-end] minmax(0, 1fr) [full-end];
-  }
-  
-  .tiles {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-}
 
 @media only screen and (max-width: 720px) {
   :root {
     --narrowwidth: 100%;
     --grid-gap: 1rem;
     --defaultsize: 16px;
-    --container-padding: 0.5rem;
   }
   
   .container {
@@ -468,12 +435,8 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  .tile img {
-    height: 240px;
-  }
-  
   .tile .description {
-    padding: 1.5rem;
+    padding: 1rem;
   }
   
   .tile .btn {
@@ -498,31 +461,5 @@ footer {
   
   .social li {
     margin: 0;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .container {
-    grid-template-columns: [full-start] minmax(0, 1fr) [main-start] minmax(1rem,calc(var(--pagewidth)/1)) [main-end] minmax(0, 1fr) [full-end];
-  }
-  
-  .tile {
-    padding: 1.5rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  .tile h4 {
-    font-size: 1.1rem;
-  }
-  
-  .tile p {
-    font-size: 0.9rem;
   }
 }
