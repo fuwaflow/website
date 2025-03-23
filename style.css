@@ -208,7 +208,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   flex-direction: column;
   gap: 0;
   min-width: 0;
-  padding: var(--grid-gap);
+  padding: 1rem;
 }
 
 .tile h4 {
