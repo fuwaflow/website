@@ -307,12 +307,79 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   fill: currentColor;
 }
 
+/* View Switcher Bar */
+.view-switcher-bar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 3.3rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 0;
+  background-color: rgba(var(--ctp-base) / 75%);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+}
+
+/* View Switcher */
+.view-switcher-narrow {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 85%
+}
+
+.view-switcher-narrow ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.view-switcher-narrow li {
+  display: inline-block;
+}
+
+.view-switcher-narrow a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 6.8rem;
+  height: 100%;
+  color: var(--ctp-text);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  gap: 0px;
+  font-size: 0.8rem;
+}
+
+.view-switcher-narrow a:hover,
+.view-switcher-narrow a:focus {
+  background-color: rgb(0 0 0 / 2.5%);
+}
+
+.view-switcher-narrow .current {
+  background-color: rgb(0 0 0 / 5%);
+}
+
+.view-switcher-narrow svg {
+  width: 1.25em;
+  height: auto;
+  margin-top: 4px;
+}
+
+
 /* Header Bar */
 .headerbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.9375rem;
+  height: 3rem;
   width: 100%;
   position: sticky;
   top: 0;
@@ -351,7 +418,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   color: var(--ctp-text);
   font-weight: bold;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 0.65rem;
   transition: background-color 0.2s ease, color 0.2s ease;
   gap: 6px;
 }
@@ -412,11 +479,15 @@ footer {
   }
 
   .view-switcher a:hover,
-  .view-switcher a:focus {
+  .view-switcher a:focus,
+  .view-switcher-narrow a:hover,
+  .view-switcher-narrow a:focus
+  {
     background-color: rgb(255 255 255 / 2.5%);
   }
 
-  .view-switcher .current {
+  .view-switcher .current 
+  .view-switcher-narrow .current{
     background-color: rgb(255 255 255 / 5%);
   }
 }
@@ -428,6 +499,18 @@ footer {
     --narrowwidth: 100%;
     --grid-gap: 1rem;
     --defaultsize: 16px;
+  }
+
+  .headerbar {
+    display: none;
+  }
+
+  .view-switcher-bar {
+    display: flex;
+  }
+
+  footer {
+    margin-bottom: 3.5rem;
   }
   
   .container {
