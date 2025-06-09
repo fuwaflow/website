@@ -14,7 +14,7 @@
   
   /* Accent colours */
   --accent-colour: var(--ctp-lavender);
-  --accent-colour: Accentcolour;
+  --accent-colour: AccentColor;
   --accent-bg-colour: #3584e4;
   --accent-fg-colour: #ffffff;
 
