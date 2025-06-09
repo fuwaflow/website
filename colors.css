@@ -1,3 +1,7 @@
+:root{
+  --accent-bg-color: AccentColor
+}
+
 @media (prefers-color-scheme: dark) {
   .view-switcher a:hover,
   .view-switcher a:focus,

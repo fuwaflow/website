@@ -1,7 +1,8 @@
 @import 'catppuccin.css';
-@import 'colors.css';
-/* Root Variables - Light Mode (Default) */
 
+@import 'colors.css';
+
+/* Root Variables - Light Mode (Default) */
 :root {
   /* Layout Variables */
   --pagewidth: 50rem;
