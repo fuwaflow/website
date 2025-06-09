@@ -1,0 +1,15 @@
+@import 'catppuccin.css';
+
+@media (prefers-color-scheme: dark) {
+
+  .view-switcher a:hover,
+  .view-switcher a:focus,
+  .view-switcher-narrow a:hover,
+  .view-switcher-narrow a:focus {
+    background-color: rgb(255 255 255 / 2.5%);
+  }
+
+  .view-switcher .current .view-switcher-narrow .current {
+    background-color: rgb(255 255 255 / 5%);
+  }
+}

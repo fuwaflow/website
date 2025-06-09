@@ -1,4 +1,4 @@
-@import 'colours.css';
+@import 'colors.css';
 
 /* Root Variables - Light Mode (Default) */
 :root {
@@ -38,8 +38,6 @@
   box-sizing: border-box;
 }
 
-
-
 html, body {
   margin: 0;
   padding: 0;
@@ -54,8 +52,8 @@ html, body {
 }
 
 body {
-  background: rgb(var(--ctp-base));
-  color: var(--ctp-text);
+  background: var(--window-bg-color);
+  color: var(--window-fg-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -73,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: var(--accent-colour);
+  color: var(--accent-bg-color);
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -100,14 +98,14 @@ h4 {
 .note {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
-  background-color: rgb(var(--ctp-antibase));
+  background-color: var(--card-bg-color);
   border-radius: var(--rounded-corner);
-  border-left: 3px solid var(--accent-colour);
+  border-left: 3px solid var(--accent-bg-color);
 }
 
 .note p {
   margin: 0;
-  color: var(--ctp-antitext);
+  color: var(--card-fg-color);
   opacity: 0.8;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -115,7 +113,7 @@ h4 {
 
 /* Links */
 a {
-  color: rgba(var(--ctp-blue));
+  color: var(--blue-4);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -133,9 +131,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: inline-block;
   width: 0.75em;
   height: 0.75em;
-
   mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
-
   mask-repeat: no-repeat;
   mask-size: contain;
   background-color: currentColor;
@@ -174,7 +170,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   grid-column: auto;
   display: grid;
   text-decoration: none;
-  color: var(--ctp-text);
+  color: var(--window-fg-color);
   grid-template-rows: auto 1fr auto;
   align-content: stretch;
   align-items: start;
@@ -183,8 +179,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   margin: 0;
   padding: 0;
   border-radius: 24px;
-  background-color: rgb(var(--ctp-antibase));
-  color: var(--ctp-antitext);
+  background-color: var(--card-bg-color);
+  color: var(--card-fg-color);
   width: 100%;
   box-sizing: border-box;
   min-width: 0;
@@ -256,7 +252,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .tile a {
   justify-self: start;
   width: 100%;
-  color: rgb(var(--ctp-antiblue));
+  color: var(--blue-4);
 }
 
 .tile a:not(.btn) {
@@ -272,8 +268,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   max-width: 12rem;
   font-size: 80%;
   border-radius: var(--btnsqr);
-  background-color: rgba(var(--ctp-antiblue)/ 30%);
-  color: var(--ctp-antitext);
+  background-color: var(--accent-bg-color);
+  color: var(--accent-fg-color);
   opacity: 1;
   font-weight: 600;
   font-variation-settings: "wght"600;
@@ -285,7 +281,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   transition: box-shadow 200ms var(--slickease);
   margin: 0.3rem;
   border: none;
-  box-shadow: 0 0 0 0 rgba(var(--ctp-antiblue)/ 30%);
+  box-shadow: 0 0 0 0 var(--accent-bg-color);
   min-width: 4rem;
   vertical-align: middle;
   text-align: center;
@@ -293,7 +289,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .tile .btn:hover {
-  box-shadow: 0 0 0 2px rgba(var(--ctp-antiblue)/ 30%);
+  box-shadow: 0 0 0 2px var(--accent-bg-color);
   text-decoration: none;
 }
 
@@ -316,7 +312,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   position: fixed;
   bottom: 0;
   padding: 0;
-  background-color: rgba(var(--ctp-base) / 75%);
+  background-color: var(--headerbar-backdrop-color);
   backdrop-filter: blur(12px);
   z-index: 9999;
   padding-left: 8px;
@@ -359,7 +355,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   flex-direction: column;
   width: auto;
   height: 100%;
-  color: var(--ctp-text);
+  color: var(--window-fg-color);
   font-weight: bold;
   text-decoration: none;
   border-radius: 0.6rem;
@@ -370,11 +366,16 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 .view-switcher-narrow a:hover,
 .view-switcher-narrow a:focus {
-  background-color: rgb(0 0 0 / 2.5%);
+  background-color: rgba(0, 0, 6, 0.056);
 }
 
 .view-switcher-narrow .current {
-  background-color: rgb(0 0 0 / 5%);
+  background-color: rgba(0, 0, 6, 0.08);
+}
+
+.view-switcher-narrow .current:hover,
+.view-switcher-narrow .current:focus {
+  background-color: rgba(0, 0, 6, 0.136);
 }
 
 .view-switcher-narrow svg {
@@ -393,7 +394,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   position: sticky;
   top: 0;
   padding: 0;
-  background-color: rgba(var(--ctp-base) / 75%);
+  background-color: var(--headerbar-backdrop-color);
   backdrop-filter: blur(12px);
   z-index: 9999;
 }
@@ -424,7 +425,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   justify-content: center;
   width: 8.25rem;
   height: 100%;
-  color: var(--ctp-text);
+  color: var(--window-fg-color);
   font-weight: bold;
   text-decoration: none;
   border-radius: 0.65rem;
@@ -434,11 +435,16 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 .view-switcher a:hover,
 .view-switcher a:focus {
-  background-color: rgb(0 0 0 / 2.5%);
+  background-color: rgba(0, 0, 6, 0.056);
 }
 
 .view-switcher .current {
-  background-color: rgb(0 0 0 / 5%);
+  background-color: rgba(0, 0, 6, 0.08);
+}
+
+.view-switcher .current:hover,
+.view-switcher .current:focus {
+  background-color: rgba(0, 0, 6, 0.136);
 }
 
 .view-switcher svg {
@@ -448,8 +454,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 /* Footer */
 footer {
-  background-color: rgb(var(--ctp-antibase));
-  color: var(--ctp-antitext);
+  background-color: var(--card-bg-color);
+  color: var(--card-fg-color);
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
