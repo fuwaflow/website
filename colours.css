@@ -1,0 +1,188 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+
+/* Root Variables - Light Mode (Default) */
+:root {
+  --ctp-text: var(--ctp-latte-text);
+  --ctp-base: var(--ctp-latte-base-rgb);
+  --ctp-blue: var(--ctp-latte-blue-rgb);
+  --ctp-lavender: var(--ctp-latte-lavender);
+  --ctp-antitext: var(--ctp-frappe-text);
+  --ctp-antibase: var(--ctp-frappe-base-rgb);
+  --ctp-antiblue: var(--ctp-frappe-blue-rgb);
+  --ctp-antilavender: var(--ctp-frappe-lavender);
+  
+  /* Accent colours */
+  --accent-colour: var(--ctp-lavender);
+  --accent-colour: Accentcolour;
+  --accent-bg-colour: #3584e4;
+  --accent-fg-colour: #ffffff;
+
+  /* Destructive colours */
+  --destructive-colour: #c01c28;
+  --destructive-bg-colour: #e01b24;
+  --destructive-fg-colour: #ffffff;
+
+  /* Success colours */
+  --success-colour: #1b8553;
+  --success-bg-colour: #2ec27e;
+  --success-fg-colour: #ffffff;
+
+  /* Warning colours */
+  --warning-colour: #9c6e03;
+  --warning-bg-colour: #e5a50a;
+  --warning-fg-colour: rgba(0, 0, 0, 0.8);
+
+  /* Error colours */
+  --error-colour: #c01c28;
+  --error-bg-colour: #e01b24;
+  --error-fg-colour: #ffffff;
+
+  /* Window colours */
+  --window-bg-colour: #fafafa;
+  --window-fg-colour: rgba(0, 0, 0, 0.8);
+
+  /* View colours */
+  --view-bg-colour: #ffffff;
+  --view-fg-colour: rgba(0, 0, 0, 0.8);
+
+  /* Header Bar colours */
+  --headerbar-bg-colour: #ffffff;
+  --headerbar-fg-colour: rgba(0, 0, 0, 0.8);
+  --headerbar-border-colour: rgba(0, 0, 0, 0.8);
+  --headerbar-backdrop-colour: #fafafa;
+  --headerbar-shade-colour: rgba(0, 0, 0, 0.12);
+  --headerbar-darker-shade-colour: rgba(0, 0, 0, 0.12);
+
+  /* Sidebar colours */
+  --sidebar-bg-colour: #ebebeb;
+  --sidebar-fg-colour: rgba(0, 0, 0, 0.8);
+  --sidebar-backdrop-colour: #f2f2f2;
+  --sidebar-border-colour: rgba(0, 0, 0, 0.07);
+  --sidebar-shade-colour: rgba(0, 0, 0, 0.07);
+
+  /* Secondary Sidebar colours */
+  --secondary-sidebar-bg-colour: #f3f3f3;
+  --secondary-sidebar-fg-colour: rgba(0, 0, 0, 0.8);
+  --secondary-sidebar-backdrop-colour: #f6f6f6;
+  --secondary-sidebar-border-colour: rgba(0, 0, 0, 0.07);
+  --secondary-sidebar-shade-colour: rgba(0, 0, 0, 0.07);
+
+  /* Card colours */
+  --card-bg-colour: #ffffff;
+  --card-fg-colour: rgba(0, 0, 0, 0.8);
+  --card-shade-colour: rgba(0, 0, 0, 0.07);
+
+  /* Thumbnail colours */
+  --thumbnail-bg-colour: #ffffff;
+  --thumbnail-fg-colour: rgba(0, 0, 0, 0.8);
+
+  /* Dialog colours */
+  --dialog-bg-colour: #fafafa;
+  --dialog-fg-colour: rgba(0, 0, 0, 0.8);
+
+  /* Popover colours */
+  --popover-bg-colour: #ffffff;
+  --popover-fg-colour: rgba(0, 0, 0, 0.8);
+  --popover-shade-colour: rgba(0, 0, 0, 0.07);
+
+  /* Miscellaneous */
+  --shade-colour: rgba(0, 0, 0, 0.07);
+  --scrollbar-outline-colour: #ffffff;
+
+  /* Helper colours */
+  --borders: rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-colour-scheme: dark) {
+  :root {
+    --accent-colour: #78aeed;
+    --accent-bg-colour: #3584e4;
+    --accent-fg-colour: #ffffff;
+
+    --destructive-colour: #ff7b63;
+    --destructive-bg-colour: #c01c28;
+    --destructive-fg-colour: #ffffff;
+
+    --success-colour: #8ff0a4;
+    --success-bg-colour: #26a269;
+    --success-fg-colour: #ffffff;
+
+    --warning-colour: #f8e45c;
+    --warning-bg-colour: #cd9309;
+    --warning-fg-colour: rgba(0, 0, 0, 0.8);
+
+    --error-colour: #ff7b63;
+    --error-bg-colour: #c01c28;
+    --error-fg-colour: #ffffff;
+
+    --window-bg-colour: #242424;
+    --window-fg-colour: #ffffff;
+
+    --view-bg-colour: #1e1e1e;
+    --view-fg-colour: #ffffff;
+
+    --headerbar-bg-colour: #303030;
+    --headerbar-fg-colour: #ffffff;
+    --headerbar-border-colour: #ffffff;
+    --headerbar-backdrop-colour: #242424;
+    --headerbar-shade-colour: rgba(0, 0, 0, 0.36);
+    --headerbar-darker-shade-colour: rgba(0, 0, 0, 0.9);
+
+    --sidebar-bg-colour: #303030;
+    --sidebar-fg-colour: #ffffff;
+    --sidebar-backdrop-colour: #2a2a2a;
+    --sidebar-border-colour: rgba(0, 0, 0, 0.36);
+    --sidebar-shade-colour: rgba(0, 0, 0, 0.25);
+
+    --secondary-sidebar-bg-colour: #2a2a2a;
+    --secondary-sidebar-fg-colour: #ffffff;
+    --secondary-sidebar-backdrop-colour: #272727;
+    --secondary-sidebar-border-colour: rgba(0, 0, 0, 0.36);
+    --secondary-sidebar-shade-colour: rgba(0, 0, 0, 0.25);
+
+    --card-bg-colour: rgba(255, 255, 255, 0.08);
+    --card-fg-colour: #ffffff;
+    --card-shade-colour: rgba(0, 0, 0, 0.36);
+
+    --thumbnail-bg-colour: #383838;
+    --thumbnail-fg-colour: #ffffff;
+
+    --dialog-bg-colour: #383838;
+    --dialog-fg-colour: #ffffff;
+
+    --popover-bg-colour: #383838;
+    --popover-fg-colour: #ffffff;
+    --popover-shade-colour: rgba(0, 0, 0, 0.25);
+
+    --shade-colour: rgba(0, 0, 0, 0.25);
+    --scrollbar-outline-colour: rgba(0, 0, 0, 0.5);
+
+    --borders: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ctp-text: var(--ctp-frappe-text);
+    --ctp-base: var(--ctp-frappe-base-rgb);
+    --ctp-blue: var(--ctp-frappe-blue-rgb);
+    --accent-colour: var(--ctp-frappe-lavender);
+    --ctp-antitext: var(--ctp-latte-text);
+    --ctp-antibase: var(--ctp-latte-base-rgb);
+    --ctp-antiblue: var(--ctp-latte-blue-rgb);
+    --ctp-antilavender: var(--ctp-latte-lavender);
+  }
+
+  .view-switcher a:hover,
+  .view-switcher a:focus,
+  .view-switcher-narrow a:hover,
+  .view-switcher-narrow a:focus {
+    background-color: rgb(255 255 255 / 2.5%);
+  }
+
+  .view-switcher .current .view-switcher-narrow .current {
+    background-color: rgb(255 255 255 / 5%);
+  }
+}

@@ -1,16 +1,7 @@
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+@import 'colours.css';
 
 /* Root Variables - Light Mode (Default) */
 :root {
-  --ctp-text: var(--ctp-latte-text);
-  --ctp-base: var(--ctp-latte-base-rgb);
-  --ctp-blue: var(--ctp-latte-blue-rgb);
-  --ctp-lavender: var(--ctp-latte-lavender);
-  --ctp-antitext: var(--ctp-frappe-text);
-  --ctp-antibase: var(--ctp-frappe-base-rgb);
-  --ctp-antiblue: var(--ctp-frappe-blue-rgb);
-  --ctp-antilavender: var(--ctp-frappe-lavender);
-
   /* Layout Variables */
   --pagewidth: 50rem;
   --grid-gap: 3rem;
@@ -82,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: var(--ctp-lavender);
+  color: var(--accent-colour);
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -111,7 +102,7 @@ h4 {
   padding: 1rem 1.5rem;
   background-color: rgb(var(--ctp-antibase));
   border-radius: var(--rounded-corner);
-  border-left: 3px solid var(--ctp-lavender);
+  border-left: 3px solid var(--accent-colour);
 }
 
 .note p {
@@ -481,31 +472,6 @@ footer {
 .social a {
   color: inherit;
   text-decoration: none;
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ctp-text: var(--ctp-frappe-text);
-    --ctp-base: var(--ctp-frappe-base-rgb);
-    --ctp-blue: var(--ctp-frappe-blue-rgb);
-    --ctp-lavender: var(--ctp-frappe-lavender);
-    --ctp-antitext: var(--ctp-latte-text);
-    --ctp-antibase: var(--ctp-latte-base-rgb);
-    --ctp-antiblue: var(--ctp-latte-blue-rgb);
-    --ctp-antilavender: var(--ctp-latte-lavender);
-  }
-
-  .view-switcher a:hover,
-  .view-switcher a:focus,
-  .view-switcher-narrow a:hover,
-  .view-switcher-narrow a:focus {
-    background-color: rgb(255 255 255 / 2.5%);
-  }
-
-  .view-switcher .current .view-switcher-narrow .current {
-    background-color: rgb(255 255 255 / 5%);
-  }
 }
 
 /* Responsive Design */
