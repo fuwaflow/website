@@ -1,6 +1,6 @@
 :root{
   --accent-bg-color: oklch(from AccentColor 0.6638 0.1751 h);
-  --window:bg-color: oklch(from AccentColor 0.9578 0.0058 h);
+  --window-bg-color: oklch(from AccentColor 0.9578 0.0058 h);
 }
 
 @media (prefers-color-scheme: dark) {
