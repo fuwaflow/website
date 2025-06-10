@@ -150,6 +150,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   padding: 0 var(--spacing);
   box-sizing: border-box;
   margin: 0 auto;
+  margin-bottom: 1rem;
   gap: 0.5rem;
 }
 
