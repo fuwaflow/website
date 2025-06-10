@@ -4,7 +4,7 @@
 /* Root Variables - Light Mode (Default) */
 :root {
   /* Layout Variables */
-  --content-width: 50rem;
+  --content-width: 60rem;
   --spacing: 3rem;
   --content-max-width: var(--content-width);
   --narrow-width: 60%;
@@ -53,11 +53,14 @@ html, body {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: var(--window-bg-color);
   color: var(--window-fg-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  gap: 1rem;
 }
 
 /* Typography */
@@ -85,19 +88,18 @@ h2:first-child {
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.6em;
 }
 
 h3 {
-  font-size: 1.45em;
+  font-size: 1.4em;
 }
 
 h4 {
-  font-size: 1.20em;
+  font-size: 1.2em;
 }
 
 .note {
-  margin: 1.5rem 0;
   padding: 1rem 1.5rem;
   background-color: var(--card-bg-color);
   border-radius: var(--rounded-corner);
@@ -140,20 +142,19 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 /* Layout */
 .container {
-  margin: 2rem 0 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: var(--content-width);
   padding: 0 var(--spacing);
+  box-sizing: border-box;
+  margin: 0 auto;
+  gap: 0.5rem;
 }
 
 .container > * {
   width: 100%;
-  max-width: var(--content-width);
 }
 
 /* Cards */
@@ -161,10 +162,10 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing);
-  padding: var(--spacing);
   justify-content: center;
-  align-content: center;
-  transition: all 300ms var(--slickease);
+  align-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cards:has(> :only-child) {
@@ -305,7 +306,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 3.3rem;
+  height: 3.75rem;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -333,8 +334,9 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 0.25rem;
+  gap: 0.5rem;
   width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -343,7 +345,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .view-switcher-narrow li {
   display: inline-block;
   width: 100%;
-  max-width: 6.8rem;
+  height: 100%;
+  max-width: 5rem;
 }
 
 .view-switcher-narrow a {
@@ -358,8 +361,9 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   text-decoration: none;
   border-radius: 0.6rem;
   transition: background-color 0.2s ease, color 0.2s ease;
-  gap: 0px;
-  font-size: 0.8rem;
+  gap: 0.1rem;
+  font-size: 0.9rem;
+  padding: 0.125rem;
 }
 
 .view-switcher-narrow a:hover,
@@ -377,8 +381,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 }
 
 .view-switcher-narrow svg {
-  width: 1.25em;
-  height: auto;
   margin-top: 4px;
 }
 
@@ -428,7 +430,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   text-decoration: none;
   border-radius: 0.65rem;
   transition: background-color 0.2s ease, color 0.2s ease;
-  gap: 6px;
+  gap: 0.4rem;
 }
 
 .view-switcher a:hover,
@@ -499,19 +501,6 @@ footer {
     padding-bottom: 5.5rem;
   }
 
-  .container {
-    padding: 0 var(--spacing);
-  }
-
-  .cards {
-    padding: var(--spacing);
-    gap: var(--spacing);
-  }
-
-  .card {
-    min-width: 100%;
-  }
-
   .card .description {
     padding: 1rem;
   }
@@ -539,4 +528,9 @@ footer {
   .social li {
     margin: 0;
   }
+
+  body {
+    margin-top: 2rem;
+  }
+
 }
