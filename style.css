@@ -150,7 +150,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   padding: 0 var(--spacing);
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 1rem;
   gap: 0.5rem;
 }
 
@@ -181,7 +180,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   transition: all 300ms var(--slickease);
   margin: 0;
   padding: 0;
-  border-radius: 24px;
+  border-radius: calc(var(--rounded-corner) * 2);
   background-color: var(--card-bg-color);
   color: var(--card-fg-color);
   box-sizing: border-box;
@@ -307,7 +306,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 3.75rem;
+  height: 4rem;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -360,29 +359,31 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   color: var(--window-fg-color);
   font-weight: bold;
   text-decoration: none;
-  border-radius: 0.6rem;
+  border-radius: var(--btnsqr);
   transition: background-color 0.2s ease, color 0.2s ease;
   gap: 0.1rem;
-  font-size: 0.9rem;
-  padding: 0.125rem;
+  font-size: 0.85rem;
+  padding: 0.15rem;
 }
 
 .view-switcher-narrow a:hover,
 .view-switcher-narrow a:focus {
-  background-color: rgba(0, 0, 6, 0.056);
+  background-color: rgba(0, 0, 6, 0.03);
 }
 
 .view-switcher-narrow .current {
-  background-color: rgba(0, 0, 6, 0.08);
+  background-color: rgba(0, 0, 6, 0.05);
 }
 
 .view-switcher-narrow .current:hover,
 .view-switcher-narrow .current:focus {
-  background-color: rgba(0, 0, 6, 0.136);
+  background-color: rgba(0, 0, 6, 0.08);
 }
 
 .view-switcher-narrow svg {
   margin-top: 4px;
+  width: 1.2rem;
+
 }
 
 /* Header Bar */
@@ -429,7 +430,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   color: var(--window-fg-color);
   font-weight: bold;
   text-decoration: none;
-  border-radius: 0.65rem;
+  border-radius: var(--btnsqr);
   transition: background-color 0.2s ease, color 0.2s ease;
   gap: 0.4rem;
 }
@@ -531,7 +532,7 @@ footer {
   }
 
   body {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
 }
