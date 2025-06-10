@@ -1,14 +1,13 @@
 @import 'catppuccin.css';
-
 @import 'colors.css';
 
 /* Root Variables - Light Mode (Default) */
 :root {
   /* Layout Variables */
-  --pagewidth: 50rem;
-  --grid-gap: 3rem;
-  --pagegridwidth: calc(var(--pagewidth) + (6 * var(--grid-gap)));
-  --narrowwidth: 60%;
+  --content-width: 50rem;
+  --spacing: 3rem;
+  --content-max-width: var(--content-width);
+  --narrow-width: 60%;
   --defaultsize: 18px;
   --slickease: cubic-bezier(.17, .89, .32, 1.28);
   --max-width: 1200px;
@@ -149,31 +148,30 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--grid-gap);
+  padding: 0 var(--spacing);
 }
 
 .container > * {
   width: 100%;
-  max-width: var(--pagewidth);
+  max-width: var(--content-width);
 }
 
-/* Tiles */
-.tiles {
+/* Cards */
+.cards {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
-  row-gap: 20px;
-  padding: 20px;
+  gap: var(--spacing);
+  padding: var(--spacing);
   justify-content: center;
   align-content: center;
   transition: all 300ms var(--slickease);
 }
 
-.tiles:has(> :only-child) {
+.cards:has(> :only-child) {
   grid-template-columns: 1fr;
 }
 
-.tile {
+.card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -190,7 +188,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   min-width: 350px;
 }
 
-.tile img {
+.card img {
   height: 270px;
   object-fit: cover;
   object-position: bottom center;
@@ -199,7 +197,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   width: 100%;
 }
 
-.tile .description {
+.card .description {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -208,7 +206,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   flex: 1;
 }
 
-.tile h4 {
+.card h4 {
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -217,7 +215,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   gap: 0.5rem;
 }
 
-.tile h3 {
+.card h3 {
   font-weight: 800;
   margin: 0;
   padding: 0;
@@ -227,13 +225,13 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   overflow-wrap: anywhere;
 }
 
-.tile h3 img {
+.card h3 img {
   width: 1em;
   height: 1em;
   border-radius: 0.375rem;
 }
 
-.tile p {
+.card p {
   opacity: 0.8;
   margin: 0;
   padding: 0;
@@ -245,26 +243,26 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   margin-bottom: 18px;
 }
 
-.tile p+p {
+.card p+p {
   margin-top: 9px;
 }
 
-.tile a {
+.card a {
   justify-self: start;
   width: 100%;
   color: var(--blue-4);
 }
 
-.tile a:not(.btn) {
+.card a:not(.btn) {
   text-decoration: none;
 }
 
-.tile a:not(.btn):hover {
+.card a:not(.btn):hover {
   text-decoration: underline;
 }
 
-/* Button styles for tiles */
-.tile .btn {
+/* Button styles for cards */
+.card .btn {
   max-width: 12rem;
   font-size: 80%;
   border-radius: var(--btnsqr);
@@ -288,12 +286,12 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   white-space: nowrap;
 }
 
-.tile .btn:hover {
+.card .btn:hover {
   box-shadow: 0 0 0 2px var(--accent-bg-color);
   text-decoration: none;
 }
 
-.tile .btn svg {
+.card .btn svg {
   margin-right: 6px;
   vertical-align: middle;
   display: inline-block;
@@ -484,8 +482,8 @@ footer {
 
 @media only screen and (max-width: 720px) {
   :root {
-    --narrowwidth: 100%;
-    --grid-gap: 1rem;
+    --narrow-width: 100%;
+    --spacing: 1rem;
     --defaultsize: 16px;
   }
 
@@ -502,22 +500,23 @@ footer {
   }
 
   .container {
-    padding: 0 var(--grid-gap);
+    padding: 0 var(--spacing);
   }
 
-  .tiles {
-    padding: 10px;
+  .cards {
+    padding: var(--spacing);
+    gap: var(--spacing);
   }
 
-  .tile {
+  .card {
     min-width: 100%;
   }
 
-  .tile .description {
+  .card .description {
     padding: 1rem;
   }
 
-  .tile .btn {
+  .card .btn {
     margin: 0.5rem 0 0;
     display: block;
     max-width: 100%;
