@@ -300,6 +300,103 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   fill: currentColor;
 }
 
+/* View Switcher Shared Styles */
+.view-switcher,
+.view-switcher-narrow {
+  justify-content: center;
+  padding: 0.25rem;
+  background-color: var(--headerbar-backdrop-color);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  border-radius: var(--btnround);
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1), 
+              0 0 1rem rgba(0, 0, 0, 0.05),
+              inset 0 1px 1px rgba(255, 255, 255, 1),
+              inset 0 0 0.27rem rgba(255, 255, 255, 1);
+}
+
+.view-switcher ul,
+.view-switcher-narrow ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+
+.view-switcher a,
+.view-switcher-narrow a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 1.25rem;
+  text-decoration: none;
+  border-radius: var(--btnround);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: bold;
+  white-space: nowrap;
+  height: 100%;
+}
+
+/* View Switcher Specific */
+.view-switcher {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 1rem;
+}
+
+.view-switcher a {
+  gap: 0.4rem;
+}
+
+.view-switcher svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* View Switcher Narrow Specific */
+.view-switcher-narrow {
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  align-items: stretch;
+}
+
+.view-switcher-narrow a {
+  flex-direction: column;
+  gap: 0.05rem;
+  font-size: 0.8rem;
+}
+
+.view-switcher-narrow svg {
+  margin-top: 0.25rem;
+  width: 1.2rem;
+}
+
+/* View Switcher States */
+.view-switcher a:hover,
+.view-switcher a:focus,
+.view-switcher-narrow a:hover,
+.view-switcher-narrow a:focus {
+  background-color: rgba(0, 0, 6, 0.03);
+  color: var(--window-fg-color);
+}
+
+.view-switcher .current,
+.view-switcher-narrow .current {
+  background-color: rgba(0, 0, 6, 0.05);
+  color: var(--view-switcher-accent);
+}
+
+.view-switcher .current:hover,
+.view-switcher .current:focus,
+.view-switcher-narrow .current:hover,
+.view-switcher-narrow .current:focus {
+  background-color: rgba(0, 0, 6, 0.08);
+  color: var(--view-switcher-accent);
+}
+
 /* View Switcher Bar */
 .view-switcher-bar {
   display: none;
@@ -309,13 +406,12 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
   width: fit-content;
   position: fixed;
   bottom: 0;
+  margin: 1rem;
+  right: 0;
+  left: 0;
   background-color: var(--headerbar-backdrop-color);
   backdrop-filter: blur(12px);
   z-index: 9999;
-  margin: 1rem;
-  padding: 0.25rem;
-  right: 0;
-  left: 0;
   border-radius: var(--btnround);
   box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1), 
               0 0 1rem rgba(0, 0, 0, 0.05),
@@ -323,140 +419,17 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
               inset 0 0 0.27rem rgba(255, 255, 255, 1);
 }
 
-/* View Switcher */
-.view-switcher-narrow {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  align-content: center;
-  align-items: stretch;
-}
-
-.view-switcher-narrow ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
-  max-width: 28rem;
-  gap: 0.25rem;
-  align-items: stretch;
-}
-
-.view-switcher-narrow li {
-  display: flex;
-  flex: 1;
-  min-width: 0;
-  align-items: stretch;
-}
-
-.view-switcher-narrow a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: var(--btnround);
-  transition: background-color 0.2s ease, color 0.2s ease;
-  gap: 0.05rem;
-  font-size: 0.8rem;
-  padding: 0.15rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  flex: 1;
-}
-
-.view-switcher-narrow a:hover,
-.view-switcher-narrow a:focus,
-.view-switcher a:hover,
-.view-switcher a:focus {
-  background-color: rgba(0, 0, 6, 0.03);
-  color: var(--window-fg-color);
-
-}
-
-.view-switcher-narrow .current,
-.view-switcher .current {
-  background-color: rgba(0, 0, 6, 0.05);
-  color: var(--view-switcher-accent)
-}
-
-.view-switcher-narrow .current:hover,
-.view-switcher-narrow .current:focus,
-.view-switcher .current:hover,
-.view-switcher .current:focus {
-  background-color: rgba(0, 0, 6, 0.08);
-  color: var(--view-switcher-accent)
-
-}
-
-.view-switcher-narrow svg {
-  margin-top: 0.25rem;
-  width: 1.2rem;
-}
-
 /* Header Bar */
 .headerbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
+  height: fit-content;
   width: 100%;
   position: sticky;
   top: 0;
   padding: 0;
-  background-color: var(--headerbar-backdrop-color);
-  backdrop-filter: blur(12px);
   z-index: 9999;
-}
-
-/* View Switcher */
-.view-switcher {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  height: 80%
-}
-
-.view-switcher ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 0.25rem;
-}
-
-.view-switcher li {
-  display: inline-block;
-}
-
-.view-switcher a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 8.25rem;
-  height: 100%;
-  color: var(--window-fg-color);
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: var(--btnsqr);
-  transition: background-color 0.2s ease, color 0.2s ease;
-  gap: 0.4rem;
-}
-
-.view-switcher svg {
-  width: 1em;
-  height: 1em;
 }
 
 /* Footer */

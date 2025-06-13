@@ -137,7 +137,7 @@
 
 .view-switcher a,
 .view-switcher-narrow a {
-  color: rgb(76, 79, 105, 0.9);
+  color: rgb(76, 79, 105, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -245,10 +245,17 @@
 
   .view-switcher a,
   .view-switcher-narrow a {
-    color: rgb(205, 214, 244, 0.9);
+    color: rgb(205, 214, 244, 0.8);
   }
 
-  .view-switcher-bar {
+  .view-switcher-narrow {
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1), 
+                0 0 1rem rgba(0, 0, 0, 0.05),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 0.27rem rgba(255, 255, 255, 0.1);
+  }
+  
+  .view-switcher {
     box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.1), 
                 0 0 1rem rgba(0, 0, 0, 0.05),
                 inset 0 1px 1px rgba(255, 255, 255, 0.1),
