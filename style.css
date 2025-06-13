@@ -250,7 +250,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .card a {
   justify-self: start;
   width: 100%;
-  color: var(--blue-4);
 }
 
 .card a:not(.btn) {
