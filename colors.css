@@ -1,42 +1,6 @@
-@supports (color: AccentColor) {
-  :root{
-    --accent-bg-color: oklch(from AccentColor 0.6638 0.1751 h);
-    --window-bg-color: oklch(from AccentColor 0.9578 0.0058 h);
-    --card-bg-color: oklch(from AccentColor 0.9335 0.0087 h);
-    --headerbar-backdrop-color: oklch(from AccentColor 0.9578 0.0058 h / 80%);
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --accent-bg-color: oklch(from AccentColor 0.8099 0.0759 h);
-      --window-bg-color: oklch(from AccentColor 0.3291 0.0324 h);
-      --card-bg-color: oklch(from AccentColor 0.4601 0.0367 h / 8%);
-      --headerbar-backdrop-color: oklch(from AccentColor 0.3291 0.0324 h / 80%);
-    }
-  }
-}
-
+@import "catppuccin.css";
 
 @media (prefers-color-scheme: dark) {
-  .view-switcher a:hover,
-  .view-switcher a:focus,
-  .view-switcher-narrow a:hover,
-  .view-switcher-narrow a:focus {
-    background-color: rgba(255, 255, 255, 0.056);
-  }
-
-  .view-switcher .current,
-  .view-switcher-narrow .current {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-
-  .view-switcher .current:hover,
-  .view-switcher .current:focus,
-  .view-switcher-narrow .current:hover,
-  .view-switcher-narrow .current:focus {
-    background-color: rgba(255, 255, 255, 0.136);
-  }
-
-  
   a {
     color: var(--blue-2);
   }
