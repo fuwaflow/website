@@ -59,7 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 /* Typography */
@@ -160,7 +160,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing);
+  gap: 1.5rem;
   justify-content: center;
   align-content: flex-start;
   width: 100%;
