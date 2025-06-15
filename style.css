@@ -49,13 +49,13 @@ html, body {
   letter-spacing: -0.01em;
   word-spacing: -0.01em;
   scroll-behavior: smooth;
+  background: var(--window-bg-color);
+  color: var(--window-fg-color);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: var(--window-bg-color);
-  color: var(--window-fg-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
