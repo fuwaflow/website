@@ -3,6 +3,7 @@
   --accent-color: rgb(32, 159, 181);
   --accent-bg-color: rgb(114, 135, 253);
   --accent-fg-color: rgb(239, 241, 245);
+  --view-switcher-accent: oklch(0.50 0.12 273.13);
 
   /* Destructive Colors */
   --destructive-color: rgb(210, 15, 57);
@@ -146,6 +147,7 @@
     --accent-color: rgb(180, 190, 254);
     --accent-bg-color: rgb(180, 190, 254);
     --accent-fg-color: rgb(17, 17, 27);
+    --view-switcher-accent: oklch(0.7664 0.1113 273.13);
 
     /* Destructive Colors */
     --destructive-color: rgb(238, 153, 160);
