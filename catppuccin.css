@@ -144,10 +144,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Accent Colors */
-    --accent-color: oklch(0.82 0.09 277.31 / 1);
-    --accent-bg-color: oklch(0.82 0.09 277.31 / 1);
+    --accent-color: oklch(0.77 0.11 277.31 / 1);
+    --accent-bg-color: oklch(0.77 0.11 277.31 / 1);
     --accent-fg-color: oklch(0.18 0.02 284.20 / 1);
-    --view-switcher-accent: oklch(0.7664 0.1113 273.13);
+    --view-switcher-accent: oklch(0.77 0.11 273.31);
 
     /* Destructive Colors */
     --destructive-color: oklch(0.77 0.10 14.37 / 1);
@@ -267,19 +267,19 @@
 
 @supports (color: AccentColor) {
   :root{
-    --accent-bg-color: oklch(from AccentColor 0.6638 0.1751 h);
-    --window-bg-color: oklch(from AccentColor 0.9578 0.0058 h);
-    --card-bg-color: oklch(from AccentColor 0.9335 0.0087 h);
-    --headerbar-backdrop-color: oklch(from AccentColor 0.9578 0.0058 h / 80%);
+    --accent-bg-color: oklch(from AccentColor 0.66 0.18 h);
+    --window-bg-color: oklch(from AccentColor 0.96 0.01 h);
+    --card-bg-color: oklch(from AccentColor 0.93 0.01 h);
+    --headerbar-backdrop-color: oklch(from AccentColor 0.96 0.01 h / 80%);
     --view-switcher-accent: oklch(from AccentColor 0.50 0.12 h);
   }
   @media (prefers-color-scheme: dark) {
     :root{
-      --accent-bg-color: oklch(from AccentColor 0.7664 0.1113 h);
-      --window-bg-color: oklch(from AccentColor 0.2429 0.0304 h);
-      --card-bg-color: oklch(from AccentColor 0.3240 0.0319 h);
-      --headerbar-backdrop-color: oklch(from AccentColor 0.2429 0.0304  h / 70%);
-      --view-switcher-accent: oklch(from AccentColor 0.7664 0.1113 h);
+      --accent-bg-color: oklch(from AccentColor 0.77 0.11 h);
+      --window-bg-color: oklch(from AccentColor 0.24 0.03 h);
+      --card-bg-color: oklch(from AccentColor 0.32 0.03 h);
+      --headerbar-backdrop-color: oklch(from AccentColor 0.24 0.03 h / 80%);
+      --view-switcher-accent: oklch(from AccentColor 0.77 0.11 h);
     }
   }
 }
