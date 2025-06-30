@@ -9,6 +9,7 @@ node_modules/
 .cache/
 .eleventy-cache/
 .env
+eleventy-fetch-*
 
 # Editor directories and files
 .idea/
@@ -48,3 +49,10 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Deployment files that should be generated on deploy
+.vercel
+.netlify
+
+# GitHub Pages
+.nojekyll
