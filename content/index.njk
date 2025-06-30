@@ -15,7 +15,7 @@ const eleventyNavigation = {
   <div class="cards">
     <div class="card">
       <a href="https://buildtheearth.net" target="_blank" rel="noopener noreferrer">
-        <img alt="BuildTheEarth.net - Recreating Earth in Minecraft" src="https://cdn.buildtheearth.net/uploads/879c4af49ee880f348c95e9fd7bdb11dd526fda08ce6dd9c1bfaee3b91a7368e">
+        <img alt="BuildTheEarth.net - Recreating Earth in Minecraft" src="{{ 'img/projects/bte-header.png' | url }}">
       </a>
       <div class="description">
         <h3>
@@ -31,11 +31,11 @@ const eleventyNavigation = {
     </div>
     <div class="card">
       <a href="https://github.com/Avdan-OS" target="_blank" rel="noopener noreferrer">
-        <img alt="AvdanOS - Linux Desktop Environment Project" src="https://raw.githubusercontent.com/Avdan-OS/Website/dev/src/public/assets/marketing/header.png">
+        <img alt="AvdanOS - Linux Desktop Environment Project" src="{{ 'img/projects/avdanos-header.png' | url }}">
       </a>
       <div class="description">
         <h3>
-          <img src="https://avatars.githubusercontent.com/u/103757089" alt="AvdanOS Logo" style="vertical-align: middle; width: 1em; height: auto;">
+          <img src="{{ 'img/logos/avdanos-icon.png' | url }}" alt="AvdanOS Logo" style="vertical-align: middle; width: 1em; height: auto;">
           AvdanOS
         </h3>
         <p>Linux Desktop environment project based on <a href="https://youtu.be/tXFEiw1aJTw" target="_blank" rel="noopener noreferrer">a concept by Avdan</a>.</p>
@@ -50,7 +50,7 @@ const eleventyNavigation = {
   <h2>Other Interests</h2>
   <div class="cards">
     <div class="card" id="devs">
-      <img alt="GNOME Developer Platform" src="https://www.gnome.org/img/download.webp">
+      <img alt="GNOME Developer Platform" src="{{ 'img/logos/gnome-platform.webp' | url }}">
       <div class="description">
         <h3>GNOME</h3>
         <p>Linux Desktop Environment</p>
@@ -65,8 +65,6 @@ const eleventyNavigation = {
           </svg>
           Visit GNOME
         </a>
-
-
       </div>
     </div>
   </div>
