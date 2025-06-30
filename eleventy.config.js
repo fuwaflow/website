@@ -6,7 +6,6 @@ import {
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -32,8 +31,6 @@ export default async function (eleventyConfig) {
 
 	// Watch CSS files
 	eleventyConfig.addWatchTarget("css/**/*.css");
-	// Watch images for the image pipeline.
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
 	// Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
 	// Bundle <style> content and adds a {% css %} paired shortcode
@@ -85,32 +82,11 @@ export default async function (eleventyConfig) {
 		},
 	});
 
-	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		// Output formats for each image.
-		formats: ["avif", "webp", "auto"],
-
-		// widths: ["auto"],
-
-		failOnError: false,
-		htmlOptions: {
-			imgAttributes: {
-				// e.g. <img loading decoding> assigned on the HTML tag will override these values.
-				loading: "lazy",
-				decoding: "async",
-			},
-		},
-
-		sharpOptions: {
-			animated: true,
-		},
-	});
-
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {
-		// by default we use Eleventy’s built-in `slugify` filter:
+		// by default we use Eleventy's built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});

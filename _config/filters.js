@@ -1,29 +1,30 @@
 import { DateTime } from "luxon";
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
+			format || "dd LLLL yyyy",
+		);
 	});
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
 	});
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
-		if(!Array.isArray(array) || array.length === 0) {
+		if (!Array.isArray(array) || array.length === 0) {
 			return [];
 		}
-		if( n < 0 ) {
+		if (n < 0) {
 			return array.slice(n);
 		}
 
@@ -36,32 +37,38 @@ export default function(eleventyConfig) {
 	});
 
 	// Return the keys used in an object
-	eleventyConfig.addFilter("getKeys", target => {
+	eleventyConfig.addFilter("getKeys", (target) => {
 		return Object.keys(target);
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
+		return (tags || []).filter((tag) => ["all", "posts"].indexOf(tag) === -1);
 	});
 
-	eleventyConfig.addFilter("sortAlphabetically", strings =>
-		(strings || []).sort((b, a) => b.localeCompare(a))
+	eleventyConfig.addFilter("sortAlphabetically", (strings) =>
+		(strings || []).sort((b, a) => b.localeCompare(a)),
 	);
 
-	eleventyConfig.addFilter("inlineSvg", function(iconName) {
-		if (!iconName) return '';
-		
-		const iconPath = path.join(__dirname, '..', '_includes', 'icons', `${iconName}.svg`);
-		
+	eleventyConfig.addFilter("inlineSvg", function (iconName) {
+		if (!iconName) return "";
+
+		const iconPath = path.join(
+			__dirname,
+			"..",
+			"_includes",
+			"icons",
+			`${iconName}.svg`,
+		);
+
 		try {
 			if (fs.existsSync(iconPath)) {
-				const svg = fs.readFileSync(iconPath, 'utf8');
+				const svg = fs.readFileSync(iconPath, "utf8");
 				return svg;
 			}
-			return '';
+			return "";
 		} catch (err) {
 			console.warn(`Could not load SVG icon: ${iconName}`, err);
-			return '';
+			return "";
 		}
 	});
 }
