@@ -1,0 +1,8 @@
+@import "catppuccin.css";
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--blue-2);
+  }
+
+}
