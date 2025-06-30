@@ -1,21 +1,21 @@
 {
-	"name": "linuxjava7.github.io",
+	"name": "linuxjava7.dev",
 	"version": "9.0.0",
 	"description": "A starter repository for a blog web site using the Eleventy site generator.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.github.io/",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.dev/",
 		"start": "npx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.github.io/ --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.dev/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/linuxjava7/linuxjava7.github.io.git"
+		"url": "git://github.com/linuxjava7/linuxjava7.dev.git"
 	},
 	"author": {
 		"name": "Zach Leatherman",
@@ -31,9 +31,9 @@
 		"url": "https://opencollective.com/11ty"
 	},
 	"bugs": {
-		"url": "https://github.com/linuxjava7/linuxjava7.github.io/issues"
+		"url": "https://github.com/linuxjava7/linuxjava7.dev/issues"
 	},
-	"homepage": "https://github.com/linuxjava7/linuxjava7.github.io#readme",
+	"homepage": "https://github.com/linuxjava7/linuxjava7.dev#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
