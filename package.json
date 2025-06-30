@@ -1,14 +1,14 @@
 {
-	"name": "linuxjava7.dev",
+	"name": "linuxjava7.github.io",
 	"version": "9.0.0",
 	"description": "A starter repository for a blog web site using the Eleventy site generator.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=linuxjava7.dev/",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.github.io/",
 		"start": "npx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "npx @11ty/eleventy --pathprefix=linuxjava7.dev/ --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/linuxjava7.github.io/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
