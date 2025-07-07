@@ -35,8 +35,8 @@ Also, the launcher opens a seperate game window that doesn't raise to the top au
 Performance isn't an issue, my FPS is always above 60, sometimes above 150—depending on the circumstances, with my GTX 1660—which is getting quite dated at this point—being 6 years old.   
 
 ### Mods
-I haven't tested out Content Manager for Assetto Corsa yet, but I have seem. guides on how to get it working and they seem pretty simple.
+I haven't tested out Content Manager for Assetto Corsa yet, but I have seen guides on how to get it working and they seem pretty simple.
 
 ## To answer the question in the title
 
-Yes. Overall, it wasn't bad,and pretty easy to get going, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
+Yes. Overall, it wasn't bad, and pretty easy to get going, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
