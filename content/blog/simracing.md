@@ -3,7 +3,7 @@ title: Can you simrace on Linux?
 description: Simracing with Assetto Corsa on Bazzite Linux, surprisingly easily.
 date: 2025-07-07
 tags: gaming
-draft: true
+draft: false
 ---
 
 
@@ -31,11 +31,11 @@ Eventually I realised my silly mistake and plugged in the power, and from there 
 
 ## How does the game run?
 Getting Assetto Corsa to work on Linux was slightly harder, although not by much, all I had to do was run it with Proton-GE 9-20 and that fixed any issues that I had with trying to start the game.
-Also, the launcher opens a seperate game window that doesn't raise to the top automatically, I spent about 10 minutes waiting for the game to load, only to realise it already loaded. 
+Also, the launcher opens a seperate game window that doesn't raise to the top automatically, I spent about 10 minutes waiting for the game to load, only to realise it had already loaded and was running underneath the launcher window. 
 Performance isn't an issue, my FPS is always above 60, sometimes above 150—depending on the circumstances, with my GTX 1660—which is getting quite dated at this point—being 6 years old.   
 ## Mods
 I haven't tested out Content Manager for Assetto Corsa yet, but I have seem. guides on how to get it working and they seem pretty simple.
 
 # To answer the question in the title
 
-Yes. Overall, it wasn't bad, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
+Yes. Overall, it wasn't bad,and pretty easy to get going, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
