@@ -36,5 +36,6 @@ Performance isn't an issue, my FPS is always above 60, sometimes above 150—dep
 ## Mods
 I haven't tested out Content Manager for Assetto Corsa yet, but I have seem. guides on how to get it working and they seem pretty simple.
 
+# To answer the question in the title
 
-Overall, it wasn't bad, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
+Yes. Overall, it wasn't bad, but I didn't expect anything different from the Linux gaming ecosystem in 2025, we've moved on from a lot of issues and I'm glad this is one of the issues we have moved away from.
