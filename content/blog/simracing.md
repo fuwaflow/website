@@ -26,7 +26,7 @@ Eventually I realised my silly mistake and plugged in the power, and from there 
 
 - I needed to set my wheel to PS3 mode to get it to be recognised by Assetto Corsa
 - I need to have the Oversteer app open when I use the wheel if I want force feedback to work
-- The LEDs that show the revs don't work without extra configuration, but this didn't really matter to me, so I didn't bother with it
+- The LEDs that show the revs don't work without extra configuration, but this didn't really matter to me, ~~so I didn't bother with it.~~ Since writing this, I have found [this script](https://github.com/d4rk/ac_shifting_leds) which makes it surprisingly easy to get working
 
 
 ## Assetto Corsa on Linux
@@ -37,7 +37,7 @@ Also, the launcher opens a seperate game window that doesn't raise to the top au
 Performance isn't an issue, my FPS is always above 60, sometimes above 150—depending on the circumstances, with my GTX 1660—which is getting quite dated at this point—being 6 years old.   
 
 ### Mods
-I haven't tested out Content Manager for Assetto Corsa yet, but I have seen guides on how to get it working and they seem pretty simple.
+~~I haven't tested out Content Manager for Assetto Corsa yet, but I have seen guides on how to get it working and they seem pretty simple.~~ I have also tried out Content Manager using [this guide](https://github.com/sihawido/assettocorsa-linux-setup/) and it works mostly without issues. It can sometimes crash, and the font rendering is sub-optimal, but these are minor problems.
 
 ## To answer the question in the title
 
