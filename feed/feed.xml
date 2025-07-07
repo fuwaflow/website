@@ -27,7 +27,7 @@ Eventually I realised my silly mistake and plugged in the power, and from there 
 &lt;ul&gt;
 &lt;li&gt;I needed to set my wheel to PS3 mode to get it to be recognised by Assetto Corsa&lt;/li&gt;
 &lt;li&gt;I need to have the Oversteer app open when I use the wheel if I want force feedback to work&lt;/li&gt;
-&lt;li&gt;The LEDs that show the revs don&#39;t work without extra configuration, but this didn&#39;t really matter to me, so I didn&#39;t bother with it&lt;/li&gt;
+&lt;li&gt;The LEDs that show the revs don&#39;t work without extra configuration, but this didn&#39;t really matter to me, &lt;s&gt;so I didn&#39;t bother with it.&lt;/s&gt; Since writing this, I have found &lt;a href=&quot;https://github.com/d4rk/ac_shifting_leds&quot;&gt;this script&lt;/a&gt; which makes it surprisingly easy to get working&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;assetto-corsa-on-linux&quot;&gt;Assetto Corsa on Linux&lt;/h2&gt;
 &lt;h3 id=&quot;how-does-the-game-run&quot;&gt;How does the game run?&lt;/h3&gt;
@@ -35,7 +35,7 @@ Eventually I realised my silly mistake and plugged in the power, and from there 
 Also, the launcher opens a seperate game window that doesn&#39;t raise to the top automatically, I spent about 10 minutes waiting for the game to load, only to realise it had already loaded and was running underneath the launcher window.
 Performance isn&#39;t an issue, my FPS is always above 60, sometimes above 150—depending on the circumstances, with my GTX 1660—which is getting quite dated at this point—being 6 years old.&lt;/p&gt;
 &lt;h3 id=&quot;mods&quot;&gt;Mods&lt;/h3&gt;
-&lt;p&gt;I haven&#39;t tested out Content Manager for Assetto Corsa yet, but I have seen guides on how to get it working and they seem pretty simple.&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;I haven&#39;t tested out Content Manager for Assetto Corsa yet, but I have seen guides on how to get it working and they seem pretty simple.&lt;/s&gt; I have also tried out Content Manager using &lt;a href=&quot;https://github.com/sihawido/assettocorsa-linux-setup/&quot;&gt;this guide&lt;/a&gt; and it works mostly without issues. It can sometimes crash, and the font rendering is sub-optimal, but these are minor problems.&lt;/p&gt;
 &lt;h2 id=&quot;to-answer-the-question-in-the-title&quot;&gt;To answer the question in the title&lt;/h2&gt;
 &lt;p&gt;Yes. Overall, it wasn&#39;t bad, and pretty easy to get going, but I didn&#39;t expect anything different from the Linux gaming ecosystem in 2025, we&#39;ve moved on from a lot of issues and I&#39;m glad this is one of the issues we have moved away from.&lt;/p&gt;
 </content>
