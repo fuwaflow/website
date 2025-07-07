@@ -4,6 +4,8 @@ description: Simracing with Assetto Corsa on Bazzite Linux, surprisingly easily.
 date: 2025-07-07
 tags: gaming
 draft: false
+eleventyNavigation:
+  parent: Blog
 ---
 
 
