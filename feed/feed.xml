@@ -26,7 +26,7 @@ Some wheels don&#39;t work without extra drivers and on Bazzite, that&#39;d be a
 Eventually I realised my silly mistake and plugged in the power, and from there it worked almost flawlessly, requiring some setup at the beginning.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I needed to set my wheel to PS3 mode to get it to be recognised by Assetto Corsa&lt;/li&gt;
-&lt;li&gt;I need to have the Oversteer app open when I use the wheel if I want force feedback to work&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;I need to have the Oversteer app open when I use the wheel if I want force feedback to work.&lt;/s&gt; After using my setup for a few days I realised that this ia unnecessary, it works fine without Oversteer, although the first launch of the game may not have force feedback&lt;/li&gt;
 &lt;li&gt;The LEDs that show the revs don&#39;t work without extra configuration, but this didn&#39;t really matter to me, &lt;s&gt;so I didn&#39;t bother with it.&lt;/s&gt; Since writing this, I have found &lt;a href=&quot;https://github.com/d4rk/ac_shifting_leds&quot;&gt;this script&lt;/a&gt; which makes it surprisingly easy to get working&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;assetto-corsa-on-linux&quot;&gt;Assetto Corsa on Linux&lt;/h2&gt;
