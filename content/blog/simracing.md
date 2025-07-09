@@ -25,7 +25,7 @@ The first day of setup was painful. I had forgot to plug in power to the wheel s
 Eventually I realised my silly mistake and plugged in the power, and from there it worked almost flawlessly, requiring some setup at the beginning.
 
 - I needed to set my wheel to PS3 mode to get it to be recognised by Assetto Corsa
-- I need to have the Oversteer app open when I use the wheel if I want force feedback to work
+- ~~I need to have the Oversteer app open when I use the wheel if I want force feedback to work.~~ After using my setup for a few days I realised that this ia unnecessary, it works fine without Oversteer, although the first launch of the game may not have force feedback
 - The LEDs that show the revs don't work without extra configuration, but this didn't really matter to me, ~~so I didn't bother with it.~~ Since writing this, I have found [this script](https://github.com/d4rk/ac_shifting_leds) which makes it surprisingly easy to get working
 
 
