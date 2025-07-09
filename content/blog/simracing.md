@@ -22,7 +22,7 @@ Some wheels don't work without extra drivers and on Bazzite, that'd be a pain to
 ### Setting up the wheel on Linux 
 
 The first day of setup was painful. I had forgot to plug in power to the wheel so I ended up trying every single troubleshooting step, even installing Windows onto my PC to test it, to no avail.
-Eventually I realised my silly mistake and plugged in the power, and from there it worked almost flawlessly, requiring some setup at the beginning.
+Eventually I realised my silly mistake and plugged in the power, and from there it worked almost flawlessly, requiring some setup at the beginning:
 
 - I needed to set my wheel to PS3 mode to get it to be recognised by Assetto Corsa
 - ~~I need to have the Oversteer app open when I use the wheel if I want force feedback to work.~~ After using my setup for a few days I realised that this is unnecessary, it works fine without Oversteer, although the first launch of the game may not have force feedback
