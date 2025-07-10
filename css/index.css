@@ -366,7 +366,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	padding: 4rem;
-	padding-top: 2rem;
+	padding-top: 1rem;
 	padding-bottom: 4rem;
 }
 
@@ -392,7 +392,6 @@ h6 {
 	font-weight: 900;
 	letter-spacing: -0.04em;
 	line-height: 1.25;
-	margin: 0 0 0.25em;
 	font-variation-settings: "opsz" 32;
 }
 
@@ -499,7 +498,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	box-sizing: border-box;
 	overflow: hidden;
 	flex: 1;
-	min-width: 350px;
+	min-width: 320px;
 }
 
 .card img {
@@ -835,7 +834,7 @@ footer {
 	}
 
 	main {
-		padding: 3rem 1rem;
+		padding: 2rem 1rem;
 	}
 }
 
