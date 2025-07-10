@@ -605,6 +605,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	font-size: 80%;
 	display: inline-table;
 	transition: transform 200ms var(--slickease);
+	align-items: center;
+	text-align: center;
 }
 
 .card .btn svg {
@@ -813,8 +815,8 @@ footer {
 		padding: 1rem;
 	}
 
-	.card .btn {
-		margin: 0.5rem 0 0;
+	.card .btn,
+	.card .btn .front {
 		display: block;
 		max-width: 100%;
 		border-radius: 6px;
