@@ -579,7 +579,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 /* Button styles for cards */
 .card .btn {
-	background: var(--view-switcher-accent);
+	background: var(--accent-shadow-color);
 	border: none;
 	cursor: pointer;
 	outline-offset: 4px;
@@ -624,7 +624,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	justify-content: center;
 	padding: 0.25rem;
 	background-color: var(--headerbar-backdrop-color);
-	backdrop-filter: blur(12px);
+	backdrop-filter: blur(10px);
 	z-index: 9999;
 	border-radius: var(--btnround);
 	box-shadow:
