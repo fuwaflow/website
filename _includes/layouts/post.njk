@@ -14,9 +14,8 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
-<div class="blog-content">
-  {{ content | safe }}
-</div>
+{{ content | safe }}
+
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
