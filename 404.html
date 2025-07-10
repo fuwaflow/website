@@ -325,7 +325,7 @@ header {
 	/* Component Variables */
 	--rounded-corner: 12px;
 	--btnround: 500px;
-	--btnsqr: 0.8rem;
+	--btnsqr: 0.9rem;
 
 	/* Font Settings */
 	font-family: Inter, sans-serif;
@@ -596,32 +596,32 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 
 /* Button styles for cards */
 .card .btn {
-	max-width: 12rem;
-	font-size: 80%;
-	border-radius: var(--btnsqr);
-	background-color: var(--accent-bg-color);
-	color: var(--accent-fg-color);
-	opacity: 1;
-	font-weight: 600;
-	font-variation-settings: "wght" 600;
-	padding: 0.6rem 1.5rem;
-	display: inline-block;
-	align-items: center;
-	gap: 0.5rem;
-	text-decoration: none;
-	transition: box-shadow 200ms var(--slickease);
-	margin: 0.3rem;
+	background: var(--view-switcher-accent);
 	border: none;
-	box-shadow: 0 0 0 0 var(--accent-bg-color);
-	min-width: 4rem;
-	vertical-align: middle;
-	text-align: center;
-	white-space: nowrap;
+	cursor: pointer;
+	outline-offset: 4px;
+	border-radius: var(--btnsqr);
+	max-width: fit-content;
 }
 
-.card .btn:hover {
-	box-shadow: 0 0 0 2px var(--accent-bg-color);
-	text-decoration: none;
+.btn:hover .front {
+	transform: translateY(-6px);
+}
+
+.btn:active .front {
+	transform: translateY(-2px);
+}
+
+.front {
+	font-size: 1.25rem;
+	background: var(--accent-bg-color);
+	color: white;
+	transform: translateY(-4px);
+	padding: 0.6rem 1.5rem;
+	border-radius: var(--btnsqr);
+	font-size: 80%;
+	display: inline-table;
+	transition: transform 200ms var(--slickease);
 }
 
 .card .btn svg {
@@ -1261,7 +1261,7 @@ This is compatible with:
             </p>
         </footer>
 
-        <!-- This page `/404.html` was built on 2025-07-10T12:37:26.364Z -->
+        <!-- This page `/404.html` was built on 2025-07-10T13:55:55.237Z -->
         <script type="module" src="/linuxjava7.github.io/dist/xbxy_EL6cU.js"></script>
     </body>
 </html>
