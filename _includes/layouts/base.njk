@@ -87,9 +87,6 @@
             </p>
         </footer>
 
-        <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-        <script type="module" src="{% getBundleFileUrl "js" %}"></script>
-
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             const allElements = document.querySelectorAll(
@@ -115,7 +112,7 @@
           });
         </script>
 
-
-
+        <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+        <script type="module" src="{% getBundleFileUrl "js" %}"></script>
     </body>
 </html>
