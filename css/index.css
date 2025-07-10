@@ -315,7 +315,10 @@ header {
 	font-feature-settings:
 		"liga" 1,
 		"calt" 1,
-		"ss04" 1;
+		"ss04" 1,
+		"cv10" 1,
+		"cv11" 1,
+		"cv01" 1;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	font-size: 18px;
@@ -329,7 +332,10 @@ header {
 		font-feature-settings:
 			"liga" 1,
 			"calt" 1,
-			"ss04" 1;
+			"ss04" 1,
+			"cv10" 1,
+			"cv11" 1,
+			"cv01" 1;
 	}
 }
 
