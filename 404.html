@@ -124,16 +124,16 @@ li {
 	line-height: 1.5;
 }
 
-main,
+home,
 footer {
 	padding: 1rem;
 }
 
-main {
+home {
 	padding-top: 2rem;
 }
 
-main :first-child {
+home :first-child {
 	margin-top: 0;
 }
 
@@ -382,7 +382,6 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
 	padding: 4rem;
 	padding-top: 2rem;
 	padding-bottom: 4rem;
@@ -399,7 +398,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 3rem 0 1rem;
+	margin: 1rem 0 1rem;
 	font-weight: 800;
 	line-height: 1.25;
 }
@@ -880,6 +879,12 @@ footer {
 .nav-item a[href][aria-current="page"]:hover {
 	background-color: oklch(0 0 0 / 0.1);
 }
+
+#home {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
 @import "catppuccin.css";
 
 @media (prefers-color-scheme: dark) {
@@ -1213,7 +1218,8 @@ footer {
 
         <main id="main">
             
-<h1 id="content-not-found">Content not found.</h1>
+<div id="home">
+	<h1 id="content-not-found">Content not found.</h1>
 <p>Go <a href="/linuxjava7.github.io/">home</a>.</p>
 <!--
 
@@ -1228,6 +1234,7 @@ This is compatible with:
 - Vercel: https://vercel.com/guides/custom-404-page#static-site-generator-ssg
 -->
 
+</div>
 
         </main>
 
@@ -1251,7 +1258,7 @@ This is compatible with:
             </p>
         </footer>
 
-        <!-- This page `/404.html` was built on 2025-07-09T08:45:39.675Z -->
+        <!-- This page `/404.html` was built on 2025-07-10T12:19:23.220Z -->
         <script type="module" src="/linuxjava7.github.io/dist/xbxy_EL6cU.js"></script>
     </body>
 </html>

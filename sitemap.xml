@@ -2,47 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/firstpost/</loc>
-		<lastmod>2018-05-01</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/secondpost/</loc>
-		<lastmod>2018-07-04</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/thirdpost/</loc>
-		<lastmod>2018-08-24</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/fourthpost/</loc>
-		<lastmod>2018-09-30</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/simracing/</loc>
 		<lastmod>2025-07-07</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://linuxjava7.dev/linuxjava7.github.io/blog/</loc>
-		<lastmod>2025-07-09</lastmod>
+		<lastmod>2025-07-10</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://linuxjava7.dev/linuxjava7.github.io/</loc>
-		<lastmod>2025-07-09</lastmod>
+		<lastmod>2025-07-10</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://linuxjava7.dev/linuxjava7.github.io/tags/</loc>
-		<lastmod>2025-07-09</lastmod>
+		<lastmod>2025-07-10</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://linuxjava7.dev/linuxjava7.github.io/feed/feed.xml</loc>
-		<lastmod>2025-07-09</lastmod>
+		<lastmod>2025-07-10</lastmod>
 	</url>
 </urlset>
