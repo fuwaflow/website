@@ -598,7 +598,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 .front {
 	font-size: 1.25rem;
 	background: var(--accent-bg-color);
-	color: white;
+	color: var(--accent-fg-color);
 	transform: translateY(-4px);
 	padding: 0.6rem 1.5rem;
 	border-radius: var(--btnsqr);
