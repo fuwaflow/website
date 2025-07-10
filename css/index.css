@@ -399,6 +399,10 @@ h2:first-child {
 	margin: 1rem 0 1rem;
 }
 
+h1 {
+	font-size: 2rem;
+}
+
 h2 {
 	font-size: 1.6em;
 }
