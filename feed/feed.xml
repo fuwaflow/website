@@ -3,18 +3,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Blog Title</title>
   <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/linuxjava7.github.io/feed/feed.xml" rel="self" />
-  <link href="https://example.com/linuxjava7.github.io/" />
+  <link href="https://example.com/feed/feed.xml" rel="self" />
+  <link href="https://example.com/" />
   <updated>2025-07-07T00:00:00Z</updated>
-  <id>https://example.com/linuxjava7.github.io/</id>
+  <id>https://example.com/</id>
   <author>
     <name>Your Name</name>
   </author>
   <entry>
     <title>Can you simrace on Linux?</title>
-    <link href="https://example.com/linuxjava7.github.io/blog/simracing/" />
+    <link href="https://example.com/blog/simracing/" />
     <updated>2025-07-07T00:00:00Z</updated>
-    <id>https://example.com/linuxjava7.github.io/blog/simracing/</id>
+    <id>https://example.com/blog/simracing/</id>
     <content type="html">&lt;p&gt;Can you really simrace on Linux?
 The short answer is—yes, as long as you have the right hardware.&lt;/p&gt;
 &lt;h2 id=&quot;hardware&quot;&gt;Hardware&lt;/h2&gt;
