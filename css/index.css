@@ -613,8 +613,8 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	margin-right: 6px;
 	vertical-align: middle;
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 1rem;
+	height: auto;
 	fill: currentColor;
 }
 
@@ -676,45 +676,31 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg))::after {
 	flex-shrink: 0;
 }
 
-/* View Switcher Narrow Specific */
-.view-switcher-narrow {
-	width: 100%;
-	height: 100%;
-	align-content: center;
-	align-items: stretch;
-	margin: 1rem;
-}
-
-.view-switcher-narrow a {
-	flex-direction: column;
-	gap: 0.05rem;
-	font-size: 0.8rem;
-}
-
-.view-switcher-narrow svg {
-	margin-top: 0.25rem;
-	width: 1.2rem;
-}
-
 /* View Switcher States */
+
+.view-switcher a {
+	transform: scale(100%);
+}
+
 .view-switcher a:hover,
-.view-switcher a:focus,
-.view-switcher-narrow a:hover,
-.view-switcher-narrow a:focus {
+.view-switcher a:focus {
 	background-color: rgba(0, 0, 6, 0.03);
 	color: var(--window-fg-color);
+	transform: scale(102.5%);
+	transition: transform 200ms var(--slickease);
+}
+.view-switcher a:active {
+	transform: scale(97.5%);
+	transition: transform 200ms var(--slickease);
 }
 
-.view-switcher .current,
-.view-switcher-narrow .current {
+.view-switcher .current {
 	background-color: rgba(0, 0, 6, 0.05);
 	color: var(--view-switcher-accent);
 }
 
 .view-switcher .current:hover,
-.view-switcher .current:focus,
-.view-switcher-narrow .current:hover,
-.view-switcher-narrow .current:focus {
+.view-switcher .current:focus {
 	background-color: rgba(0, 0, 6, 0.08);
 	color: var(--view-switcher-accent);
 }
@@ -872,4 +858,24 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+}
+
+@keyframes appear {
+	from {
+		transform: translateY(16px);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-2px);
+		opacity: 100;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 100;
+	}
+}
+
+.appear {
+	opacity: 0;
+	animation: appear ease forwards;
 }
