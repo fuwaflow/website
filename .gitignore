@@ -1,58 +1,19 @@
-# Build output
-_site/
+# build output
 dist/
 
-# Dependencies
+# dependencies
 node_modules/
 
-# Cache
-.cache/
-.eleventy-cache/
-.env
-eleventy-fetch-*
-
-# Editor directories and files
-.idea/
-.vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-.DS_Store
-Thumbs.db
-
-# Debug logs
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-*.log
+pnpm-debug.log*
 
-# Local env files
-.env*.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*~
+# environment variables
+.env
+.env.production
 
-# Operating System Files
+# macOS-specific files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Deployment files that should be generated on deploy
-.vercel
-.netlify
-
-# GitHub Pages
-.nojekyll
