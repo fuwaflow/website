@@ -1,0 +1,56 @@
+---
+import AccentButton from "./AccentButton.astro";
+import TabBarLarge from "./TabBarLarge.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<style>
+  #header-bar {
+    display: flex;
+    box-sizing: border-box;
+    height: 64px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    align-items: stretch;
+    z-index: 1;
+
+    .centre,
+    .leading,
+    .trailing {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .centre {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .trailing {
+      justify-content: right;
+    }
+
+    .headerbar-title {
+      display: none;
+      margin: 0;
+      font-size: 16px;
+      font-weight: 590;
+      text-align: center;
+      qqqqqq
+    }
+  }
+</style>
+
+<div id="header-bar">
+  <div class="leading"></div>
+  <div class="centre">
+    <TabBarLarge />
+    <p class="headerbar-title">{pageTitle}</p>
+  </div>
+  <div class="trailing">
+    <AccentButton />
+  </div>
+</div>

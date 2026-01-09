@@ -1,0 +1,177 @@
+---
+
+---
+
+<script>
+  let saved = localStorage.getItem("accent-setting");
+  const isFirefox = navigator.userAgent.toLowerCase().includes("firefox");
+
+  if (!saved) {
+    saved = isFirefox ? "system" : "default";
+    localStorage.setItem("accent-setting", saved);
+  }
+
+  changeAccentSetting(saved);
+
+  document
+    .querySelector(`#accent-options [data-value="${saved}"]`)
+    .classList.add("selected");
+
+  const button = document.getElementById("accent-button");
+  const menu = document.getElementById("accent-options");
+
+  button.addEventListener("click", () => {
+    menu.classList.toggle("hide");
+  });
+
+  menu.addEventListener("click", (e) => {
+    const value = e.target.dataset.value;
+    if (!value) return;
+
+    document
+      .querySelectorAll("#accent-options .selected")
+      .forEach((el) => el.classList.remove("selected"));
+
+    e.target.classList.add("selected");
+
+    changeAccentSetting(value);
+
+    menu.classList.add("hide");
+  });
+</script>
+
+<script is:client>
+  function changeAccentSetting(value) {
+    const select = document.querySelector("#accent-select div");
+
+    switch (value) {
+      case "system":
+        localStorage.setItem("accent-setting", "system");
+        document.documentElement.style.removeProperty("--accent-color-base");
+        break;
+
+      case "default":
+        localStorage.setItem("accent-setting", "default");
+        document.documentElement.style.setProperty(
+          "--accent-color-base",
+          "oklch(0.6 0.2 300)",
+        );
+        break;
+    }
+  }
+</script>
+<style>
+  .accent-dropdown {
+    border-radius: 100px;
+
+    #accent-options {
+      right: 10px;
+      border-radius: 1rem;
+      margin: 0.5rem 0rem;
+      padding: 1rem;
+      background-color: oklch(from var(--accent-color) 0.95 0.03 h / 75%);
+      box-shadow:
+        0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+        0 0 1rem rgba(0, 0, 0, 0.05),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        inset 0 0 0.27rem rgba(255, 255, 255, 0.5);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: oklch(from var(--accent-color) 0.24 0.017 h / 75%);
+        box-shadow:
+          0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+          0 0 1rem rgba(0, 0, 0, 0.05),
+          inset 0 1px 1px oklch(1 0 0 / 0.1),
+          inset 0 0 0.27rem rgba(255, 255, 255, 0.1);
+      }
+      position: absolute;
+      z-index: 2;
+
+      backdrop-filter: blur(25px);
+      font-size: 0.8rem;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0.5rem;
+
+      > div {
+        padding: 0.25rem 1.25rem;
+      }
+    }
+
+    #accent-options.hide {
+      display: none;
+    }
+
+    #accent-button {
+      backdrop-filter: blur(25px);
+      height: 44px;
+      width: 44px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 0.25rem;
+      border: none;
+      font-family: inherit;
+      font-variation-settings: inherit;
+      color: oklch(from var(--accent-color) 0.7 0.15 h);
+      font-weight: 600;
+      font-size: inherit;
+      background-color: oklch(from var(--accent-color) 0.95 0.03 h / 75%);
+      box-shadow:
+        0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+        0 0 1rem rgba(0, 0, 0, 0.05),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        inset 0 0 0.27rem rgba(255, 255, 255, 0.5);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: oklch(from var(--accent-color) 0.24 0.017 h / 75%);
+        box-shadow:
+          0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+          0 0 1rem rgba(0, 0, 0, 0.05),
+          inset 0 1px 1px oklch(1 0 0 / 0.1),
+          inset 0 0 0.27rem rgba(255, 255, 255, 0.1);
+      }
+    }
+    #accent-options div {
+      padding: 0.4rem 0.6rem;
+      cursor: pointer;
+      border-radius: 100px;
+    }
+
+    #accent-options div:hover {
+      background-color: oklch(0 0 0 / 0.07);
+      @media (prefers-color-scheme: dark) {
+        background-color: oklch(1 0 0 / 0.06);
+      }
+    }
+    #accent-options div.selected {
+      background-color: oklch(0 0 0 / 0.05);
+      color: var(--accent-color);
+      @media (prefers-color-scheme: dark) {
+        background-color: oklch(1 0 0 / 0.04);
+      }
+    }
+  }
+</style>
+
+<div class="accent-dropdown">
+  <button id="accent-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22px" viewBox="0 0 16 16">
+      <g fill="currentColor">
+        <path
+          d="m 12.953125 0.980469 c -0.519531 0.015625 -1.011719 0.234375 -1.375 0.605469 l -1.585937 1.585937 l -1.085938 -1.085937 c -0.09375 -0.09375 -0.222656 -0.148438 -0.359375 -0.148438 c -0.128906 0.003906 -0.253906 0.054688 -0.347656 0.148438 l -2.121094 2.121093 c -0.195313 0.195313 -0.195313 0.511719 0 0.707031 l 0.648437 0.648438 l -5.585937 5.582031 c -0.09375 0.097657 -0.148437 0.222657 -0.148437 0.355469 v 1.792969 l -0.851563 0.851562 c -0.1953125 0.195313 -0.1953125 0.515625 0 0.710938 l 1 1 c 0.195313 0.191406 0.511719 0.191406 0.707031 0 l 0.851563 -0.855469 h 1.792969 c 0.132812 0 0.261718 -0.050781 0.355468 -0.144531 l 5.585938 -5.585938 l 0.644531 0.644531 c 0.195313 0.195313 0.511719 0.195313 0.707031 0 l 2.121094 -2.121093 c 0.195312 -0.195313 0.195312 -0.511719 0 -0.707031 l -1.085938 -1.085938 l 1.585938 -1.585938 c 1.308594 -1.273437 0.371094 -3.488281 -1.453125 -3.433593 z m -5.019531 5.789062 l 1.292968 1.292969 l -2.941406 2.9375 h -2.585937 z m 0 0"
+        ></path>
+      </g>
+    </svg>
+  </button>
+
+  <div id="accent-options" class="options hide">
+    <div data-value="system" style="color: oklch(from AccentColor 0.7 0.1 h">
+      System
+    </div>
+    <div data-value="default" style="color: oklch(0.7 0.1 300)">Default</div>
+  </div>
+</div>

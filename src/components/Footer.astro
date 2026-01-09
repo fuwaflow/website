@@ -1,0 +1,77 @@
+---
+
+---
+
+<style>
+  footer {
+    margin: 0.9rem;
+    padding: 1rem;
+
+    background-color: oklch(0 0 0/3%);
+    @media (prefers-color-scheme: dark) {
+      background-color: oklch(1 0 0/5%);
+    }
+    color: var(--card-fg-color);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    margin-top: auto;
+    border-radius: 1.5rem;
+    p {
+      margin-bottom: 0;
+      margin-top: 0.5rem;
+    }
+    @media only screen and (max-width: 750px) {
+      padding-bottom: 4.2rem;
+    }
+  }
+
+  .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .social li {
+    margin: 0 0.5rem;
+  }
+
+  .social a {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>
+
+<footer>
+  <ul class="social">
+    <li class="github">
+      <a
+        href="https://github.com/linuxjava7"
+        title="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </li>
+    <li class="mastodon">
+      <a
+        rel="me"
+        href="https://mastodon.social/@linuxjava7"
+        title="Mastodon"
+        target="_blank"
+      >
+        Mastodon
+      </a>
+    </li>
+  </ul>
+
+  <p>
+    This website's code is licensed under the AGPL v3. Content is licensed under
+    CC BY-SA 4.0.
+  </p>
+</footer>

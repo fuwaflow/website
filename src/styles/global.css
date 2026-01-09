@@ -1,0 +1,198 @@
+a {
+  font-weight: 600;
+  text-decoration: none;
+}
+h1 {
+  font-weight: 750;
+}
+
+h2 {
+  font-weight: 750;
+}
+
+h3 {
+  font-weight: 750;
+}
+
+html {
+  background: linear-gradient(
+    115deg,
+    oklch(from var(--accent-color) 0.92 0.1 calc(h + 45)),
+    oklch(from var(--accent-color) 0.92 0.1 calc(h + 22.5)),
+    oklch(from var(--accent-color) 0.92 0.1 calc(h - 22.5)),
+    oklch(from var(--accent-color) 0.92 0.1 calc(h - 45))
+  );
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      115deg,
+      oklch(from var(--accent-color) 0.2 0.05 calc(h + 45)),
+      oklch(from var(--accent-color) 0.2 0.05 calc(h + 22.5)),
+      oklch(from var(--accent-color) 0.2 0.05 calc(h - 22.5)),
+      oklch(from var(--accent-color) 0.2 0.05 calc(h - 45))
+    );
+  }
+  color: var(--text-color);
+  min-height: 100%;
+  font-size: 18px;
+}
+p,
+li {
+  line-height: 150%;
+}
+body {
+  background: oklch(1 0 0/0.66);
+  margin: 2rem;
+  padding: 0;
+  border-radius: 34px;
+  max-width: min(90%, 1680px);
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0.6rem 0.8rem 0.3rem rgba(0, 0, 0, 0.1),
+    0 0 2rem rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5),
+    inset 0 0 0.27rem rgba(255, 255, 255, 0.5);
+  @media (prefers-color-scheme: dark) {
+    background: oklch(0.25 0 0/0.66);
+
+    box-shadow:
+      0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+      0 0 1rem rgba(0, 0, 0, 0.05),
+      inset 0 1px 1px oklch(1 0 0 / 0.1),
+      inset 0 0 0.27rem rgba(255, 255, 255, 0.1);
+  }
+}
+
+main {
+  padding: 0.75rem 2rem 2rem 2rem;
+  color: var(--card-fg-color);
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+:root {
+  --accent-color-base: oklch(0.7 0.1 300);
+
+  @supports (color: AccentColor) {
+    --accent-color-base: oklch(from AccentColor 0.7 0.1 h);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --accent-color: oklch(from var(--accent-color-base) 0.8 0.1 h) !important;
+  }
+
+  --accent-color: oklch(from var(--accent-color-base) 0.7 0.18 h) !important;
+  --btnround: 500px;
+}
+
+:root {
+  --bg-color: oklch(from var(--accent-color) 0.92 0.1 h / 100%);
+  --text-color: oklch(from var(--accent-color) 0.4 0.01 h);
+  a {
+    color: oklch(from var(--accent-color) 0.66 0.18 h);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: oklch(from var(--accent-color) 0.25 0.02 h / 100%);
+    --text-color: oklch(from var(--accent-color) 0.88 0.04 h);
+    a {
+      color: oklch(from var(--accent-color) 0.77 0.11 h);
+    }
+  }
+}
+
+/* Link Icon */
+a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
+    .button
+  )::after {
+  margin: 0 0.1em 0 0.2em;
+  content: "";
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: currentColor;
+}
+
+@media only screen and (max-width: 750px) {
+  html,
+  body {
+    margin: 0;
+    max-width: unset;
+    height: unset;
+    border-radius: 0;
+  }
+  body {
+    min-height: 100vh;
+  }
+  footer {
+    margin-top: auto;
+  }
+
+  main {
+    max-width: unset;
+    padding: 0.75rem 0.9rem 2rem 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+li,
+p {
+  margin-top: 0;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  #header-bar {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        0deg,
+        oklch(from var(--accent-color) 0.23 0.0168 h / 0%),
+        oklch(from var(--accent-color) 0.23 0.0168 h / 75%)
+      );
+    }
+  }
+  #tab-bar-large {
+    display: none;
+  }
+  .headerbar-title {
+    display: flex !important;
+  }
+  #bottom-bar {
+    display: flex !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

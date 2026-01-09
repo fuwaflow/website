@@ -1,15 +1,125 @@
 ---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+const pageTitle = "linuxjava7";
+import bte_header from "../images/bte-header.png";
+import avdanos_header from "../images/avdanos-header.png";
+import avdanos_icon from "../images/avdanos-icon.png";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+  #name {
+    color: var(--accent-color);
+    font-size: 4rem;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-variation-settings:
+      "ROND" 50,
+      "wdth" 90,
+      "opsz" 144;
+  }
+  @media only screen and (max-width: 450px) {
+    #name {
+      font-size: 16vw !important;
+    }
+  }
+  @media only screen and (max-width: 350px) {
+    #name {
+      font-size: 15vw !important;
+    }
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="section" id="intro">
+    <h1 id="name">linuxjava7</h1>
+    <p>
+      hey there! i'm <b>linuxjava7</b>, a hobbyist UX/UI designer and frontend
+      developer. i do various things, mostly related to the <a
+        href="https://www.gnome.org/">GNOME project</a
+      > and Linux.
+    </p>
+    <p>here are some of the things i've done below:</p>
+  </div>
+
+  <div class="section">
+    <h2>projects:</h2>
+    <div class="cards">
+      <Card
+        name="BuildTheEarth.net"
+        url="https://buildtheearth.net/"
+        image={bte_header}
+        alt="BuildTheEarth.net - Recreating Earth in Minecraft"
+        background="hi"
+      >
+        <h3>
+          <img
+            src="https://buildtheearth.net/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.65c70928.gif&w=96&q=75"
+            alt="BuildTheEarth Logo"
+            style="vertical-align: middle; width: 1em; height: auto;"
+          />
+          BuildTheEarth.net
+        </h3>
+        <p>
+          A project that aims to recreate the Earth in Minecraft. Also a <a
+            href="https://www.guinnessworldrecords.com/world-records/734997-biggest-minecraft-project"
+            target="_blank"
+            rel="noopener noreferrer">Guinness World Record holder</a
+          > for the largest Minecraft project in the world.
+        </p>
+        <h4 id="team-owner-and-system-administrator">
+          Team Owner &amp; System Administrator
+        </h4>
+        <p>
+          Team owner for the Middle East region, also managing the Minecraft
+          server as its system admin. <a
+            href="https://buildtheearth.net/teams/me"
+            target="_blank"
+            rel="noopener noreferrer">Visit my team</a
+          >
+        </p>
+        <h4 id="support-staff-member-from-august-2020-to-september-2023">
+          Support Staff Member (From August 2020 to September 2023)
+        </h4>
+        <p>
+          Volunteered as a support staff member, helping users with technical
+          issues.
+        </p>
+      </Card>
+      <Card
+        name="AvdanOS"
+        url="https://github.com/Avdan-OS"
+        image={avdanos_header}
+        alt="BuildTheEarth.net - Recreating Earth in Minecraft"
+        background="hi"
+      >
+        <h3 id="avdanos">
+          <Image
+            src={avdanos_icon}
+            alt=""
+            style="vertical-align: middle; width: 1em; height: auto;"
+          />
+          AvdanOS
+        </h3>
+        <p>
+          Linux Desktop environment project based on <a
+            href="https://youtu.be/tXFEiw1aJTw"
+            target="_blank"
+            rel="noopener noreferrer">a concept by Avdan</a
+          >.
+        </p>
+        <h4 id="ui-designer-from-2022-to-2023">
+          UI Designer (From 2022 to 2023)
+        </h4>
+        <p>
+          Created some UI mockups and design systems for the desktop within the
+          design team.
+        </p>
+      </Card>
+    </div>
+  </div>
+</BaseLayout>

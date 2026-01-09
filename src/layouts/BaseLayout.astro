@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+import Navigation from "../components/Navigation/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Font from "../components/Font.astro";
+import Headerbar from "../components/Navigation/Headerbar.astro";
+import Bottombar from "../components/Navigation/Bottombar.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <Font />
+
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <Headerbar pageTitle={pageTitle} />
+    <Bottombar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

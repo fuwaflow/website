@@ -1,0 +1,36 @@
+---
+import TabBarSmall from "./TabBarSmall.astro";
+---
+
+<style>
+  #bottom-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 95px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 25px;
+    padding-top: 16px;
+    z-index: 1;
+
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        180deg,
+        oklch(from var(--accent-color) 0.23 0.0168 h / 0%),
+        oklch(from var(--accent-color) 0.23 0.0168 h / 75%)
+      );
+    }
+  }
+</style>
+
+<div id="bottom-bar">
+  <TabBarSmall />
+</div>

@@ -1,0 +1,127 @@
+---
+import { Image } from "astro:assets";
+
+const { name, url, description, image, alt = "", background } = Astro.props;
+---
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.17, 0.89, 0.32, 1.28);
+    margin: 0;
+    padding: 0;
+    border-radius: 1.5rem;
+    background-color: oklab(0 0 0/5%);
+    @media (prefers-color-scheme: dark) {
+      background-color: oklab(1 0 0/5%);
+    }
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1;
+
+    .card_text {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+    }
+
+    img {
+      height: 270px;
+      object-fit: cover;
+      object-position: bottom center;
+      z-index: 0;
+      overflow: hidden;
+      width: 100%;
+    }
+    .card_text {
+      padding: 1rem;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      img {
+        border-radius: 0.3rem;
+      }
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .button {
+      margin: 1rem;
+      background: oklch(from var(--accent-color) 0.6 0.2 h/66%);
+
+      @media (prefers-color-scheme: dark) {
+        background: oklch(from var(--accent-color) 0.8 0.1 h/66%);
+      }
+      border: none;
+      cursor: pointer;
+      outline-offset: 4px;
+      border-radius: 0.5rem;
+      max-width: 100%;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    .button:hover .front {
+      transform: translateY(-6px);
+    }
+
+    .button:active .front {
+      transform: translateY(-2px);
+    }
+
+    .front {
+      font-size: 1.25rem;
+      background: oklch(from var(--accent-color) 0.6 0.2 h/100%);
+
+      @media (prefers-color-scheme: dark) {
+        background: oklch(from var(--accent-color) 0.8 0.1 h/100%);
+      }
+      color: oklch(from var(--accent-color) 1 0 h/ 80%);
+      @media (prefers-color-scheme: dark) {
+        color: oklch(from var(--accent-color) 0.2 0.01 h);
+      }
+      transform: translateY(-4px);
+      padding: 0.6rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 80%;
+      max-width: 100%;
+      display: block;
+      transition: transform 200ms cubic-bezier(0.17, 0.89, 0.32, 1.28);
+      text-align: center;
+    }
+
+    .button svg {
+      margin-right: 6px;
+      vertical-align: middle;
+      display: inline-block;
+      width: 1rem;
+      height: auto;
+      fill: currentColor;
+    }
+  }
+</style>
+
+<div class="card">
+  <a href={url}>
+    <Image src={image} alt={alt} />
+  </a>
+  <div class="card_text">
+    <slot />
+  </div>
+  <a class="button" href={url}>
+    <span class="front">
+      Visit {name}
+    </span>
+  </a>
+</div>
