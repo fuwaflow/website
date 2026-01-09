@@ -155,17 +155,18 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
 }
 
 @media (max-width: 750px) {
-  html {
+  html,
+  body {
     background: oklch(from var(--accent-color) 0.98 0.03 h);
   }
 
   @media (prefers-color-scheme: dark) {
-    html {
+    html,
+    body {
       background: oklch(from var(--accent-color) 0.25 0.03 h);
     }
   }
-
-  html,
+  transparent html,
   body {
     margin: 0;
     max-width: unset;
@@ -174,7 +175,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
 
   body {
     min-height: 100vh;
-    background: transparent;
     box-shadow: none;
   }
 
