@@ -1,5 +1,6 @@
 ---
-
+import { pages } from "./nav.js";
+import { icons } from "./icons.js";
 ---
 
 <style>
@@ -33,33 +34,29 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: 0rem;
 
       .nav-item {
-        background: transparent;
         border-radius: 999px;
         display: flex;
-        justify-content: stretch;
 
         a {
-          flex-direction: column;
           width: 102px;
           padding: 8px;
           border-radius: inherit;
-          display: inline-block;
-          font-weight: 600;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
+          gap: 0.2rem;
+          font-weight: 600;
+          font-size: 13px;
           line-height: 100%;
           text-decoration: none;
           color: var(--text-color);
-          font-size: 13px;
-          gap: 0.2rem;
           box-sizing: border-box;
         }
 
-        a[href]:hover {
+        a:hover {
           background-color: oklch(0 0 0 / 0.06);
           @media (prefers-color-scheme: dark) {
             background-color: oklch(1 0 0 / 0.06);
@@ -87,57 +84,33 @@
 
 <script>
   const links = document.querySelectorAll(".nav-item a");
-  const current = location.href;
+  const current = location.pathname;
 
-  links.forEach((linkElement) => {
-    const link = linkElement.href;
+  links.forEach((link) => {
+    const href = new URL(link.href).pathname;
 
-    if (link === location.origin + "/") {
-      if (current === link) {
-        linkElement.classList.add("active");
-      }
+    if (href === "/" && current === "/") {
+      link.classList.add("active");
       return;
     }
 
-    if (current.startsWith(link)) {
-      linkElement.classList.add("active");
+    if (href !== "/" && current.startsWith(href)) {
+      link.classList.add("active");
     }
   });
 </script>
 
 <div id="tab-bar-small">
   <ul class="nav">
-    <!-- first button  -->
-    <li class="nav-item">
-      <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-          <g fill="currentColor">
-            <path
-              d="m 12 16 c 1.660156 0 3 -1.339844 3 -3 v -6 c 0 -0.929688 -0.414062 -1.8125 -1.128906 -2.410156 l -4.460938 -3.71875 c -0.816406 -0.679688 -2.003906 -0.679688 -2.820312 0 l -4.460938 3.71875 c -0.714844 0.597656 -1.128906 1.480468 -1.128906 2.410156 v 6 c 0 1.660156 1.339844 3 3 3 z m -9 -3 v -6 c 0 -0.335938 0.148438 -0.65625 0.410156 -0.871094 l 4.460938 -3.71875 c 0.074218 -0.0625 0.183594 -0.0625 0.257812 0 l 4.460938 3.71875 c 0.261718 0.214844 0.410156 0.535156 0.410156 0.871094 v 6 c 0 0.546875 -0.453125 1 -1 1 h -8 c -0.546875 0 -1 -0.453125 -1 -1 z m 0 0"
-            ></path>
-            <path
-              d="m 7 8 h 2 c 0.90781 0 1 0.449219 1 1 v 5 c 0 0.90781 -0.449219 1 -1 1 h -2 c -0.90781 0 -1 -0.449219 -1 -1 v -5 c 0 -0.90781 0.449219 -1 1 -1 z m 0 0"
-            ></path>
-          </g>
-        </svg>
-        home</a
-      >
-    </li>
-    <!-- second button -->
-    <li class="nav-item">
-      <a href="/blog">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-          <g fill="currentColor">
-            <path
-              d="m 4.199219 2 c -0.453125 0 -0.84375 0.300781 -0.964844 0.738281 l -3.234375 11.261719 h 2.066406 l 0.808594 -3 l 2.125 -0.003906 l 2.121094 0.003906 l 0.808594 3 h 2.070312 l -3.238281 -11.261719 c -0.117188 -0.4375 -0.511719 -0.738281 -0.960938 -0.738281 z m 0.785156 2 h 0.015625 h 0.011719 c 0.121093 -0.003906 0.238281 0.011719 0.289062 0.207031 l 1.320313 4.792969 h -3.242188 l 1.316406 -4.792969 c 0.054688 -0.195312 0.171876 -0.210937 0.289063 -0.207031 z m 0 0"
-            ></path>
-            <path
-              d="m 10 0 v 1 h 2 v 14 h -2 v 1 h 2.5 l 0.5 -0.5 l 0.5 0.5 h 2.5 v -1 h -2 v -14 h 2 v -1 h -2.5 l -0.5 0.5 l -0.5 -0.5 z m 0 0"
-            ></path>
-          </g>
-        </svg>
-        blog</a
-      >
-    </li>
+    {
+      pages.map((page) => (
+        <li class="nav-item">
+          <a href={page.url}>
+            {icons[page.url] && <Fragment set:html={icons[page.url]} />}
+            {page.title.toLowerCase()}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </div>

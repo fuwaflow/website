@@ -3,7 +3,9 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Redesigning Liquid Glass on macOS
 description: Redesigning Liquid Glass on macOS Tahoe
 date: 2026-01-09
-tags: design
+tags:
+  - design
+  - portfolio
 ---
 
 ## Liquid Glass isn't actually that bad...

@@ -2,15 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 
-const pageTitle = "linuxjava7's blog";
+const pageTitle = "linuxjava7's portfolio";
 
 const allPosts = Object.values(
   import.meta.glob("./blog/*.md", { eager: true }),
-).sort((a, b) => {
-  const dateA = new Date(a.frontmatter?.date ?? 0);
-  const dateB = new Date(b.frontmatter?.date ?? 0);
-  return dateB - dateA; // newest first
-});
+);
+
+// Filter posts tagged as "portfolio" and sort newest first
+const portfolioPosts = allPosts
+  .filter((post) => post.frontmatter?.tags?.includes("portfolio"))
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter?.date ?? 0);
+    const dateB = new Date(b.frontmatter?.date ?? 0);
+    return dateB - dateA;
+  });
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -18,7 +23,7 @@ const allPosts = Object.values(
 
   <div class="cards">
     {
-      allPosts.map((post) => (
+      portfolioPosts.map((post) => (
         <Card name={post.frontmatter.title} url={post.url} showButton={false}>
           {/* Tags */}
           {post.frontmatter.tags?.length && (

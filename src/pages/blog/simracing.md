@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Can you simrace on Linux?
-description: Simracing with Assetto Corsa on Bazzite Linux, surprisingly easily.
+description: Can you really simrace on Linux? The short answer is—yes, as long as you have the right hardware.
 date: 2025-07-07
-tags: gaming
+tags: 
+- gaming
 ---
 
-Can you really simrace on Linux?
-The short answer is—yes, as long as you have the right hardware.
+
 
 ## Hardware
 

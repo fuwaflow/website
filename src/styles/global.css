@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
-  background: oklch(1 0 0 / 0.66);
+  background: oklch(1 0 0 / 0.75);
   box-shadow:
     0 0.6rem 0.8rem 0.3rem rgba(0, 0, 0, 0.1),
     0 0 2rem rgba(0, 0, 0, 0.1),

@@ -1,7 +1,15 @@
 ---
 import { Image } from "astro:assets";
 
-const { name, url, description, image, alt = "", background } = Astro.props;
+const {
+  name,
+  url,
+  description,
+  image,
+  alt = "",
+  background,
+  showButton = true,
+} = Astro.props;
 ---
 
 <style>
@@ -13,7 +21,7 @@ const { name, url, description, image, alt = "", background } = Astro.props;
     margin: 0;
     padding: 0;
     border-radius: 1.1rem;
-    background-color: oklab(0 0 0/5%);
+    background-color: oklab(0 0 0/3%);
     @media (prefers-color-scheme: dark) {
       background-color: oklab(1 0 0/5%);
     }
@@ -112,16 +120,31 @@ const { name, url, description, image, alt = "", background } = Astro.props;
   }
 </style>
 
-<div class="card">
-  <a href={url}>
-    <Image src={image} alt={alt} />
-  </a>
-  <div class="card_text">
-    <slot />
-  </div>
-  <a class="button" href={url}>
-    <span class="front">
-      Visit {name}
-    </span>
-  </a>
-</div>
+{
+  showButton ? (
+    <div class="card">
+      {image && (
+        <a href={url}>
+          <Image src={image} alt={alt} />
+        </a>
+      )}
+
+      <div class="card_text">
+        <slot />
+      </div>
+
+      {url && (
+        <a class="button" href={url}>
+          <span class="front">Visit {name}</span>
+        </a>
+      )}
+    </div>
+  ) : (
+    <a href={url} class="card" style="text-decoration: none;">
+      {image && <Image src={image} alt={alt} />}
+      <div class="card_text">
+        <slot />
+      </div>
+    </a>
+  )
+}
