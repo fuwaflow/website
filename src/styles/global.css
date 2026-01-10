@@ -164,7 +164,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
   @media (prefers-color-scheme: dark) {
     html,
     body {
-      background: oklch(from var(--accent-color) 0.25 0.03 h);
+      background: oklch(from var(--accent-color) 0.25 0.02 h);
     }
   }
   transparent html,
