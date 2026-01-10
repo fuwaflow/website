@@ -1,8 +1,10 @@
 ---
 import AccentButton from "./AccentButton.astro";
 import TabBarLarge from "./TabBarLarge.astro";
+import BackButton from "./BackButton.astro";
 
 const { pageTitle } = Astro.props;
+const showBackButton = Astro.url.pathname !== "/";
 ---
 
 <style>
@@ -12,59 +14,66 @@ const { pageTitle } = Astro.props;
     padding: 19px;
     position: sticky;
     top: 0;
-    align-items: stretch;
+    align-items: center;
     z-index: 1;
+    gap: calc(19px / 2);
 
-    .centre,
     .leading,
+    .centre,
     .trailing {
       display: flex;
-      flex-grow: 1;
-      flex-basis: 0;
+      align-items: center;
+    }
+
+    .leading,
+    .trailing {
+      width: 44px;
+      justify-content: center;
     }
 
     .centre {
+      flex: 1 1 auto;
       justify-content: center;
-      align-items: center;
-      flex-grow: 2;
-    }
-
-    .trailing {
-      justify-content: right;
+      min-width: 0;
+      gap: 8px;
     }
 
     .titlebox {
       display: none;
-      margin: 0;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 590;
       text-align: center;
       background-color: oklch(from var(--accent-color) 0.98 0.03 h / 90%);
       padding: 4px 16px;
       border-radius: 100px;
       backdrop-filter: blur(2px);
-
       justify-content: center;
       align-items: center;
       height: 44px;
       box-sizing: border-box;
-
+      flex-shrink: 1;
+      min-width: 0;
       box-shadow:
         0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
         0 0 1rem rgba(0, 0, 0, 0.05),
         inset 0 1px 1px rgba(255, 255, 255, 0.5),
         inset 0 0 0.27rem rgba(255, 255, 255, 0.5);
     }
+
     .headerbar-title {
       display: inline-block;
       margin: 0;
-      line-height: 118%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 </style>
 
 <div id="header-bar">
-  <div class="leading"></div>
+  <div class="leading">
+    {showBackButton && <BackButton />}
+  </div>
   <div class="centre">
     <TabBarLarge />
     <div class="titlebox">

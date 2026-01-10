@@ -1,0 +1,53 @@
+---
+
+---
+
+<style>
+  button {
+    backdrop-filter: blur(2px);
+    height: 44px;
+    width: 44px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.25rem;
+    border: none;
+    font-family: inherit;
+    font-variation-settings: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+    font-size: inherit;
+    background-color: oklch(from var(--accent-color) 0.98 0.03 h / 90%);
+    box-shadow:
+      0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+      0 0 1rem rgba(0, 0, 0, 0.05),
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      inset 0 0 0.27rem rgba(255, 255, 255, 0.5);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: oklch(from var(--accent-color) 0.24 0.017 h / 90%);
+      box-shadow:
+        0 0.3rem 0.3rem rgba(0, 0, 0, 0.1),
+        0 0 1rem rgba(0, 0, 0, 0.05),
+        inset 0 1px 1px oklch(1 0 0 / 0.1),
+        inset 0 0 0.27rem rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    padding-right: 2px;
+  }
+</style>
+
+<button onClick="window.history.back()">
+  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"
+      fill="currentColor"></path>
+  </svg>
+</button>
