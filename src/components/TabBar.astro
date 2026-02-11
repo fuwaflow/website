@@ -1,0 +1,18 @@
+---
+const navItems = [
+  { href: "/", text: "home" },
+  { href: "/blog", text: "blog" },
+  { href: "/portfolio", text: "portfolio" },
+];
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<nav>
+  {
+    navItems.map((item) => (
+      <a href={item.href} class={pathname === item.href ? "active" : ""}>
+        {item.text}
+      </a>
+    ))
+  }
+</nav>
