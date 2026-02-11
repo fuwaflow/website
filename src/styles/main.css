@@ -1,3 +1,5 @@
+/*main.css*/
+
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/colors.css";*/
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/widgets.css";*/
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/typography.css";*/
@@ -6,11 +8,21 @@
 @import "./widgets.css";
 @import "./typography.css";
 
+:root {
+  --bottom-nav-height: 0px;
+  --z-below: -1;
+  --z-base: 0;
+  --z-nav: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+}
+
 html,
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -36,4 +48,11 @@ main > *:first-child {
     margin: 16px;
     margin-bottom: 2rem;
   }
+  footer {
+    padding-bottom: calc(1.4rem + var(--bottom-nav-height));
+  }
+}
+
+body:has(.bottombar) {
+  --bottom-nav-height: 5rem;
 }

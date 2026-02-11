@@ -1,74 +1,10 @@
+/*widgets.css*/
+
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/buttons.css";*/
+/*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/cards.css";*/
 
 @import "./buttons.css";
-
-:root {
-  --card-radius: 1.25rem;
-}
-
-.card {
-  display: block;
-  background-color: var(--card-bg-color);
-  color: var(--card-fg-color);
-  border-radius: var(--card-radius);
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 5%);
-  box-sizing: border-box;
-}
-@media (prefers-color-scheme: dark) {
-  .card {
-    box-shadow: 0 0 0 1px oklch(1 0 0 / 20%);
-  }
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  gap: 0.5rem;
-  justify-content: space-between;
-}
-
-.card-content:has(> :only-child) {
-  justify-content: center;
-}
-
-.card-content > h1,
-.card-content > h2,
-.card-content > h3,
-.card-content > h4,
-.card-content > h5,
-.card-content > h6,
-.card-content > p,
-.card-content > small {
-  margin: 0;
-  padding: 0;
-}
-
-.boxed-list-separate {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.boxed-list-separate > * {
-  flex: 1 1 0;
-  min-width: 225px;
-}
-
-.boxed-list-separate.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-}
-
-.boxed-list-separate.grid > * {
-  flex: unset;
-  min-width: unset;
-}
+@import "./cards.css";
 
 /*headerbar*/
 /*headerbar fills the width of the screen.*/
@@ -85,7 +21,7 @@
   padding: 20px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: var(--z-nav);
 }
 
 .headerbar-left,
@@ -144,12 +80,12 @@ and only takes a tab bar.*/
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 20px;
   position: fixed;
   bottom: 0;
-  z-index: 10;
+  z-index: var(--z-nav);
 }
 
 @media (min-width: 768px) {
@@ -163,26 +99,16 @@ and only takes a tab bar.*/
 
 .tab-bar {
   background-color: oklch(from var(--bg-color) l c h / 80%);
-  display: flex;
+  display: inline-grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+
   width: fit-content;
   border-radius: 999px;
   padding: 0.2rem;
   box-sizing: border-box;
   gap: 0.2rem;
   backdrop-filter: brightness(125%) saturate(125%) blur(2px);
-}
-
-@media (prefers-color-scheme: dark) {
-  .tab-bar {
-    background-color: oklch(from var(--bg-color) 0.3 c h / 50%);
-  }
-}
-.tab-bar.stretch {
-  width: 100%;
-}
-
-.tab-bar.stretch .tab-item {
-  flex: 1;
 }
 
 a.tab-item {
@@ -201,7 +127,19 @@ a.tab-item {
   font-weight: 550;
 }
 
-/* Base icon size for small/standard mode */
+@media (prefers-color-scheme: dark) {
+  .tab-bar {
+    background-color: oklch(from var(--bg-color) 0.3 c h / 50%);
+  }
+}
+.tab-bar.stretch {
+  width: 100%;
+}
+
+.tab-bar.stretch .tab-item {
+  flex: 1;
+}
+
 /* Base icon size for small/standard mode */
 a.tab-item svg,
 a.tab-item img {
@@ -259,7 +197,7 @@ footer {
   margin-top: auto;
 }
 @media (prefers-color-scheme: dark) {
-  .footer {
+  footer {
     box-shadow: 0 0 0 1px oklch(1 0 0 / 20%);
   }
 }

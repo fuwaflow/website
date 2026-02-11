@@ -22,22 +22,27 @@ const { class: className } = Astro.props;
 
 <nav class:list={["tab-bar", className]}>
   {
-    navItems.map((item) => (
-      <a
-        href={item.href}
-        class="tab-item"
-        aria-current={pathname === item.href ? "page" : undefined}
-      >
-        <svg
-          height="16px"
-          viewBox="0 0 16 16"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
+    navItems.map((item) => {
+      const isActive =
+        item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+
+      return (
+        <a
+          href={item.href}
+          class="tab-item"
+          aria-current={isActive ? "page" : undefined}
         >
-          <Fragment set:html={item.icon} />
-        </svg>
-        {item.text}
-      </a>
-    ))
+          <svg
+            height="16px"
+            viewBox="0 0 16 16"
+            width="16px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <Fragment set:html={item.icon} />
+          </svg>
+          {item.text}
+        </a>
+      );
+    })
   }
 </nav>
