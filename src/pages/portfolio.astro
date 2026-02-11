@@ -1,8 +1,51 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "linuxjava7's portfolio";
+
+const allPosts = Object.values(
+  import.meta.glob("./blog/*.md", { eager: true }),
+);
+
+// Filter posts tagged as "portfolio" and sort newest first
+const portfolioPosts = allPosts
+  .filter((post) => post.frontmatter?.tags?.includes("portfolio"))
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter?.date ?? 0);
+    const dateB = new Date(b.frontmatter?.date ?? 0);
+    return dateB - dateA;
+  });
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{pageTitle}</h1>
+  <h1><b>{pageTitle}</b></h1>
+  <div class="boxed-list-separate">
+    {
+      portfolioPosts.map((post) => (
+        <a href={post.url} class="card">
+          <div class="card-content">
+            {/* Tags */}
+            {post.frontmatter.tags?.length && (
+              <div class="tags">
+                {post.frontmatter.tags.map((tag) => (
+                  <span class="tag">{tag.toLowerCase()}, </span>
+                ))}
+              </div>
+            )}
+            {/* Title */}
+            <h3>
+              <b>{post.frontmatter.title}</b>
+            </h3>
+            {/* Date */}
+            <small>
+              {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </small>
+          </div>
+        </a>
+      ))
+    }
+  </div>
 </BaseLayout>

@@ -6,6 +6,13 @@ import "../styles/global.css";
 
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,GRAD,ROND@6..144,-10..0,25..151,1..1000,0..100,0..100&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -15,12 +22,45 @@ import "../styles/global.css";
     <div class="headerbar">
       <div class="headerbar-left"></div>
       <div class="headerbar-center">
-        <TabBar />
+        <TabBar class="large" />
       </div>
       <div class="headerbar-right"></div>
     </div>
+    <div class="bottombar">
+      <TabBar class="stretch" />
+    </div>
+
     <main>
       <slot />
     </main>
+    <footer>
+      <ul class="social">
+        <li class="github">
+          <a
+            href="https://github.com/linuxjava7"
+            title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </li>
+        <li class="mastodon">
+          <a
+            rel="me"
+            href="https://mastodon.social/@linuxjava7"
+            title="Mastodon"
+            target="_blank"
+          >
+            Mastodon
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        This website's code is licensed under the AGPL v3. Content is licensed
+        under CC BY-SA 4.0.
+      </p>
+    </footer>
   </body>
 </html>

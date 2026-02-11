@@ -1,3 +1,17 @@
+/* extra large heading */
+.h0 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 3rem 0 1.5rem 0;
+  font-variation-settings:
+    "ROND" 50,
+    "opsz" 144;
+}
+.h0 strong,
+.h0 b {
+  font-weight: 900;
+}
+
 /* Heading 1 */
 h1 {
   font-size: 2rem; /* 34px */
@@ -111,4 +125,31 @@ sub {
 sub strong,
 sub b {
   font-weight: 600;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color: oklch(from var(--accent-color) 0.66 0.18 h);
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: oklch(from var(--accent-color) 0.77 0.11 h);
+  }
+}
+
+/* link icon */
+a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
+    .button
+  )::after {
+  content: "";
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0 0.1em 0 0.2em;
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }

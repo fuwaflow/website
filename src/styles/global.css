@@ -1,6 +1,14 @@
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css/main.css";*/
 @import "./main.css";
+
+/* website specific stuff goes here */
+
 :root {
   font-family: "Google Sans Flex";
   font-size: 17px;
+  font-variation-settings:
+    "ROND" 75,
+    "wdth" 95;
+  line-height: 1.3;
+  font-optical-sizing: auto;
 }

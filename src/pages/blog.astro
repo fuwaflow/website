@@ -11,7 +11,7 @@ const allPosts = Object.values(
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>{pageTitle}</h1>
+  <h1><b>{pageTitle}</b></h1>
   <div class="boxed-list-separate">
     {
       allPosts.map((post) => (
@@ -26,7 +26,9 @@ const allPosts = Object.values(
               </div>
             )}
             {/* Title */}
-            <h3>{post.frontmatter.title}</h3>
+            <h3>
+              <b>{post.frontmatter.title}</b>
+            </h3>
             {/* Date */}
             <small>
               {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
