@@ -23,10 +23,6 @@
   --destructive-color: var(--accent-red);
   --destructive-bg-color: var(--accent-red);
   --destructive-fg-color: oklch(0.95 0.01 25);
-
-  /* Cards */
-  --card-bg-color: oklch(1 0 0);
-  --card-fg-color: oklch(0.2 0 0 / 80%);
 }
 
 /* Dark Mode */
@@ -52,7 +48,6 @@
     --destructive-fg-color: oklch(0.05 0.01 25);
 
     /* Cards */
-    --card-bg-color: oklch(1 0 0 / 15%);
-    --card-fg-color: oklch(1 0 0 / 100%);
+    --card-fg-color: var(--fg-color);
   }
 }

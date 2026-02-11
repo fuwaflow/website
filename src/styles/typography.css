@@ -1,132 +1,112 @@
-/* extra large heading */
+:root {
+  --fs-h0: 3.5rem;
+  --fs-h1: 2rem;
+  --fs-h2: 1.65rem;
+  --fs-h3: 1.3rem;
+  --fs-h4: 1.2rem;
+  --fs-h5: 1.1rem;
+  --fs-h6: 0.9rem;
+
+  --fs-p: 1rem;
+  --fs-blockquote: 0.941rem;
+  --fs-small: 0.765rem;
+  --fs-figcaption: 0.706rem;
+  --fs-sub: 0.647rem;
+}
+
+/* --- Headings --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .h0 {
-  font-size: 3rem;
   font-weight: 400;
-  margin: 3rem 0 1.5rem 0;
+  margin: 1em 0 0.5em 0;
+}
+
+.h0 {
+  font-size: var(--fs-h0);
   font-variation-settings:
     "ROND" 50,
     "opsz" 144;
+  line-height: 1.1;
 }
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+h4 {
+  font-size: var(--fs-h4);
+}
+h5 {
+  font-size: var(--fs-h5);
+}
+h6 {
+  font-size: var(--fs-h6);
+}
+
+/* Bold weights per level */
 .h0 strong,
 .h0 b {
   font-weight: 900;
 }
-
-/* Heading 1 */
-h1 {
-  font-size: 2rem; /* 34px */
-  font-weight: 400;
-  margin: 2rem 0 1rem 0; /* double top, half bottom */
-}
 h1 strong,
-h1 b {
-  font-weight: 700;
-}
-/* Heading 2 */
-h2 {
-  font-size: 1.647rem; /* 28px */
-  font-weight: 400;
-  margin: 1.648rem 0 0.824rem 0; /* double top, half bottom */
-}
+h1 b,
 h2 strong,
-h2 b {
-  font-weight: 700;
-}
-/* Heading 3 */
-h3 {
-  font-size: 1.294rem; /* 22px */
-  font-weight: 400;
-  margin: 1.294rem 0 0.647rem 0; /* double top, half bottom */
-}
+h2 b,
 h3 strong,
 h3 b {
   font-weight: 700;
 }
-/* Heading 4 */
-h4 {
-  font-size: 1.176rem; /* 20px */
-  font-weight: 400;
-  margin: 1.176rem 0 0.588rem 0; /* double top, half bottom */
-}
 h4 strong,
-h4 b {
-  font-weight: 600;
-}
-/* Heading 5 */
-h5 {
-  font-size: 1rem; /* 17px */
-  font-weight: 400;
-  margin: 1rem 0 0.5rem 0; /* double top, half bottom */
-}
+h4 b,
 h5 strong,
-h5 b {
-  font-weight: 600;
-}
-/* Heading 6 */
-h6 {
-  font-size: 0.882rem; /* 15px */
-  font-weight: 400;
-  margin: 0.882rem 0 0.441rem 0; /* double top, half bottom */
-}
+h5 b,
 h6 strong,
-h6 b {
-  font-weight: 600;
-}
-/* paragraph */
-p {
-  font-size: 1rem; /* 17px */
-  font-weight: 400;
-  margin: 0 0 0.5rem 0; /* no top margin */
-}
+h6 b,
 p strong,
 p b {
   font-weight: 600;
 }
-/* blockquote */
-blockquote {
-  font-size: 0.941rem; /* 16px */
-  line-height: 1.235rem; /* 21px */
-  font-weight: 400;
-  margin: 0 0 0.471rem 0; /* no top margin */
-}
-blockquote strong,
-blockquote b {
-  font-weight: 600;
-}
-/* Small */
-small {
-  font-size: 0.765rem; /* 13px */
-  line-height: 1.059rem; /* 18px */
-  font-weight: 400;
-  margin: 0 0 0.383rem 0; /* no top margin */
-}
-small strong,
-small b {
-  font-weight: 600;
-}
-/* figcaption */
-figcaption {
-  font-size: 0.706rem; /* 12px */
-  line-height: 0.941rem; /* 16px */
-  font-weight: 400;
-  margin: 0 0 0.353rem 0; /* no top margin */
-}
-figcaption strong,
-figcaption b {
-  font-weight: 600;
-}
-/* sub */
+
+/* --- Prose Elements --- */
+p,
+blockquote,
+small,
+figcaption,
 sub {
-  font-size: 0.647rem; /* 11px */
-  line-height: 0.765rem; /* 13px */
   font-weight: 400;
-  margin: 0 0 0.324rem 0; /* no top margin */
-}
-sub strong,
-sub b {
-  font-weight: 600;
+  margin: 0 0 0.5em 0;
 }
 
+p {
+  font-size: var(--fs-p);
+}
+blockquote {
+  font-size: var(--fs-blockquote);
+  line-height: 1.3;
+}
+small {
+  font-size: var(--fs-small);
+  line-height: 1.1rem;
+}
+figcaption {
+  font-size: var(--fs-figcaption);
+  line-height: 1.3;
+}
+sub {
+  font-size: var(--fs-sub);
+  line-height: 1.2;
+}
+
+/* --- Links --- */
 a {
   font-weight: 500;
   text-decoration: none;
@@ -139,7 +119,7 @@ a {
   }
 }
 
-/* link icon */
+/* External Link Icon */
 a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
     .button
   )::after {
@@ -149,7 +129,7 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
   height: 0.75em;
   margin: 0 0.1em 0 0.2em;
   background-color: currentColor;
-  mask-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
+  mask: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
   mask-repeat: no-repeat;
   mask-size: contain;
 }

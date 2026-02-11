@@ -1,6 +1,8 @@
+/*buttons.css*/
+
 :root {
   --button-radius: 9px;
-  --button-color: color-mix(in srgb, currentColor 10%, transparent);
+  --button-color: color-mix(in oklch, currentColor 10%, transparent);
   --destructive-button-color: color-mix(in srgb, currentColor 15%, transparent);
 }
 /* Basic button styles */
@@ -31,8 +33,9 @@ button.suggested-action {
   background-color: var(--accent-bg-color);
 }
 button.suggested-action:hover {
-  background-color: color-mix(in srgb, var(--accent-bg-color) 90%, white);
+  background-color: oklch(from var(--accent-bg-color) calc(l + 0.1) c h);
 }
+
 button.suggested-action:active {
   background-color: color-mix(in srgb, var(--accent-bg-color) 80%, black);
 }
