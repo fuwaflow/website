@@ -1,0 +1,114 @@
+/* Heading 1 */
+h1 {
+  font-size: 2rem; /* 34px */
+  font-weight: 400;
+  margin: 2rem 0 1rem 0; /* double top, half bottom */
+}
+h1 strong,
+h1 b {
+  font-weight: 700;
+}
+/* Heading 2 */
+h2 {
+  font-size: 1.647rem; /* 28px */
+  font-weight: 400;
+  margin: 1.648rem 0 0.824rem 0; /* double top, half bottom */
+}
+h2 strong,
+h2 b {
+  font-weight: 700;
+}
+/* Heading 3 */
+h3 {
+  font-size: 1.294rem; /* 22px */
+  font-weight: 400;
+  margin: 1.294rem 0 0.647rem 0; /* double top, half bottom */
+}
+h3 strong,
+h3 b {
+  font-weight: 700;
+}
+/* Heading 4 */
+h4 {
+  font-size: 1.176rem; /* 20px */
+  font-weight: 400;
+  margin: 1.176rem 0 0.588rem 0; /* double top, half bottom */
+}
+h4 strong,
+h4 b {
+  font-weight: 600;
+}
+/* Heading 5 */
+h5 {
+  font-size: 1rem; /* 17px */
+  font-weight: 400;
+  margin: 1rem 0 0.5rem 0; /* double top, half bottom */
+}
+h5 strong,
+h5 b {
+  font-weight: 600;
+}
+/* Heading 6 */
+h6 {
+  font-size: 0.882rem; /* 15px */
+  font-weight: 400;
+  margin: 0.882rem 0 0.441rem 0; /* double top, half bottom */
+}
+h6 strong,
+h6 b {
+  font-weight: 600;
+}
+/* paragraph */
+p {
+  font-size: 1rem; /* 17px */
+  font-weight: 400;
+  margin: 0 0 0.5rem 0; /* no top margin */
+}
+p strong,
+p b {
+  font-weight: 600;
+}
+/* blockquote */
+blockquote {
+  font-size: 0.941rem; /* 16px */
+  line-height: 1.235rem; /* 21px */
+  font-weight: 400;
+  margin: 0 0 0.471rem 0; /* no top margin */
+}
+blockquote strong,
+blockquote b {
+  font-weight: 600;
+}
+/* Small */
+small {
+  font-size: 0.765rem; /* 13px */
+  line-height: 1.059rem; /* 18px */
+  font-weight: 400;
+  margin: 0 0 0.383rem 0; /* no top margin */
+}
+small strong,
+small b {
+  font-weight: 600;
+}
+/* figcaption */
+figcaption {
+  font-size: 0.706rem; /* 12px */
+  line-height: 0.941rem; /* 16px */
+  font-weight: 400;
+  margin: 0 0 0.353rem 0; /* no top margin */
+}
+figcaption strong,
+figcaption b {
+  font-weight: 600;
+}
+/* sub */
+sub {
+  font-size: 0.647rem; /* 11px */
+  line-height: 0.765rem; /* 13px */
+  font-weight: 400;
+  margin: 0 0 0.324rem 0; /* no top margin */
+}
+sub strong,
+sub b {
+  font-weight: 600;
+}
