@@ -1,0 +1,27 @@
+/*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/colors.css";*/
+/*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/widgets.css";*/
+
+@import "./colors.css";
+@import "./widgets.css";
+@import "./typography.css";
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+body {
+  margin: 0;
+}
+
+main {
+  max-width: min(90%, 1680px);
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: unset;
+    margin: 0 16px;
+  }
+}

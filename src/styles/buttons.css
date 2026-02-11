@@ -1,0 +1,137 @@
+:root {
+  --button-radius: 9px;
+  --button-color: color-mix(in srgb, currentColor 10%, transparent);
+  --destructive-button-color: color-mix(in srgb, currentColor 15%, transparent);
+}
+/* Basic button styles */
+button {
+  min-height: 24px;
+  min-width: 16px;
+  padding: 5px 10px;
+  border-radius: var(--button-radius);
+  font-weight: bold;
+  background-color: var(--button-color);
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: inherit;
+}
+button:hover {
+  background-color: color-mix(in srgb, currentColor 15%, transparent);
+}
+button:active {
+  background-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+/* Suggested action button */
+button.suggested-action {
+  box-shadow: none;
+  color: var(--accent-fg-color);
+  background-color: var(--accent-bg-color);
+}
+button.suggested-action:hover {
+  background-color: color-mix(in srgb, var(--accent-bg-color) 90%, white);
+}
+button.suggested-action:active {
+  background-color: color-mix(in srgb, var(--accent-bg-color) 80%, black);
+}
+/* Destructive action button */
+button.destructive-action {
+  --accent-bg-color: var(--destructive-bg-color);
+  --accent-fg-color: var(--destructive-fg-color);
+  --accent-color: var(--destructive-color);
+  color: var(--accent-color);
+  background-color: var(--destructive-button-color);
+}
+button.destructive-action:hover {
+  background-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+button.destructive-action:active {
+  background-color: color-mix(in srgb, currentColor 25%, transparent);
+}
+/* Flat button styles */
+button.flat {
+  background: transparent;
+  box-shadow: none;
+}
+button.flat:hover {
+  background-color: color-mix(in srgb, currentColor 10%, transparent);
+}
+button.flat:active {
+  background-color: color-mix(in srgb, currentColor 15%, transparent);
+}
+/* Circular button */
+button.circular {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  border-radius: 9999px;
+}
+button.circular label {
+  padding: 0;
+}
+/* Pill button */
+button.pill {
+  padding: 10px 32px;
+  border-radius: 9999px;
+}
+
+/* Clear glass button - Shared styles */
+button.clear-glass,
+button.clear-glass-light,
+button.clear-glass-dark {
+  backdrop-filter: blur(2px);
+  box-shadow:
+    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.25),
+    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.25);
+}
+
+/* Auto variant */
+button.clear-glass {
+  --button-color: color-mix(in srgb, white 30%, transparent);
+  color: black;
+}
+button.clear-glass:hover {
+  background-color: color-mix(in srgb, white 40%, transparent);
+}
+button.clear-glass:active {
+  background-color: color-mix(in srgb, white 50%, transparent);
+}
+
+/* Light variant - more opaque */
+button.clear-glass-light {
+  --button-color: color-mix(in srgb, white 30%, transparent);
+  color: black;
+}
+button.clear-glass-light:hover {
+  background-color: color-mix(in srgb, white 40%, transparent);
+}
+button.clear-glass-light:active {
+  background-color: color-mix(in srgb, white 50%, transparent);
+}
+
+/* Dark variant - less opaque */
+button.clear-glass-dark {
+  --button-color: color-mix(in srgb, white 10%, transparent);
+  color: white;
+}
+button.clear-glass-dark:hover {
+  background-color: color-mix(in srgb, white 15%, transparent);
+}
+button.clear-glass-dark:active {
+  background-color: color-mix(in srgb, white 20%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  button.clear-glass {
+    --button-color: color-mix(in srgb, white 10%, transparent);
+    color: white;
+  }
+  button.clear-glass:hover {
+    background-color: color-mix(in srgb, white 15%, transparent);
+  }
+  button.clear-glass:active {
+    background-color: color-mix(in srgb, white 20%, transparent);
+  }
+}
