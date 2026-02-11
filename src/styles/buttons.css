@@ -92,6 +92,7 @@ button.circular {
   height: 2.5rem;
   flex-shrink: 0;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 button.circular label {
