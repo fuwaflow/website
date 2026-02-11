@@ -108,7 +108,7 @@ and only takes a tab bar.*/
   padding: 0.2rem;
   box-sizing: border-box;
   gap: 0.2rem;
-  backdrop-filter: brightness(125%) saturate(125%) blur(2px);
+  backdrop-filter: brightness(150%) saturate(150%) blur(4px);
 }
 
 a.tab-item {
@@ -129,7 +129,7 @@ a.tab-item {
 
 @media (prefers-color-scheme: dark) {
   .tab-bar {
-    background-color: oklch(from var(--bg-color) 0.3 c h / 50%);
+    background-color: oklch(from var(--bg-color) 0.2 c h / 70%);
   }
 }
 .tab-bar.stretch {
