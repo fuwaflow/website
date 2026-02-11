@@ -1,6 +1,7 @@
 ---
 const { pageTitle } = Astro.props;
 import TabBar from "../components/TabBar.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -11,8 +12,14 @@ import TabBar from "../components/TabBar.astro";
     <title>{pageTitle}</title>
   </head>
   <body>
+    <div class="headerbar">
+      <div class="headerbar-left"></div>
+      <div class="headerbar-center">
+        <TabBar />
+      </div>
+      <div class="headerbar-right"></div>
+    </div>
     <main>
-      <TabBar />
       <slot />
     </main>
   </body>

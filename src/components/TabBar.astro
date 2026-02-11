@@ -7,10 +7,14 @@ const navItems = [
 const pathname = new URL(Astro.request.url).pathname;
 ---
 
-<nav>
+<nav class="tab-bar">
   {
     navItems.map((item) => (
-      <a href={item.href} class={pathname === item.href ? "active" : ""}>
+      <a
+        href={item.href}
+        class="tab-item"
+        aria-current={pathname === item.href ? "page" : undefined}
+      >
         {item.text}
       </a>
     ))

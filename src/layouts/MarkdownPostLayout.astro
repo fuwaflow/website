@@ -1,0 +1,36 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+
+const formattedDate = frontmatter.date
+  ? new Date(frontmatter.date).toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  : "";
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <article>
+    {
+      frontmatter.tags?.length && (
+        <div>
+          {frontmatter.tags.map((tag) => (
+            <span>{tag}, </span>
+          ))}
+        </div>
+      )
+    }
+
+    {formattedDate && <p>{formattedDate}</p>}
+
+    <h1>{frontmatter.title}</h1>
+
+    {frontmatter.description && <p>{frontmatter.description}</p>}
+
+    <div>
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 const pageTitle = "linuxjava7's blog";
-
 const allPosts = Object.values(
   import.meta.glob("./blog/*.md", { eager: true }),
 ).sort((a, b) => {
@@ -14,4 +12,32 @@ const allPosts = Object.values(
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>{pageTitle}</h1>
+  <div class="boxed-list-separate">
+    {
+      allPosts.map((post) => (
+        <a href={post.url} class="card">
+          <div class="card-content">
+            {/* Tags */}
+            {post.frontmatter.tags?.length && (
+              <div class="tags">
+                {post.frontmatter.tags.map((tag) => (
+                  <span class="tag">{tag.toLowerCase()}, </span>
+                ))}
+              </div>
+            )}
+            {/* Title */}
+            <h3>{post.frontmatter.title}</h3>
+            {/* Date */}
+            <small>
+              {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </small>
+          </div>
+        </a>
+      ))
+    }
+  </div>
 </BaseLayout>

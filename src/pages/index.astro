@@ -4,53 +4,88 @@ const pageTitle = "linuxjava7";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <header>
-    <h1>linuxjava7</h1>
-  </header>
+  <h1>linuxjava7</h1>
+  <section>
+    <p>
+      hey there! i'm <strong>linuxjava7</strong>. i'm a hobbyist UI/UX designer
+      and frontend developer. i mostly work with open source software, like
+      making apps for the <a href="https://gnome.org/">GNOME</a> ecosystem, and working
+      on design for open source software. i also dabble in app development for Apple
+      platforms.
+    </p>
+  </section>
 
-  <main>
-    <section>
-      <p>
-        hey there! i'm <strong>linuxjava7</strong>. i'm a hobbyist UI/UX
-        designer and frontend developer. i mostly work with open source
-        software, like making apps for the <a href="https://gnome.org/">GNOME</a
-        > ecosystem, and working on design for open source software. i also dabble
-        in app development for Apple platforms.
-      </p>
-    </section>
-
-    <section>
-      <p>here are some other websites you should check out!</p>
-
-      <h2>people</h2>
-      <ul>
-        <li>
+  <section>
+    <p>here are some other websites you should check out!</p>
+    <h2>people</h2>
+    <ul class="boxed-list-separate grid">
+      <li class="card">
+        <div class="card-content">
+          <h3>Izzy</h3>
           <a href="https://fizzyizzy05.dev/">https://fizzyizzy05.dev/</a>
-        </li>
-        <li>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>Zoey</h3>
           <a href="https://zoeythewitch.page/">https://zoeythewitch.page/</a>
-        </li>
-        <li><a href="https://tesk.page/">https://tesk.page/</a></li>
-        <li><a href="https://kramo.page/">https://kramo.page/</a></li>
-        <li><a href="https://jamie.garden/">https://jamie.garden/</a></li>
-        <li><a href="https://greeeen.dev/">https://greeeen.dev/</a></li>
-        <li>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>TheEvilSkeleton</h3>
+          <a href="https://tesk.page/">https://tesk.page/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>kramo</h3>
+          <a href="https://kramo.page/">https://kramo.page/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>Jamie</h3>
+          <a href="https://jamie.garden/">https://jamie.garden/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>green</h3>
+          <a href="https://greeeen.dev/">https://greeeen.dev/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>Heliguy</h3>
           <a href="https://github.com/heliguy4599"
             >https://github.com/heliguy4599</a
           >
-        </li>
-      </ul>
-
-      <h2>projects</h2>
-      <ul>
-        <li><a href="https://gnome.org/">https://gnome.org/</a></li>
-        <li><a href="https://elementary.io/">https://elementary.io/</a></li>
-        <li>
+        </div>
+      </li>
+    </ul>
+    <h2>projects</h2>
+    <ul class="boxed-list-separate grid">
+      <li class="card">
+        <div class="card-content">
+          <h3>GNOME</h3>
+          <a href="https://gnome.org/">https://gnome.org/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>elementary</h3>
+          <a href="https://elementary.io/">https://elementary.io/</a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card-content">
+          <h3>Natsumi Browser</h3>
           <a href="https://github.com/greeeen-dev/natsumi-browser"
             >https://github.com/greeeen-dev/natsumi-browser</a
           >
-        </li>
-      </ul>
-    </section>
-  </main>
+        </div>
+      </li>
+    </ul>
+  </section>
 </BaseLayout>
