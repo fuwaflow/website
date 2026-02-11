@@ -172,6 +172,14 @@ a.tab-item[aria-current="page"] {
   background-color: oklch(0 0 0/ 4%);
 }
 
+a.tab-item:hover {
+  background-color: oklch(from var(--fg-color) l c h / 4%);
+}
+
+a.tab-item[aria-current="page"]:hover {
+  background-color: oklch(from var(--fg-color) l c h / 8%);
+}
+
 @media (prefers-color-scheme: dark) {
   a.tab-item[aria-current="page"] {
     color: oklch(from var(--accent-color) 0.77 0.11 h);

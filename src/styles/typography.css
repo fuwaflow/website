@@ -85,7 +85,13 @@ sub {
   font-weight: 400;
   margin: 0 0 0.5em 0;
 }
-
+p,
+blockquote,
+figcaption {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
 p {
   font-size: var(--fs-p);
 }
