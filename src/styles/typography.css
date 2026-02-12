@@ -121,7 +121,6 @@ figcaption {
 p,
 blockquote,
 figcaption {
-  overflow-wrap: break-word;
   hyphens: auto;
 }
 

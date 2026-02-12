@@ -3,7 +3,7 @@
 :root {
   /* breakpoints */
   --breakpoint-md: 600px;
-  --breakpoint-lg: 800px;
+  --breakpoint-lg: 900px;
   --main-margin-y: 16px;
   --main-margin-bottom: 2rem;
 }
@@ -27,10 +27,17 @@ footer > * {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .boxed-list-separate > * {
-  flex: 1 1 225px;
+  flex: 1 1 227.5px;
+}
+
+.boxed-list-separate > .horizontal {
+  flex: 1 1 350px;
 }
 
 /* --- Desktop Logic (Above 600px) --- */
