@@ -3,7 +3,11 @@
 :root {
   --button-radius: 9px;
   --button-color: color-mix(in oklch, currentColor 10%, transparent);
-  --destructive-button-color: color-mix(in srgb, currentColor 15%, transparent);
+  --destructive-button-color: color-mix(
+    in oklch,
+    var(--destructive-color) 12%,
+    transparent
+  );
 }
 
 /* Basic button styles */
@@ -31,11 +35,11 @@ button {
 }
 
 button:hover {
-  background-color: color-mix(in oklch, var(--local-tint) 18%, transparent);
+  background-color: color-mix(in oklch, var(--local-tint) 16%, transparent);
 }
 
 button:active {
-  background-color: color-mix(in oklch, var(--local-tint) 25%, transparent);
+  background-color: color-mix(in oklch, var(--local-tint) 22%, transparent);
   transform: scale(0.97);
 }
 
@@ -43,32 +47,37 @@ button:active {
 button.suggested-action {
   box-shadow: none;
   color: var(--accent-fg-color);
-  background-color: var(--accent-bg-color);
+  background-color: var(--accent-color);
 }
 
 button.suggested-action:hover {
-  background-color: oklch(from var(--accent-bg-color) calc(l + 0.05) c h);
+  background-color: oklch(from var(--accent-color) calc(l + 0.04) c h);
 }
 
 button.suggested-action:active {
-  background-color: color-mix(in srgb, var(--accent-bg-color) 80%, black);
+  background-color: oklch(from var(--accent-color) calc(l - 0.04) c h);
 }
 
 /* Destructive action button */
 button.destructive-action {
-  --accent-bg-color: var(--destructive-bg-color);
-  --accent-fg-color: var(--destructive-fg-color);
-  --accent-color: var(--destructive-color);
-  color: var(--accent-color);
+  color: var(--destructive-color);
   background-color: var(--destructive-button-color);
 }
 
 button.destructive-action:hover {
-  background-color: color-mix(in srgb, currentColor 20%, transparent);
+  background-color: color-mix(
+    in oklch,
+    var(--destructive-color) 18%,
+    transparent
+  );
 }
 
 button.destructive-action:active {
-  background-color: color-mix(in srgb, currentColor 25%, transparent);
+  background-color: color-mix(
+    in oklch,
+    var(--destructive-color) 24%,
+    transparent
+  );
 }
 
 /* Flat button styles */
@@ -78,11 +87,11 @@ button.flat {
 }
 
 button.flat:hover {
-  background-color: color-mix(in srgb, currentColor 10%, transparent);
+  background-color: color-mix(in oklch, var(--local-tint) 10%, transparent);
 }
 
 button.flat:active {
-  background-color: color-mix(in srgb, currentColor 15%, transparent);
+  background-color: color-mix(in oklch, var(--local-tint) 16%, transparent);
 }
 
 /* Circular button */
@@ -117,16 +126,16 @@ button.clear-glass-dark {
 
 /* Auto variant */
 button.clear-glass {
-  --button-color: color-mix(in srgb, white 30%, transparent);
-  color: black;
+  --button-color: color-mix(in oklch, var(--bg-color) 70%, transparent);
+  color: var(--fg-color);
 }
 
 button.clear-glass:hover {
-  background-color: color-mix(in srgb, white 40%, transparent);
+  background-color: color-mix(in oklch, var(--bg-color) 80%, transparent);
 }
 
 button.clear-glass:active {
-  background-color: color-mix(in srgb, white 50%, transparent);
+  background-color: color-mix(in oklch, var(--bg-color) 90%, transparent);
 }
 
 /* Light variant - more opaque */
