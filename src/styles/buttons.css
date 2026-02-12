@@ -42,7 +42,15 @@ button:active {
   background-color: color-mix(in oklch, var(--local-tint) 22%, transparent);
   transform: scale(0.97);
 }
-
+button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Suggested action button */
 button.suggested-action {
   box-shadow: none;
@@ -57,7 +65,15 @@ button.suggested-action:hover {
 button.suggested-action:active {
   background-color: oklch(from var(--accent-color) calc(l - 0.04) c h);
 }
-
+button.suggested-action:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button.suggested-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Destructive action button */
 button.destructive-action {
   color: var(--destructive-color);
@@ -79,7 +95,15 @@ button.destructive-action:active {
     transparent
   );
 }
-
+button.destructive-action:focus-visible {
+  outline: 2px solid var(--destructive-color);
+  outline-offset: 2px;
+}
+button.destructive-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Flat button styles */
 button.flat {
   background: transparent;
@@ -93,7 +117,15 @@ button.flat:hover {
 button.flat:active {
   background-color: color-mix(in oklch, var(--local-tint) 16%, transparent);
 }
-
+button.flat:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button.flat:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Circular button */
 button.circular {
   padding: 0;
@@ -137,7 +169,15 @@ button.clear-glass:hover {
 button.clear-glass:active {
   background-color: color-mix(in oklch, var(--bg-color) 90%, transparent);
 }
-
+button.clear-glass:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button.clear-glass:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Light variant - more opaque */
 button.clear-glass-light {
   --button-color: color-mix(in srgb, white 30%, transparent);
@@ -151,7 +191,15 @@ button.clear-glass-light:hover {
 button.clear-glass-light:active {
   background-color: color-mix(in srgb, white 50%, transparent);
 }
-
+button.clear-glass-light:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button.clear-glass-light:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 /* Dark variant - less opaque */
 button.clear-glass-dark {
   --button-color: color-mix(in srgb, white 10%, transparent);
@@ -165,7 +213,15 @@ button.clear-glass-dark:hover {
 button.clear-glass-dark:active {
   background-color: color-mix(in srgb, white 20%, transparent);
 }
-
+button.clear-glass-dark:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button.clear-glass-dark:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
 @media (prefers-color-scheme: dark) {
   button.clear-glass {
     --button-color: color-mix(in srgb, white 10%, transparent);
