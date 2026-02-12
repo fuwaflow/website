@@ -1,11 +1,26 @@
 ---
-const { pageTitle } = Astro.props;
+const { pageTitle, description = "LinuxJava7's website" } = Astro.props;
 import TabBar from "../components/TabBar.astro";
 import "../styles/global.css";
 ---
 
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+
+    <!-- Theme & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,9 +28,6 @@ import "../styles/global.css";
       rel="stylesheet"
     />
 
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -29,8 +41,7 @@ import "../styles/global.css";
     <div class="bottombar">
       <TabBar />
     </div>
-
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <footer class="card">

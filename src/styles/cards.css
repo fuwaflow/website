@@ -14,7 +14,7 @@
   background-color: var(--card-bg-color);
   color: var(--card-fg-color);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 0 1px oklch(from var(--fg-color) l 0 h / 10%);
+  box-shadow: 0 0 0 1px oklch(from var(--fg-color) l 0 h / 7%);
   box-sizing: border-box;
   overflow: hidden;
 }
