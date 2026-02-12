@@ -17,9 +17,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Surfaces */
-    --bg-color: oklch(from var(--accent-color) 0.2 0.02 h);
-    --surface-color: oklch(from var(--accent-color) 0.25 0.03 h);
-    --fg-color: oklch(from var(--accent-color) 0.95 0.02 h);
+    --bg-color: oklch(from var(--accent-color) 0.2 0.015 h);
+    --surface-color: oklch(from var(--accent-color) 0.25 0.01 h);
+    --fg-color: oklch(from var(--accent-color) 0.95 0.03 h);
     --fg-muted: oklch(from var(--accent-color) 0.75 0.02 h);
     --border-color: oklch(from var(--accent-color) 0.35 0.03 h);
   }

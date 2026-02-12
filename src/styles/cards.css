@@ -13,18 +13,20 @@
   border: 1px solid var(--border-color);
   box-sizing: border-box;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .card.tinted {
-  --card-bg-color: oklch(from var(--fg-color) 0.98 0.01 h);
-  color: oklch(from var(--card-fg-color) calc(l - 0.15) c h);
-  border-color: oklch(from var(--fg-color) l c h / 15%);
+  --card-bg-color: oklch(from var(--accent-color) 0.93 0.03 h);
+  --fg-color: oklch(from var(--accent-color) 0.25 0.04 h);
+  --border-color: oklch(from var(--accent-color) 0.92 0.02 h);
 }
 
 @media (prefers-color-scheme: dark) {
   .card.tinted {
-    --card-bg-color: oklch(from var(--fg-color) 0.22 0.015 h);
-    border-color: oklch(from var(--fg-color) l c h / 20%);
+    --card-bg-color: oklch(from var(--accent-color) 0.22 0.015 h);
+    --fg-color: oklch(from var(--accent-color) 0.95 0.05 h);
+    --border-color: oklch(from var(--accent-color) 0.35 0.03 h);
   }
 }
 

@@ -30,7 +30,7 @@
 /* === DARK MODE === */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: oklch(0.18 0.01 250);
+    --bg-color: oklch(0.2 0.01 250);
     --surface-color: oklch(0.22 0.01 250);
     --fg-color: oklch(0.95 0.005 250);
     --fg-muted: oklch(0.7 0.005 250);
