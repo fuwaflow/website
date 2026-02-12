@@ -16,6 +16,12 @@ main {
   display: flow-root;
 }
 
+p > img {
+  display: block;
+  max-width: min(100%, var(--breakpoint-md));
+  margin: auto;
+}
+
 footer > * {
   max-width: var(--breakpoint-lg);
   margin-left: auto;
