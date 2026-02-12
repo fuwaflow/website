@@ -61,19 +61,30 @@
 }
 
 .titlebox {
-  font-size: 18px;
-  font-weight: 590;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
   text-align: center;
-  background-color: oklch(from var(--accent-color) 0.98 0.03 h / 90%);
-  padding: 4px 16px;
-  border-radius: 100px;
-  backdrop-filter: blur(2px);
+
+  background-color: oklch(from var(--bg-color) l c h / 70%);
+  backdrop-filter: brightness(125%) saturate(150%) blur(4px);
+
+  padding: 0.6rem 1.2rem; /* Matches .tab-bar.large padding */
+  border-radius: 999px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  flex-shrink: 1;
-  min-width: 0;
+  width: fit-content;
+
+  border: 1px solid oklch(from var(--fg-color) l c h / 10%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .titlebox {
+    background-color: oklch(from var(--bg-color) 0.2 c h / 70%);
+    border-color: oklch(from var(--fg-color) l c h / 20%);
+  }
 }
 
 /* bottombar */
