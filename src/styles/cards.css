@@ -3,18 +3,14 @@
 }
 
 .card {
-  --card-bg-color: oklch(1 0 0 / 75%);
+  --card-bg-color: var(--surface-color);
   --card-fg-color: var(--fg-color);
-
-  @media (prefers-color-scheme: dark) {
-    --card-bg-color: oklch(1 0 0 / 12.5%);
-  }
   display: flex;
   flex-direction: column;
   background-color: var(--card-bg-color);
   color: var(--card-fg-color);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 0 1px oklch(from var(--fg-color) l 0 h / 7%);
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -22,13 +18,13 @@
 .card.tinted {
   --card-bg-color: oklch(from var(--fg-color) 0.98 0.01 h);
   color: var(--card-fg-color);
-  box-shadow: 0 0 0 1px oklch(from var(--fg-color) l c h / 15%);
+  border-color: oklch(from var(--fg-color) l c h / 15%);
 }
 
 @media (prefers-color-scheme: dark) {
   .card.tinted {
-    --card-bg-color: oklch(from var(--fg-color) 0.25 0.02 h);
-    box-shadow: 0 0 0 1px oklch(from var(--fg-color) l c h / 20%);
+    --card-bg-color: oklch(from var(--fg-color) 0.22 0.015 h);
+    border-color: oklch(from var(--fg-color) l c h / 20%);
   }
 }
 
