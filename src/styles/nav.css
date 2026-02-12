@@ -1,22 +1,44 @@
-/* --- Base Glassy Component --- */
-.glassy {
+/*nav.css*/
+
+/* --- BASE STYLES --- */
+
+.bar-glass-button {
   background-color: oklch(from var(--bg-color) l c h / 70%);
   backdrop-filter: brightness(125%) saturate(150%) blur(4px);
   border-radius: 999px;
   border: 1px solid oklch(from var(--fg-color) l c h / 10%);
   box-sizing: border-box;
-  /* Ensure it uses the standard text color by default */
   color: var(--fg-color);
+  transition: all 0.2s ease;
 }
 
+/* bar items have shadows */
+.headerbar > * > *,
+.bottombar > * {
+  box-shadow:
+    0rem 0.275rem 0.55rem 0rem rgba(0, 0, 0, 0.2),
+    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 1),
+    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 1);
+}
+
+/* Dark Mode Adjustments for Glass Base */
 @media (prefers-color-scheme: dark) {
-  .glassy {
+  .bar-glass-button {
     background-color: oklch(from var(--bg-color) 0.2 c h / 70%);
     border-color: oklch(from var(--fg-color) l c h / 20%);
   }
+
+  .headerbar > * > *,
+  .bottombar > * {
+    box-shadow:
+      0rem 0.275rem 0.55rem 0rem rgba(0, 0, 0, 0.2),
+      inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.33),
+      inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.33);
+  }
 }
 
-/* --- Header & Bottom Bar Layouts --- */
+/* --- LAYOUT CONTAINERS --- */
+
 .headerbar,
 .bottombar {
   box-sizing: border-box;
@@ -31,6 +53,7 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
+  gap: 6px;
 }
 
 .bottombar {
@@ -39,59 +62,77 @@
   bottom: 0;
 }
 
+/* Header Sections: Start, Center, End */
 .headerbar-start,
-.headerbar-end,
-.headerbar-center {
-  flex: 1;
+.headerbar-end {
+  flex: 1 1 0%; /* Ensures both sides balance the center perfectly */
   display: flex;
   align-items: center;
+  min-width: min-content;
 }
 
 .headerbar-start {
   justify-content: flex-start;
 }
-.headerbar-center {
-  justify-content: center;
-}
 .headerbar-end {
   justify-content: flex-end;
 }
 
-/* The "lifted" shadow for items placed inside bars */
-.headerbar > * > *,
-.bottombar > * {
-  box-shadow:
-    0rem 0.275rem 0.55rem 0rem rgba(0, 0, 0, 0.2),
-    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 1),
-    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 1);
+.headerbar-center {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  gap: 8px;
+}
+
+/* --- WIDGETS --- */
+
+.nav-button {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 @media (prefers-color-scheme: dark) {
-  .headerbar > * > *,
-  .bottombar > * {
-    box-shadow:
-      0rem 0.275rem 0.55rem 0rem rgba(0, 0, 0, 0.2),
-      inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.33),
-      inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.33);
+  .nav-button {
+    background-color: oklch(from var(--accent-color) 0.25 0.02 h / 90%);
   }
 }
 
-/* --- Titlebox Widget --- */
 .titlebox {
-  /* Inherits .glassy */
   font-size: 1rem;
   font-weight: 600;
   line-height: 1;
   padding: 0.6rem 1.2rem;
   width: fit-content;
+  height: 44px;
+  display: flex;
+  min-width: 0;
+  flex-shrink: 1;
+  align-items: center;
+}
+
+.headerbar-title {
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* --- Tab Bar Widget --- */
 .tab-bar {
-  /* Inherits .glassy */
   display: inline-grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
@@ -104,7 +145,21 @@
   width: 100%;
 }
 
-/* --- Tab Items --- */
+/* Tab Bar Variations */
+.tab-bar.large .tab-item {
+  flex-direction: row;
+  gap: 0.6rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  align-items: center;
+}
+
+.tab-bar.large .tab-item svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* Tab Individual Items */
 a.tab-item {
   padding: 0.5rem 1rem;
   border-radius: 999px;
@@ -118,7 +173,6 @@ a.tab-item {
   line-height: 1;
   gap: 0.2rem;
   transition: all 0.2s ease;
-  /* Force non-active items to use the standard color */
   color: var(--fg-color);
 }
 
@@ -129,37 +183,20 @@ a.tab-item img {
   fill: currentColor;
 }
 
-/* States */
+/* Tab States (Hover & Active) */
 a.tab-item:hover {
   background-color: oklch(from var(--fg-color) l c h / 6%);
 }
 
-/* Specific Active State */
 a.tab-item[aria-current="page"] {
   font-weight: 650;
-  color: oklch(from var(--accent-color) 0.55 0.2 h); /* High-contrast accent */
+  color: oklch(from var(--accent-color) 0.55 0.2 h);
   background-color: oklch(from var(--fg-color) l c h / 8%);
 }
 
 @media (prefers-color-scheme: dark) {
   a.tab-item[aria-current="page"] {
-    color: oklch(
-      from var(--accent-color) 0.8 0.12 h
-    ); /* Brighter accent for dark mode */
+    color: oklch(from var(--accent-color) 0.8 0.12 h);
     background-color: oklch(from var(--fg-color) l c h / 12%);
   }
-}
-
-/* Large Mode (Navbar style) */
-.tab-bar.large .tab-item {
-  flex-direction: row;
-  gap: 0.6rem;
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  align-items: center;
-}
-
-.tab-bar.large .tab-item svg {
-  width: 1.1em;
-  height: 1.1em;
 }
