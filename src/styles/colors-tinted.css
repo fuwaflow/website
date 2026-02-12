@@ -18,7 +18,7 @@
   :root {
     /* Surfaces */
     --bg-color: oklch(from var(--accent-color) 0.225 0.015 h);
-    --surface-color: oklch(from var(--accent-color) 0.275 0.02 h);
+    --surface-color: oklch(from var(--accent-color) 0.275 0.015 h);
     --fg-color: oklch(from var(--accent-color) 0.95 0.03 h);
     --fg-muted: oklch(from var(--accent-color) 0.75 0.02 h);
     --border-color: oklch(from var(--accent-color) 0.35 0.03 h);
