@@ -12,24 +12,20 @@
 }
 
 .headerbar-start,
-.headerbar-end {
-  flex: 1;
-}
-
+.headerbar-end,
 .headerbar-center {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+.headerbar-center {
+  justify-content: center;
+}
 .headerbar-start {
-  display: flex;
   justify-content: flex-start;
 }
-
 .headerbar-end {
-  display: flex;
   justify-content: flex-end;
 }
 
@@ -72,6 +68,7 @@
   padding: 4px 16px;
   border-radius: 100px;
   backdrop-filter: blur(2px);
+  display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -109,18 +106,6 @@
 @media (prefers-color-scheme: dark) {
   .tab-bar {
     background-color: oklch(from var(--bg-color) 0.2 c h / 70%);
-  }
-}
-
-@media (max-width: 768px) {
-  .headerbar .tab-bar {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .bottombar .tab-bar {
-    display: none;
   }
 }
 

@@ -3,10 +3,12 @@
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/colors.css";*/
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/widgets.css";*/
 /*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/typography.css";*/
+/*@import "https://cdn.jsdelivr.net/gh/LinuxJava7/css@main/layout.css";*/
 
 @import "./colors-tinted.css";
 @import "./widgets.css";
 @import "./typography.css";
+@import "./layout.css";
 
 :root {
   --bottom-nav-height: 0px;
@@ -29,28 +31,6 @@ body {
   flex-direction: column;
   min-height: 100dvh;
   margin: 0;
-}
-
-main {
-  max-width: min(90%, 1680px);
-  margin: 16px auto;
-  display: flow-root;
-  margin-bottom: 2rem;
-}
-
-main > *:first-child {
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  main {
-    max-width: unset;
-    margin: 16px;
-    margin-bottom: 2rem;
-  }
-  footer {
-    padding-bottom: calc(1.4rem + var(--bottom-nav-height));
-  }
 }
 
 body:has(.bottombar) {

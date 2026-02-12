@@ -1,0 +1,62 @@
+/* layout.css */
+
+:root {
+  /* breakpoints */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1680px;
+  --main-margin-y: 16px;
+  --main-margin-bottom: 2rem;
+}
+
+/* --- Global Layout --- */
+main {
+  max-width: min(90%, var(--breakpoint-lg));
+  margin-inline: auto;
+  margin-block: var(--main-margin-y) var(--main-margin-bottom);
+  display: flow-root;
+}
+
+/* --- Grid & List Scaling (Intrinsic Layout) --- */
+.boxed-list-separate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.boxed-list-separate > * {
+  flex: 1 1 225px;
+}
+
+/* --- Desktop Logic (Above 768px) --- */
+@media (min-width: 768px) {
+  .bottombar {
+    display: none;
+  }
+
+  /* if header has a navbar, hide the titlebox */
+  .headerbar:has(.tab-bar) .titlebox {
+    display: none;
+  }
+}
+
+/* --- Mobile Logic (Below 768px) --- */
+@media (max-width: 768px) {
+  main {
+    max-width: none;
+    margin-inline: 16px;
+  }
+
+  .headerbar {
+    padding: 12px;
+  }
+
+  /* hide navbar in header on mobile (as it moves to bottombar) */
+  .headerbar .tab-bar {
+    display: none;
+  }
+
+  footer {
+    /* padding based on whether bottombar exists */
+    padding-bottom: calc(1.4rem + var(--bottom-nav-height));
+  }
+}
