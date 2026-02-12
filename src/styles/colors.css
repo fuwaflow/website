@@ -5,16 +5,22 @@
   --fg-color: oklch(0.3 0.04 320);
   --fg-muted: oklch(0.55 0.03 320);
   --border-color: oklch(0.92 0.02 320);
+
   /* === ACCENT PALETTE === */
-  --accent-blue: oklch(0.85 0.06 240);
-  --accent-teal: oklch(0.85 0.06 180);
-  --accent-green: oklch(0.88 0.06 145);
-  --accent-yellow: oklch(0.92 0.07 95);
-  --accent-orange: oklch(0.88 0.08 50);
   --accent-red: oklch(0.85 0.09 25);
+  --accent-orange: oklch(0.88 0.08 50);
+  --accent-peach: oklch(0.9 0.07 75);
+  --accent-yellow: oklch(0.92 0.07 95);
+  --accent-green: oklch(0.88 0.06 145);
+  --accent-mint: oklch(0.87 0.06 165);
+  --accent-teal: oklch(0.85 0.06 180);
+  --accent-blue: oklch(0.85 0.06 240);
+  --accent-slate: oklch(0.85 0.02 260);
+  --accent-lavender: oklch(0.85 0.1 280);
+  --accent-purple: oklch(0.85 0.1 300);
+  --accent-orchid: oklch(0.85 0.1 320);
   --accent-pink: oklch(0.85 0.1 340);
-  --accent-purple: oklch(0.85 0.08 300);
-  --accent-slate: oklch(0.85 0.03 260);
+
   /* === SEMANTIC COLORS === */
   --accent-color: var(--accent-pink);
   --accent-fg-color: oklch(0.4 0.1 340);
@@ -31,15 +37,20 @@
     --fg-color: oklch(0.95 0.02 320);
     --fg-muted: oklch(0.75 0.02 320);
     --border-color: oklch(0.35 0.03 300);
+
     /* Accent palette */
-    --accent-blue: oklch(0.8 0.08 240);
-    --accent-teal: oklch(0.8 0.08 180);
-    --accent-green: oklch(0.82 0.08 145);
-    --accent-yellow: oklch(0.85 0.08 95);
-    --accent-orange: oklch(0.82 0.09 50);
     --accent-red: oklch(0.8 0.1 25);
-    --accent-pink: oklch(0.82 0.11 340);
-    --accent-purple: oklch(0.8 0.1 300);
+    --accent-orange: oklch(0.82 0.09 50);
+    --accent-peach: oklch(0.85 0.08 75);
+    --accent-yellow: oklch(0.85 0.08 95);
+    --accent-green: oklch(0.82 0.08 145);
+    --accent-mint: oklch(0.82 0.08 165);
+    --accent-teal: oklch(0.8 0.08 180);
+    --accent-blue: oklch(0.8 0.08 240);
     --accent-slate: oklch(0.8 0.04 260);
+    --accent-lavender: oklch(0.82 0.1 280);
+    --accent-purple: oklch(0.8 0.1 300);
+    --accent-orchid: oklch(0.82 0.1 320);
+    --accent-pink: oklch(0.82 0.11 340);
   }
 }
