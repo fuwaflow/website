@@ -156,7 +156,6 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
 }
 
 main > *:first-child,
-section > *:first-child,
 .card > *:first-child {
   margin-top: 0;
 }
