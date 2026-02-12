@@ -3,7 +3,7 @@
 :root {
   /* === SEED COLOR === */
   /* Change this single variable to re-theme the entire page */
-  --accent-color: var(--accent-purple);
+  --accent-color: var(--accent-orchid);
 
   /* === SURFACES === */
   --bg-color: oklch(from var(--accent-color) 0.97 0.01 h);
