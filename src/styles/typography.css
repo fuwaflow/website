@@ -118,12 +118,6 @@ figcaption {
   line-height: var(--lh-normal);
 }
 
-p,
-blockquote,
-figcaption {
-  hyphens: auto;
-}
-
 /* --- Links --- */
 a {
   color: oklch(from var(--accent-color) 0.66 0.18 h);
