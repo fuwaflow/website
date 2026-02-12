@@ -3,11 +3,13 @@
 /* website specific stuff goes here */
 
 :root {
-  font-family: "Google Sans Flex";
+  --font-family-base: "Google Sans Flex", system-ui, sans-serif;
+  --font-family-heading: "Google Sans Flex", system-ui, sans-serif;
+
   font-size: 17px;
+
   font-variation-settings:
     "ROND" 75,
     "wdth" 95;
-  line-height: 1.3;
   font-optical-sizing: auto;
 }

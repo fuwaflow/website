@@ -1,17 +1,32 @@
 :root {
-  --fs-h0: 3.5rem;
-  --fs-h1: 2rem;
-  --fs-h2: 1.65rem;
-  --fs-h3: 1.3rem;
-  --fs-h4: 1.2rem;
-  --fs-h5: 1.1rem;
-  --fs-h6: 0.9rem;
+  /*font family*/
+  --font-family-base: system-ui, -apple-system, sans-serif;
+  --font-family-heading: var(--font-family-base);
+  --font-family-mono: ui-monospace, monospace;
 
+  /*heading*/
+  --fs-h0: 3.157rem;
+  --fs-h1: 2.369rem;
+  --fs-h2: 1.777rem;
+  --fs-h3: 1.333rem;
+  --fs-h4: 1rem;
+  --fs-h5: 0.875rem;
+  --fs-h6: 0.75rem;
+
+  /*body*/
   --fs-p: 1rem;
-  --fs-blockquote: 0.941rem;
-  --fs-small: 0.765rem;
-  --fs-figcaption: 0.706rem;
-  --fs-sub: 0.647rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /*line height*/
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--lh-normal);
 }
 
 /* --- Headings --- */
@@ -22,7 +37,9 @@ h4,
 h5,
 h6,
 .h0 {
+  font-family: var(--font-family-heading);
   font-weight: 400;
+  line-height: var(--lh-tight);
   margin: 1em 0 0.5em 0;
 }
 
@@ -33,6 +50,7 @@ h6,
     "opsz" 144;
   line-height: 1.1;
 }
+
 h1 {
   font-size: var(--fs-h1);
 }
@@ -77,51 +95,55 @@ p b {
 }
 
 /* --- Prose Elements --- */
-p,
-blockquote,
-small,
-figcaption,
-sub {
-  font-weight: 400;
-  margin: 0 0 0.5em 0;
+p {
+  font-size: var(--fs-p);
+  margin: 0 0 1em 0; /* CHANGE FROM 0.5em */
 }
+
+blockquote {
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  margin: 1em 0;
+  padding-left: 1.5em;
+  border-left: 3px solid var(--accent-color);
+  font-style: italic;
+}
+
+small {
+  font-size: var(--fs-small);
+}
+
+figcaption {
+  font-size: var(--fs-tiny);
+  line-height: var(--lh-normal);
+}
+
 p,
 blockquote,
 figcaption {
   overflow-wrap: break-word;
-  word-break: break-word;
   hyphens: auto;
-}
-p {
-  font-size: var(--fs-p);
-}
-blockquote {
-  font-size: var(--fs-blockquote);
-  line-height: 1.3;
-}
-small {
-  font-size: var(--fs-small);
-  line-height: 1.1rem;
-}
-figcaption {
-  font-size: var(--fs-figcaption);
-  line-height: 1.3;
-}
-sub {
-  font-size: var(--fs-sub);
-  line-height: 1.2;
 }
 
 /* --- Links --- */
 a {
-  font-weight: 500;
-  text-decoration: none;
   color: oklch(from var(--accent-color) 0.66 0.18 h);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: oklch(from var(--accent-color) 0.55 0.2 h);
 }
 
 @media (prefers-color-scheme: dark) {
   a {
     color: oklch(from var(--accent-color) 0.77 0.11 h);
+  }
+
+  a:hover {
+    color: oklch(from var(--accent-color) 0.85 0.13 h);
   }
 }
 
@@ -131,11 +153,11 @@ a[href^="http"]:not(:has(.arrow)):not(:has(img)):not(:has(svg)):not(
   )::after {
   content: "";
   display: inline-block;
-  width: 0.75em;
-  height: 0.75em;
-  margin: 0 0.1em 0 0.2em;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 0.25em;
   background-color: currentColor;
-  mask: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSI+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjgiIGQ9Ik04IDd2LjVhMiAyIDAgMCAxLTIgMkgzYTIgMiAwIDAgMS0yLTJ2LTNhMiAyIDAgMCAxIDItMmguNW0xIDMuNSA1LTVtMCAwSDZtMy41IDB2My41Ii8+PC9zdmc+");
-  mask-repeat: no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='none'%3E%3Cpath stroke='currentColor' stroke-linecap='round' stroke-width='1.8' d='M8 7v.5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h.5m1 3.5 5-5m0 0H6m3.5 0v3.5'/%3E%3C/svg%3E")
+    no-repeat center;
   mask-size: contain;
 }
