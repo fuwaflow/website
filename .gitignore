@@ -24,3 +24,4 @@ pnpm-debug.log*
 .idea/
 
 src/pages/buttontest.astro
+src/pages/arabic.astro

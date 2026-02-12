@@ -1,10 +1,15 @@
 :root {
+  /* === SEED COLOR === */
+  /* Change this single variable to re-theme the entire page */
+  --accent-color: oklch(0.85 0.1 340); /* Currently Pink */
+
   /* === SURFACES === */
-  --bg-color: oklch(0.97 0.01 320);
-  --surface-color: oklch(0.99 0.01 320);
-  --fg-color: oklch(0.3 0.04 320);
-  --fg-muted: oklch(0.55 0.03 320);
-  --border-color: oklch(0.92 0.02 320);
+  --bg-color: oklch(from var(--accent-color) 0.97 0.01 h);
+  --surface-color: oklch(from var(--accent-color) 0.99 0.005 h);
+  --fg-color: oklch(from var(--accent-color) 0.3 0.04 h);
+  --fg-muted: oklch(from var(--accent-color) 0.55 0.03 h);
+  --border-color: oklch(from var(--accent-color) 0.92 0.02 h);
+
   /* === ACCENT PALETTE === */
   --accent-blue: oklch(0.85 0.06 240);
   --accent-teal: oklch(0.85 0.06 180);
@@ -15,22 +20,22 @@
   --accent-pink: oklch(0.85 0.1 340);
   --accent-purple: oklch(0.85 0.08 300);
   --accent-slate: oklch(0.85 0.03 260);
+
   /* === SEMANTIC COLORS === */
-  --accent-color: var(--accent-pink);
-  --accent-fg-color: oklch(0.4 0.1 340);
+  --accent-fg-color: oklch(from var(--accent-color) 0.35 0.1 h);
   --destructive-color: var(--accent-red);
-  --destructive-fg-color: oklch(0.4 0.1 25);
+  --destructive-fg-color: oklch(from var(--accent-red) 0.35 0.1 h);
 }
 
 /* === DARK MODE === */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Surfaces */
-    --bg-color: oklch(0.2 0.03 300);
-    --surface-color: oklch(0.25 0.03 300);
-    --fg-color: oklch(0.95 0.02 320);
-    --fg-muted: oklch(0.75 0.02 320);
-    --border-color: oklch(0.35 0.03 300);
+    --bg-color: oklch(from var(--accent-color) 0.2 0.03 h);
+    --surface-color: oklch(from var(--accent-color) 0.25 0.03 h);
+    --fg-color: oklch(from var(--accent-color) 0.95 0.02 h);
+    --fg-muted: oklch(from var(--accent-color) 0.75 0.02 h);
+    --border-color: oklch(from var(--accent-color) 0.35 0.03 h);
     /* Accent palette */
     --accent-blue: oklch(0.8 0.08 240);
     --accent-teal: oklch(0.8 0.08 180);
