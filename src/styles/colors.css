@@ -30,11 +30,11 @@
 /* === DARK MODE === */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: oklch(0.2 0.01 250);
-    --surface-color: oklch(0.22 0.01 250);
+    --bg-color: oklch(0.225 0.01 250);
+    --surface-color: oklch(0.275 0.01 250);
     --fg-color: oklch(0.95 0.005 250);
-    --fg-muted: oklch(0.7 0.005 250);
-    --border-color: oklch(0.28 0.01 250);
+    --fg-muted: oklch(0.75 0.005 250);
+    --border-color: oklch(0.35 0.01 250);
 
     /* Accent palette */
     --accent-red: oklch(0.65 0.18 25);
