@@ -27,10 +27,27 @@ footer {
   border: 1px solid var(--border-color);
   box-sizing: border-box;
   margin-top: auto;
+  text-align: center;
+  p {
+    margin: 0;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  footer {
-    box-shadow: 0 0 0 1px oklch(1 0 0 / 20%);
-  }
+.social {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.social li {
+  margin: 0 0.5rem;
+}
+
+.social a {
+  color: inherit;
+  text-decoration: none;
 }

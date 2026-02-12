@@ -3,10 +3,9 @@
 /* --- BASE STYLES --- */
 
 .bar-glass-button {
-  background-color: oklch(from var(--bg-color) l c h / 70%);
-  backdrop-filter: brightness(125%) saturate(150%) blur(4px);
+  background-color: oklch(from var(--bg-color) l c h / 90%);
+  backdrop-filter: brightness(175%) saturate(200%) blur(3px);
   border-radius: 999px;
-  border: 1px solid oklch(from var(--fg-color) l c h / 10%);
   box-sizing: border-box;
   color: var(--fg-color);
   transition: all 0.2s ease;
@@ -16,7 +15,7 @@
 .headerbar > * > *,
 .bottombar > * {
   box-shadow:
-    0rem 0.3rem 0.4rem 0rem oklch(0 0 0 / 10%),
+    0rem 0.3rem 0.3rem 0rem oklch(0 0 0 / 5%),
     inset 1px 1px 1px -0.5px rgba(255, 255, 255, 1),
     inset -1px -1px 1px -0.5px rgba(255, 255, 255, 1);
 }
@@ -24,16 +23,15 @@
 /* Dark Mode Adjustments for Glass Base */
 @media (prefers-color-scheme: dark) {
   .bar-glass-button {
-    background-color: oklch(from var(--bg-color) 0.2 c h / 70%);
-    border-color: oklch(from var(--fg-color) l c h / 20%);
+    background-color: oklch(from var(--bg-color) l c h / 70%);
   }
 
   .headerbar > * > *,
   .bottombar > * {
     box-shadow:
-      0rem 0.275rem 0.55rem 0rem rgba(0, 0, 0, 0.2),
-      inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.33),
-      inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.33);
+      0rem 0.3rem 0.3rem 0rem oklch(0 0 0 / 5%),
+      inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.25),
+      inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.25);
   }
 }
 
@@ -44,7 +42,7 @@
   box-sizing: border-box;
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 16px;
   z-index: var(--z-nav);
 }
 
@@ -53,13 +51,14 @@
   justify-content: space-between;
   position: sticky;
   top: 0;
-  gap: 6px;
+  gap: 12px;
 }
 
 .bottombar {
   justify-content: center;
   position: fixed;
   bottom: 0;
+  padding: 20px;
 }
 
 /* Header Sections: Start, Center, End */
@@ -96,7 +95,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: none;
   cursor: pointer;
 }
 
@@ -104,12 +102,6 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-@media (prefers-color-scheme: dark) {
-  .nav-button {
-    background-color: oklch(from var(--accent-color) 0.25 0.02 h / 90%);
-  }
 }
 
 .titlebox {
@@ -130,6 +122,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.4;
 }
 
 .tab-bar {

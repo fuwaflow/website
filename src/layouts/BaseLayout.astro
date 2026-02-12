@@ -2,6 +2,7 @@
 const { pageTitle, description = "LinuxJava7's website" } = Astro.props;
 import TabBar from "../components/TabBar.astro";
 import "../styles/global.css";
+const showBackButton = Astro.url.pathname !== "/";
 ---
 
 <html lang="en">
@@ -33,16 +34,21 @@ import "../styles/global.css";
   <body>
     <div class="headerbar">
       <div class="headerbar-start">
-        <button
-          onClick="window.history.back()"
-          class="nav-button bar-glass-button"
-        >
-          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"
-              fill="currentColor"></path>
-          </svg>
-        </button>
+        {
+          showBackButton && (
+            <button
+              onClick="window.history.back()"
+              class="nav-button bar-glass-button"
+            >
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          )
+        }
       </div>
       <div class="headerbar-center">
         <TabBar class="large bar-glass-button" />
@@ -51,16 +57,21 @@ import "../styles/global.css";
         </div>
       </div>
       <div class="headerbar-end">
-        <button
-          onClick="window.history.back()"
-          class="nav-button bar-glass-button"
-        >
-          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"
-              fill="currentColor"></path>
-          </svg>
-        </button>
+        {
+          showBackButton && (
+            <button
+              onClick="window.history.back()"
+              class="nav-button bar-glass-button"
+            >
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          )
+        }
       </div>
     </div>
     <div class="bottombar">
@@ -69,7 +80,7 @@ import "../styles/global.css";
     <main id="main-content">
       <slot />
     </main>
-    <footer class="card">
+    <footer>
       <ul class="social">
         <li class="github">
           <a

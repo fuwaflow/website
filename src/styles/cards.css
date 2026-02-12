@@ -17,7 +17,7 @@
 
 .card.tinted {
   --card-bg-color: oklch(from var(--fg-color) 0.98 0.01 h);
-  color: var(--card-fg-color);
+  color: oklch(from var(--card-fg-color) calc(l - 0.15) c h);
   border-color: oklch(from var(--fg-color) l c h / 15%);
 }
 

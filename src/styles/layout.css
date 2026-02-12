@@ -2,18 +2,24 @@
 
 :root {
   /* breakpoints */
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1680px;
+  --breakpoint-md: 600px;
+  --breakpoint-lg: 800px;
   --main-margin-y: 16px;
   --main-margin-bottom: 2rem;
 }
 
 /* --- Global Layout --- */
 main {
-  max-width: min(90%, var(--breakpoint-lg));
+  max-width: min(85%, var(--breakpoint-lg));
   margin-inline: auto;
   margin-block: var(--main-margin-y) var(--main-margin-bottom);
   display: flow-root;
+}
+
+footer > * {
+  max-width: var(--breakpoint-lg);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --- Grid & List Scaling (Intrinsic Layout) --- */
@@ -27,8 +33,8 @@ main {
   flex: 1 1 225px;
 }
 
-/* --- Desktop Logic (Above 768px) --- */
-@media (min-width: 768px) {
+/* --- Desktop Logic (Above 600px) --- */
+@media (min-width: 600px) {
   .bottombar {
     display: none;
   }
@@ -39,15 +45,15 @@ main {
   }
 }
 
-/* --- Mobile Logic (Below 768px) --- */
-@media (max-width: 768px) {
+/* --- Mobile Logic (Below 600px) --- */
+@media (max-width: 600px) {
   main {
     max-width: none;
     margin-inline: 16px;
   }
 
   .headerbar {
-    padding: 12px;
+    padding: 6px 16px;
   }
 
   /* hide navbar in header on mobile (as it moves to bottombar) */

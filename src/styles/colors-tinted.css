@@ -3,7 +3,7 @@
 :root {
   /* === SEED COLOR === */
   /* Change this single variable to re-theme the entire page */
-  --accent-color: var(--accent-orchid);
+  --accent-color: var(--accent-purple);
 
   /* === SURFACES === */
   --bg-color: oklch(from var(--accent-color) 0.97 0.01 h);
@@ -11,18 +11,13 @@
   --fg-color: oklch(from var(--accent-color) 0.3 0.04 h);
   --fg-muted: oklch(from var(--accent-color) 0.55 0.03 h);
   --border-color: oklch(from var(--accent-color) 0.92 0.02 h);
-
-  /* === SEMANTIC COLORS === */
-  --accent-fg-color: oklch(from var(--accent-color) 0.35 0.1 h);
-  --destructive-color: var(--accent-red);
-  --destructive-fg-color: oklch(from var(--accent-red) 0.35 0.1 h);
 }
 
 /* === DARK MODE === */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Surfaces */
-    --bg-color: oklch(from var(--accent-color) 0.2 0.03 h);
+    --bg-color: oklch(from var(--accent-color) 0.2 0.02 h);
     --surface-color: oklch(from var(--accent-color) 0.25 0.03 h);
     --fg-color: oklch(from var(--accent-color) 0.95 0.02 h);
     --fg-muted: oklch(from var(--accent-color) 0.75 0.02 h);

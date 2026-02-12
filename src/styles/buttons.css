@@ -5,7 +5,7 @@
   --button-color: color-mix(in oklch, currentColor 10%, transparent);
   --destructive-button-color: color-mix(
     in oklch,
-    var(--destructive-color) 12%,
+    var(--destructive-color) 16%,
     transparent
   );
 }
@@ -24,7 +24,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: var(--local-tint);
+  color: oklch(from var(--local-tint) calc(l - 0.15) c h);
   background-color: color-mix(in oklch, var(--local-tint) 10%, transparent);
   display: inline-flex;
   align-items: center;
@@ -76,7 +76,7 @@ button.suggested-action:disabled {
 }
 /* Destructive action button */
 button.destructive-action {
-  color: var(--destructive-color);
+  color: oklch(from var(--destructive-color) 0.75 0.25 h);
   background-color: var(--destructive-button-color);
 }
 
