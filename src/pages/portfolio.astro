@@ -38,12 +38,9 @@ const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }))
               style="text-decoration: none; color: inherit; display: block;"
             >
               {post.frontmatter.tags && (
-                <p style="font-size: 0.8rem; margin-bottom: 0.5rem; opacity: 0.8;">
-                  {post.frontmatter.tags.map((tag: string, i: number) => (
-                    <span>
-                      {tag.toLowerCase()}
-                      {i < post.frontmatter.tags.length - 1 ? ", " : ""}
-                    </span>
+                <p style="font-size: 0.8rem; opacity: 0.8;">
+                  {post.frontmatter.tags.map((tag) => (
+                    <span>{tag}, </span>
                   ))}
                 </p>
               )}
