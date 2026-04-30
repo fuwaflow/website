@@ -1,5 +1,75 @@
 ---
 import Layout from "../layouts/layout.astro";
+
+const pageTitle = "fuwaflow — blog";
+
+const allPosts = Object.values(
+  import.meta.glob("./blog/*.md", { eager: true }),
+).sort((a: any, b: any) => {
+  const dateA = new Date(a.frontmatter?.date ?? 0).getTime();
+  const dateB = new Date(b.frontmatter?.date ?? 0).getTime();
+  return dateB - dateA;
+});
 ---
 
-<Layout title="fuwaflow — blog"> <section></section></Layout>
+<Layout title={pageTitle}>
+  <main>
+    <section>
+      <h1 style="color: var(--accent);" class="h0">{pageTitle}</h1>
+      <p>
+        welcome to my blog! this is where i share my thoughts on design, open
+        source, and whatever else i'm currently working on.
+      </p>
+      <hr />
+    </section>
+
+    <section>
+      <h2>recent posts</h2>
+      {/* This must be a div to contain the grid */}
+      <div class="card-grid">
+        {
+          allPosts.map((post: any) => (
+            /* The entire card is now the <a> tag */
+            <a
+              href={post.url}
+              class="card"
+              style="text-decoration: none; color: inherit; display: block;"
+            >
+              {post.frontmatter.tags && (
+                <p style="font-size: 0.8rem; margin-bottom: 0.5rem; opacity: 0.8;">
+                  {post.frontmatter.tags.map((tag: string, i: number) => (
+                    <span>
+                      {tag.toLowerCase()}
+                      {i < post.frontmatter.tags.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </p>
+              )}
+
+              <h3>{post.frontmatter.title}</h3>
+
+              <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 1rem;">
+                {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+
+              {/* We use a span or div styled like a link here, since we can't put an <a> inside an <a> */}
+              <span
+                class="fake-link"
+                style="color: var(--accent); text-decoration: underline;"
+              >
+                read post
+              </span>
+            </a>
+          ))
+        }
+      </div>
+      <hr />
+    </section>
+
+    <p>thanks for reading!</p>
+  </main>
+</Layout>

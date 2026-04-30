@@ -1,6 +1,7 @@
 ---
 import "normalize.css";
 import "../styles/main.css";
+import Navbar from "../components/Navbar.astro";
 
 interface Props {
   title?: string;
@@ -34,14 +35,8 @@ const { title = "fuwaflow", description = "fuwaflow's website" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav>
-      <a href="/" class="logo">fuwaflow</a>
-      <a href="/blog">blog</a>
-      <a href="/portfolio">portfolio</a>
-    </nav>
-    <main>
-      <slot />
-    </main>
+    <Navbar />
+    <slot />
     <footer>
       <div class="footer-inner">
         <p>made with love by fuwaflow</p>

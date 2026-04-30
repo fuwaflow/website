@@ -1,0 +1,42 @@
+---
+import Layout from "./layout.astro";
+const { frontmatter } = Astro.props;
+
+const formattedDate = frontmatter.date
+  ? new Date(frontmatter.date).toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  : "";
+---
+
+<Layout pageTitle={frontmatter.title}>
+  <article>
+    <header>
+      <!-- Tags -->
+      {
+        frontmatter.tags?.length && (
+          <div>
+            {frontmatter.tags.map((tag) => (
+              <span>{tag}, </span>
+            ))}
+          </div>
+        )
+      }
+
+      <!-- Date -->
+      {formattedDate && <p>{formattedDate}</p>}
+
+      <!-- Title -->
+      <h1>{frontmatter.title}</h1>
+
+      <!-- Description -->
+      {frontmatter.description && <p>{frontmatter.description}</p>}
+    </header>
+    <!-- Content -->
+    <main>
+      <slot />
+    </main>
+  </article>
+</Layout>

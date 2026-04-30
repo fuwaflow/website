@@ -1,0 +1,12 @@
+---
+const { pathname } = Astro.url;
+
+const isActive = (path: string) =>
+  pathname === path || pathname === path + "/" ? "page" : undefined;
+---
+
+<nav>
+  <a href="/" class="logo" aria-current={isActive("/")}> fuwaflow </a>
+  <a href="/blog" aria-current={isActive("/blog")}> blog </a>
+  <a href="/portfolio" aria-current={isActive("/portfolio")}> portfolio </a>
+</nav>
