@@ -34,6 +34,11 @@ const { title = "fuwaflow", description = "fuwaflow's website" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <nav>
+      <a href="/" class="logo">fuwaflow</a>
+      <a href="/blog">blog</a>
+      <a href="/portfolio">portfolio</a>
+    </nav>
     <main>
       <slot />
     </main>
