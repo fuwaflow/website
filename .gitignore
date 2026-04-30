@@ -22,3 +22,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+src/styles/cosie.css
+src/styles/normalize.css
