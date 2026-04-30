@@ -4,18 +4,25 @@ import "../styles/main.css";
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = "fuwaflow" } = Astro.props;
+const { title = "fuwaflow", description = "fuwaflow's website" } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +34,21 @@ const { title = "fuwaflow" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>made with love by fuwaflow</p>
+      <p>
+        <small>
+          code is licensed under <a
+            href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL v3</a
+          >. content is licensed under <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            >CC BY-SA 4.0</a
+          >.
+        </small>
+      </p>
+    </footer>
   </body>
 </html>
