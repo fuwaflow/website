@@ -1,2 +1,2 @@
-@import "cosie.css";
-@import "theme.css";
+@import "./cosie-css/theme.css";
+@import "./cosie-css/cosie.css";
