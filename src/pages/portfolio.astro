@@ -1,15 +1,19 @@
 ---
 import Layout from "../layouts/layout.astro";
 
-const pageTitle = "fuwaflow — portfolio";
+const pageTitle = "fuwaflow's portfolio";
 
-const allPosts = Object.values(
-  import.meta.glob("./blog/*.md", { eager: true }),
-).sort((a: any, b: any) => {
-  const dateA = new Date(a.frontmatter?.date ?? 0).getTime();
-  const dateB = new Date(b.frontmatter?.date ?? 0).getTime();
-  return dateB - dateA;
-});
+const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }))
+  .filter((post: any) =>
+    post.frontmatter.tags
+      ?.map((t: string) => t.toLowerCase())
+      .includes("portfolio"),
+  )
+  .sort((a: any, b: any) => {
+    const dateA = new Date(a.frontmatter?.date ?? 0).getTime();
+    const dateB = new Date(b.frontmatter?.date ?? 0).getTime();
+    return dateB - dateA;
+  });
 ---
 
 <Layout title={pageTitle}>
@@ -17,19 +21,17 @@ const allPosts = Object.values(
     <section>
       <h1 style="color: var(--accent);" class="h0">{pageTitle}</h1>
       <p>
-        welcome to my blog! this is where i share my thoughts on design, open
-        source, and whatever else i'm currently working on.
+        welcome to my portfolio! here are the projects and works i've been
+        focusing on.
       </p>
       <hr />
     </section>
 
     <section>
-      <h2>recent posts</h2>
-      {/* This must be a div to contain the grid */}
+      <h2>featured projects</h2>
       <div class="card-grid">
         {
           allPosts.map((post: any) => (
-            /* The entire card is now the <a> tag */
             <a
               href={post.url}
               class="card"
@@ -48,28 +50,18 @@ const allPosts = Object.values(
 
               <h3>{post.frontmatter.title}</h3>
 
-              <p style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 1rem;">
+              <p style="font-size: 0.9rem; opacity: 0.7;">
                 {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
               </p>
-
-              {/* We use a span or div styled like a link here, since we can't put an <a> inside an <a> */}
-              <span
-                class="fake-link"
-                style="color: var(--accent); text-decoration: underline;"
-              >
-                read post
-              </span>
             </a>
           ))
         }
       </div>
       <hr />
     </section>
-
-    <p>thanks for reading!</p>
   </main>
 </Layout>
