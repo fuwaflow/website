@@ -32,28 +32,25 @@ const allPosts = Object.values(import.meta.glob("./blog/*.md", { eager: true }))
       <div class="card-grid">
         {
           allPosts.map((post: any) => (
-            <a
-              href={post.url}
-              class="card"
-              style="text-decoration: none; color: inherit; display: block;"
-            >
-              {post.frontmatter.tags && (
-                <p style="font-size: 0.8rem; opacity: 0.8;">
-                  {post.frontmatter.tags.map((tag) => (
-                    <span>{tag}, </span>
+            <a href={post.url} class="card">
+              {post.frontmatter.tags?.length && (
+                <div class="card-tags">
+                  {post.frontmatter.tags.map((tag: string) => (
+                    <span class="card-tag">{tag}</span>
                   ))}
-                </p>
+                </div>
               )}
-
-              <h3>{post.frontmatter.title}</h3>
-
-              <p style="font-size: 0.9rem; opacity: 0.7;">
+              <h3 class="card-title">{post.frontmatter.title}</h3>
+              {post.frontmatter.description && (
+                <p class="card-description">{post.frontmatter.description}</p>
+              )}
+              <time class="card-date">
                 {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
                 })}
-              </p>
+              </time>
             </a>
           ))
         }

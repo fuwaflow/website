@@ -76,23 +76,39 @@ import Layout from "../layouts/layout.astro";
       <h2>cool projects</h2>
       <p>here are some great projects that i love and/or work with:</p>
       <div class="card-grid">
-        <div class="card">
-          <h3>GNOME</h3>
-          <p>a linux desktop ecosystem, with great design and accessibility.</p>
-          <a href="https://gnome.org/">visit gnome</a>
-        </div>
-        <div class="card">
-          <h3>elementaryOS</h3>
-          <p>a beautiful, accessible, well-designed linux distribution.</p>
-          <a href="https://elementary.io/">visit elementaryOS</a>
-        </div>
-        <div class="card">
-          <h3>Natsumi Browser</h3>
-          <p>an awesome userchrome theme for firefox and forks.</p>
-          <a href="https://github.com/greeeen-dev/natsumi-browser"
-            >view on github</a
-          >
-        </div>
+        <a href="https://elementary.io/" class="card">
+          <img
+            class="card-image"
+            src="https://elementary.io/images/screenshots/desktop.jpg"
+            alt=""
+          />
+          <h3 class="card-title">elementaryOS</h3>
+          <p class="card-description">
+            a beautiful, accessible, well-designed linux distribution.
+          </p>
+        </a>
+        <a href="https://github.com/greeeen-dev/natsumi-browser" class="card">
+          <img
+            class="card-image"
+            src="https://github.com/greeeen-dev/natsumi-browser/blob/main/images/main.webp?raw=true"
+            alt=""
+          />
+          <h3 class="card-title">Natsumi Browser</h3>
+          <p class="card-description">
+            an awesome userchrome theme for firefox and forks.
+          </p>
+        </a>
+        <a href="https://gnome.org/" class="card">
+          <img
+            class="card-image"
+            src="https://os.gnome.org/assets/nightly.webp"
+            alt=""
+          />
+          <h3 class="card-title">GNOME</h3>
+          <p class="card-description">
+            a linux desktop ecosystem, with great design and accessibility.
+          </p>
+        </a>
       </div>
       <hr />
     </section>
@@ -104,34 +120,62 @@ import Layout from "../layouts/layout.astro";
         with:
       </p>
       <div class="card-grid">
-        <div class="card">
-          <h3>Izzy</h3>
-          <a href="https://fizzyizzy05.dev/">visit izzy's site</a>
-        </div>
-        <div class="card">
-          <h3>Zoey</h3>
-          <a href="https://zoeythewitch.page/">visit zoey's site</a>
-        </div>
-        <div class="card">
-          <h3>TheEvilSkeleton</h3>
-          <a href="https://tesk.page/">visit their site</a>
-        </div>
-        <div class="card">
-          <h3>kramo</h3>
-          <a href="https://kramo.page/">visit kramo's site</a>
-        </div>
-        <div class="card">
-          <h3>Jamie</h3>
-          <a href="https://jamie.garden/">visit jamie's site</a>
-        </div>
-        <div class="card">
-          <h3>green</h3>
-          <a href="https://greeeen.dev/">visit green's site</a>
-        </div>
-        <div class="card">
-          <h3>Heliguy</h3>
-          <a href="https://github.com/heliguy4599">visit on github</a>
-        </div>
+        <a href="https://fizzyizzy05.dev/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/85719751?v=4"
+            alt=""
+          />
+          <h3 class="card-title">Izzy</h3>
+        </a>
+        <a href="https://zoeythewitch.page/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/239873844?v=4"
+            alt=""
+          />
+          <h3 class="card-title">Zoey</h3>
+        </a>
+        <a href="https://tesk.page/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/50847364?v=4"
+            alt=""
+          />
+          <h3 class="card-title">TheEvilSkeleton</h3>
+        </a>
+        <a href="https://kramo.page/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/93832451?v=4"
+            alt=""
+          />
+          <h3 class="card-title">kramo</h3>
+        </a>
+        <a href="https://jamie.garden/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://gitlab.gnome.org/uploads/-/system/user/avatar/112136/avatar.png"
+            alt=""
+          />
+          <h3 class="card-title">Jamie</h3>
+        </a>
+        <a href="https://greeeen.dev/" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/41323182?v=4"
+            alt=""
+          />
+          <h3 class="card-title">green</h3>
+        </a>
+        <a href="https://github.com/heliguy4599" class="card horizontal">
+          <img
+            class="card-image"
+            src="https://avatars.githubusercontent.com/u/95997226?v=4"
+            alt=""
+          />
+          <h3 class="card-title">Heliguy</h3>
+        </a>
       </div>
       <hr />
     </section>
