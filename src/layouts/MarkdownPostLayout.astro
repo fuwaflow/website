@@ -13,30 +13,26 @@ const formattedDate = frontmatter.date
 
 <Layout pageTitle={frontmatter.title}>
   <article>
-    <header>
-      <!-- Tags -->
+    <header class="post-header">
       {
         frontmatter.tags?.length && (
-          <div>
+          <div class="post-tags">
             {frontmatter.tags.map((tag) => (
-              <span>{tag}, </span>
+              <span class="post-tag">{tag}</span>
             ))}
           </div>
         )
       }
-
-      <!-- Date -->
-      {formattedDate && <p>{formattedDate}</p>}
-
-      <!-- Title -->
-      <h1>{frontmatter.title}</h1>
-
-      <!-- Description -->
-      {frontmatter.description && <p>{frontmatter.description}</p>}
+      <h1 class="post-title">{frontmatter.title}</h1>
+      {
+        frontmatter.description && (
+          <p class="post-description">{frontmatter.description}</p>
+        )
+      }
+      {formattedDate && <time class="post-date">{formattedDate}</time>}
     </header>
-    <!-- Content -->
-    <main>
+    <div class="post-body">
       <slot />
-    </main>
+    </div>
   </article>
 </Layout>
