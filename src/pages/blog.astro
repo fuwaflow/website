@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/layout.astro";
+import { NAME } from "../layouts/layout.astro";
 
-const pageTitle = "fuwaflow's blog";
+const pageTitle = `${NAME}'s blog`;
 
 const allPosts = Object.values(
   import.meta.glob("./blog/*.md", { eager: true }),

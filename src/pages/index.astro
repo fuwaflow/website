@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/layout.astro";
+import { NAME, USERNAME } from "../layouts/layout.astro";
 ---
 
-<Layout title="fuwaflow">
+<Layout title={NAME}>
   <main>
     <section>
-      <h1 style="color: var(--accent);" class="h0">fuwaflow</h1>
+      <h1 style="color: var(--accent);" class="h0">{NAME}</h1>
       <p>
         hi!!! welcome to my little corner of the internet! i'm <strong
-          >fuwaflow</strong
+          >{NAME}</strong
         >, a hobbyist designer and maker! i really love open source and i enjoy
         making apps for the <a href="https://gnome.org/">GNOME</a> and <a
           href="https://elementary.io/">elementary</a
@@ -184,8 +185,10 @@ import Layout from "../layouts/layout.astro";
       <h2>find me</h2>
       <ul>
         <li>
-          <a href="https://github.com/fuwaflow">github</a>
-          <li><a href="https://mastodon.social/@linuxjava7">mastodon</a></li>
+          <a href={`https://github.com/${USERNAME}`}>github</a>
+        </li>
+        <li>
+          <a href="https://mastodon.social/@linuxjava7">mastodon</a>
         </li>
       </ul>
       <hr />

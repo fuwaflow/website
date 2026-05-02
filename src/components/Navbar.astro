@@ -1,4 +1,5 @@
 ---
+const { name } = Astro.props;
 const { pathname } = Astro.url;
 
 const isActive = (path: string) =>
@@ -6,7 +7,7 @@ const isActive = (path: string) =>
 ---
 
 <nav>
-  <a href="/" class="logo" aria-current={isActive("/")}> fuwaflow </a>
+  <a href="/" class="logo" aria-current={isActive("/")}>{name}</a>
   <a href="/blog" aria-current={isActive("/blog")}> blog </a>
   <a href="/portfolio" aria-current={isActive("/portfolio")}> portfolio </a>
 </nav>
